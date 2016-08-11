@@ -1,0 +1,40 @@
+﻿
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login to Freight Transport</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+
+</head>
+<body>
+    @if (ViewBag.Message != null)
+    {
+        <div class="alert alert-danger">@ViewBag.Message</div>
+    }
+
+    <div class="container" style='width:782px;'>
+        <img src="/Content/header.jpg" /><br /><br />
+        <form class="form-signin" method="post" action="/IQSecurity/Login">
+            <div class="row">
+                <div class="col-sm-9">
+                    <label for="inputEmail" class="sr-only">Username</label>
+                    <input type="text" name="username" id="inputEmail" class="form-control" placeholder="username" required autofocus>
+                    <br /><label for="inputPassword" class="sr-only">Password</label>
+                    <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                </div>
+                <div class="col-sm-3">
+                    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+                </div></div>
+        </form>
+    
+        <br />
+    <div class="well">If you cannot remember your login details, contact us for assistance</div>
+    </div>
+    
+
+</body>
+</html>

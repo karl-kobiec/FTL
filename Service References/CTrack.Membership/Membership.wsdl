@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Membership" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="WSHttpBinding_IMembership_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://sales.ctrack.co.uk/CtrackAPI/Membership.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://sales.ctrack.co.uk/CtrackAPI/Membership.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://sales.ctrack.co.uk/CtrackAPI/Membership.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/DCT.CtrackExternalAPI.Model" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IMembership_AcquireSecurityToken_InputMessage">
+    <wsdl:part name="parameters" element="tns:AcquireSecurityToken" />
+  </wsdl:message>
+  <wsdl:message name="IMembership_AcquireSecurityToken_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AcquireSecurityTokenResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMembership_GetUserDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserDetails" />
+  </wsdl:message>
+  <wsdl:message name="IMembership_GetUserDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMembership_ValidateToken_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateToken" />
+  </wsdl:message>
+  <wsdl:message name="IMembership_ValidateToken_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateTokenResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMembership_GetBusinessGroups_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBusinessGroups" />
+  </wsdl:message>
+  <wsdl:message name="IMembership_GetBusinessGroups_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBusinessGroupsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMembership_GetProductsFeatures_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductsFeatures" />
+  </wsdl:message>
+  <wsdl:message name="IMembership_GetProductsFeatures_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductsFeaturesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMembership_GetFullUserSettings_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFullUserSettings" />
+  </wsdl:message>
+  <wsdl:message name="IMembership_GetFullUserSettings_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFullUserSettingsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMembership_ReleaseSecurityToken_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReleaseSecurityToken" />
+  </wsdl:message>
+  <wsdl:message name="IMembership_ReleaseSecurityToken_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReleaseSecurityTokenResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMembership_GetAllCostCenterDetailsbyUserID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllCostCenterDetailsbyUserID" />
+  </wsdl:message>
+  <wsdl:message name="IMembership_GetAllCostCenterDetailsbyUserID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllCostCenterDetailsbyUserIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMembership_GetAllCostCenterDetailsbyBusinessGroupId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllCostCenterDetailsbyBusinessGroupId" />
+  </wsdl:message>
+  <wsdl:message name="IMembership_GetAllCostCenterDetailsbyBusinessGroupId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllCostCenterDetailsbyBusinessGroupIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMembershipRest_AcquireSecurityTokenRest_InputMessage">
+    <wsdl:part name="parameters" element="tns:AcquireSecurityTokenRest" />
+  </wsdl:message>
+  <wsdl:message name="IMembershipRest_AcquireSecurityTokenRest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AcquireSecurityTokenRestResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMembershipRest_GetUserDetailsRest_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserDetailsRest" />
+  </wsdl:message>
+  <wsdl:message name="IMembershipRest_GetUserDetailsRest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserDetailsRestResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMembershipRest_ReleaseSecurityTokenRest_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReleaseSecurityTokenRest" />
+  </wsdl:message>
+  <wsdl:message name="IMembershipRest_ReleaseSecurityTokenRest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReleaseSecurityTokenRestResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMembershipRest_ValidateTokenRest_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateTokenRest" />
+  </wsdl:message>
+  <wsdl:message name="IMembershipRest_ValidateTokenRest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateTokenRestResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMembershipRest_GetProductsFeaturesRest_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductsFeaturesRest" />
+  </wsdl:message>
+  <wsdl:message name="IMembershipRest_GetProductsFeaturesRest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductsFeaturesRestResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMembershipRest_GetBusinessGroupsRest_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBusinessGroupsRest" />
+  </wsdl:message>
+  <wsdl:message name="IMembershipRest_GetBusinessGroupsRest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBusinessGroupsRestResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMembershipRest_GetFullUserSettingsRest_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFullUserSettingsRest" />
+  </wsdl:message>
+  <wsdl:message name="IMembershipRest_GetFullUserSettingsRest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFullUserSettingsRestResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMembershipRest_GetAllCostCenterDetailsbyUserIDRest_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllCostCenterDetailsbyUserIDRest" />
+  </wsdl:message>
+  <wsdl:message name="IMembershipRest_GetAllCostCenterDetailsbyUserIDRest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllCostCenterDetailsbyUserIDRestResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMembershipRest_GetAllCostCenterDetailsbyBusinessGroupIdRest_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllCostCenterDetailsbyBusinessGroupIdRest" />
+  </wsdl:message>
+  <wsdl:message name="IMembershipRest_GetAllCostCenterDetailsbyBusinessGroupIdRest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllCostCenterDetailsbyBusinessGroupIdRestResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IMembership">
+    <wsdl:operation name="AcquireSecurityToken">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMembership/AcquireSecurityToken" message="tns:IMembership_AcquireSecurityToken_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMembership/AcquireSecurityTokenResponse" message="tns:IMembership_AcquireSecurityToken_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMembership/GetUserDetails" message="tns:IMembership_GetUserDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMembership/GetUserDetailsResponse" message="tns:IMembership_GetUserDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateToken">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMembership/ValidateToken" message="tns:IMembership_ValidateToken_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMembership/ValidateTokenResponse" message="tns:IMembership_ValidateToken_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBusinessGroups">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMembership/GetBusinessGroups" message="tns:IMembership_GetBusinessGroups_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMembership/GetBusinessGroupsResponse" message="tns:IMembership_GetBusinessGroups_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductsFeatures">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMembership/GetProductsFeatures" message="tns:IMembership_GetProductsFeatures_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMembership/GetProductsFeaturesResponse" message="tns:IMembership_GetProductsFeatures_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFullUserSettings">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMembership/GetFullUserSettings" message="tns:IMembership_GetFullUserSettings_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMembership/GetFullUserSettingsResponse" message="tns:IMembership_GetFullUserSettings_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReleaseSecurityToken">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMembership/ReleaseSecurityToken" message="tns:IMembership_ReleaseSecurityToken_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMembership/ReleaseSecurityTokenResponse" message="tns:IMembership_ReleaseSecurityToken_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCostCenterDetailsbyUserID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMembership/GetAllCostCenterDetailsbyUserID" message="tns:IMembership_GetAllCostCenterDetailsbyUserID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMembership/GetAllCostCenterDetailsbyUserIDResponse" message="tns:IMembership_GetAllCostCenterDetailsbyUserID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCostCenterDetailsbyBusinessGroupId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMembership/GetAllCostCenterDetailsbyBusinessGroupId" message="tns:IMembership_GetAllCostCenterDetailsbyBusinessGroupId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMembership/GetAllCostCenterDetailsbyBusinessGroupIdResponse" message="tns:IMembership_GetAllCostCenterDetailsbyBusinessGroupId_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="IMembershipRest">
+    <wsdl:operation name="AcquireSecurityTokenRest">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMembershipRest/AcquireSecurityTokenRest" message="tns:IMembershipRest_AcquireSecurityTokenRest_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMembershipRest/AcquireSecurityTokenRestResponse" message="tns:IMembershipRest_AcquireSecurityTokenRest_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserDetailsRest">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMembershipRest/GetUserDetailsRest" message="tns:IMembershipRest_GetUserDetailsRest_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMembershipRest/GetUserDetailsRestResponse" message="tns:IMembershipRest_GetUserDetailsRest_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReleaseSecurityTokenRest">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMembershipRest/ReleaseSecurityTokenRest" message="tns:IMembershipRest_ReleaseSecurityTokenRest_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMembershipRest/ReleaseSecurityTokenRestResponse" message="tns:IMembershipRest_ReleaseSecurityTokenRest_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateTokenRest">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMembershipRest/ValidateTokenRest" message="tns:IMembershipRest_ValidateTokenRest_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMembershipRest/ValidateTokenRestResponse" message="tns:IMembershipRest_ValidateTokenRest_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductsFeaturesRest">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMembershipRest/GetProductsFeaturesRest" message="tns:IMembershipRest_GetProductsFeaturesRest_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMembershipRest/GetProductsFeaturesRestResponse" message="tns:IMembershipRest_GetProductsFeaturesRest_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBusinessGroupsRest">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMembershipRest/GetBusinessGroupsRest" message="tns:IMembershipRest_GetBusinessGroupsRest_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMembershipRest/GetBusinessGroupsRestResponse" message="tns:IMembershipRest_GetBusinessGroupsRest_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFullUserSettingsRest">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMembershipRest/GetFullUserSettingsRest" message="tns:IMembershipRest_GetFullUserSettingsRest_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMembershipRest/GetFullUserSettingsRestResponse" message="tns:IMembershipRest_GetFullUserSettingsRest_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCostCenterDetailsbyUserIDRest">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMembershipRest/GetAllCostCenterDetailsbyUserIDRest" message="tns:IMembershipRest_GetAllCostCenterDetailsbyUserIDRest_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMembershipRest/GetAllCostCenterDetailsbyUserIDRestResponse" message="tns:IMembershipRest_GetAllCostCenterDetailsbyUserIDRest_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCostCenterDetailsbyBusinessGroupIdRest">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMembershipRest/GetAllCostCenterDetailsbyBusinessGroupIdRest" message="tns:IMembershipRest_GetAllCostCenterDetailsbyBusinessGroupIdRest_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMembershipRest/GetAllCostCenterDetailsbyBusinessGroupIdRestResponse" message="tns:IMembershipRest_GetAllCostCenterDetailsbyBusinessGroupIdRest_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WSHttpBinding_IMembership" type="tns:IMembership">
+    <wsp:PolicyReference URI="#WSHttpBinding_IMembership_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AcquireSecurityToken">
+      <soap12:operation soapAction="http://tempuri.org/IMembership/AcquireSecurityToken" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserDetails">
+      <soap12:operation soapAction="http://tempuri.org/IMembership/GetUserDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateToken">
+      <soap12:operation soapAction="http://tempuri.org/IMembership/ValidateToken" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBusinessGroups">
+      <soap12:operation soapAction="http://tempuri.org/IMembership/GetBusinessGroups" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductsFeatures">
+      <soap12:operation soapAction="http://tempuri.org/IMembership/GetProductsFeatures" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFullUserSettings">
+      <soap12:operation soapAction="http://tempuri.org/IMembership/GetFullUserSettings" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReleaseSecurityToken">
+      <soap12:operation soapAction="http://tempuri.org/IMembership/ReleaseSecurityToken" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCostCenterDetailsbyUserID">
+      <soap12:operation soapAction="http://tempuri.org/IMembership/GetAllCostCenterDetailsbyUserID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCostCenterDetailsbyBusinessGroupId">
+      <soap12:operation soapAction="http://tempuri.org/IMembership/GetAllCostCenterDetailsbyBusinessGroupId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Membership">
+    <wsdl:port name="WSHttpBinding_IMembership" binding="tns:WSHttpBinding_IMembership">
+      <soap12:address location="http://sales.ctrack.co.uk/CtrackAPI/Membership.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://sales.ctrack.co.uk/CtrackAPI/Membership.svc</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

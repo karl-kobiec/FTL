@@ -1,0 +1,18 @@
+﻿@model FTL.Areas.Dashlets.ButtonBlockModel
+
+<div class="row">
+    @foreach (var btn in Model.Buttons)
+    {
+        if (!string.IsNullOrEmpty(btn.Url) && !string.IsNullOrEmpty(btn.Title))
+        {
+            <div class="col-sm-6">
+                @if (!string.IsNullOrEmpty(btn.Url) && !string.IsNullOrEmpty(btn.Title))
+                {
+                    <a class="btn btn-primary btn-block"
+                       href="@(btn.Url.StartsWith("IQJS") ? "" : btn.Url)"
+                       onclick="@(!btn.Url.StartsWith("IQJS") ? "" : btn.Url)">@btn.Title</a>
+                }
+            </div>
+        }
+    }
+</div>

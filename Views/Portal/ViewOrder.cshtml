@@ -1,0 +1,76 @@
+﻿@{ 
+
+    ViewBag.Title = "View Order - " + Model.OrdIdValue; 
+}
+@model FTL.Orders
+
+<label style="width:100%;text-align:center;font-size:16px;">Order Ref: @Model.OrdIdValue</label>
+<hr />
+<table style="width:100%;">
+    <tr><td style="width:35%;border-right:1px solid #eee;vertical-align:top;padding:2px;">
+        <div class="row">
+            <div class="col-sm-6"><label>Job Number:</label></div>
+            <div class="col-sm-6">@Model.OrdJobValue</div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6"><label>Company Name:</label></div>
+            <div class="col-sm-6">@Model.OrdCust.DisplayValue</div>
+        </div>
+        <br />
+<div class="row">
+    <div class="col-sm-12"><label>Delivery address:</label></div>
+</div>
+        <div class="row"><div class="col-sm-12">
+            @Model.GetCustAddr()
+            </div></div>
+   </td><td style="width:25%;vertical-align:top;padding:2px;">
+       <label>Supplier address:</label><br />
+@Model.GetSuppAddr()
+        </td><td style="width:40%;border-left:1px solid #eee;vertical-align:top;padding:2px;">
+        <div class="row">
+            <div class="col-sm-7"><label>Order Date:</label></div>
+            <div class="col-sm-5">@Model.OrdDateValue.ToString("dd MMM yyyy")</div>
+        </div>
+        <div class="row">
+            <div class="col-sm-7"><label>Required Date:</label></div>
+            <div class="col-sm-5">@Model.OrdReqDateValue.ToString("dd MMM yyyy")</div>
+        </div>
+   </td></tr></table>
+<hr />
+
+<label style="width:100%;text-align:center;font-size:16px;">Order Items</label>
+<div class="row">
+    <div class="col-sm-12">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Desc</th>
+                    <th>Quantity</th>
+                    <th>Package</th>
+                    <th>Type</th>
+                    <th>Size</th>
+                </tr>
+
+            </thead>
+
+
+            <tbody>
+                @foreach (var itm in Model.OrderLines)
+                {
+                    <tr>
+                        <td>@itm.OrdLLineNoValue</td>
+                        <td>@itm.OrdLDescValue</td>
+                        <td>@itm.OrdLQtyValue</td>
+                        <td>@itm.OrdLPackageType.DisplayValue</td>
+                        <td>@itm.OrdLPalletType.DisplayValue</td>
+                        <td>@itm.OrdLSizeValue</td>
+                    </tr>
+
+                }
+
+            </tbody>
+        </table>
+    </div>
+
+</div>

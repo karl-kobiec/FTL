@@ -1,0 +1,88 @@
+﻿@using JDash.Mvc
+@section header {
+    <style type="text/css">
+        .DashletModule { font-size:18px;
+            cursor: hand;
+        }
+        #DashboardModules .dndArea.gridContainerZone { float:left;margin:5px;}
+    </style>
+}
+<button type="button" class="btn btn-success pull-right" onclick="HideShowModulesList(this)">Add Modules</button>
+<div id="DashboardModules" style="display: none">
+    <span style="float: left">Drag a module type into dashboard:</span>
+    @foreach (var module in ViewBag.DashletModules)
+    {
+        using (Html.JDash().DashletModulesContainer().Tag("div").Content())
+        {
+            @(Html.JDash().DashletCreateLink()
+                  .Tag("span")
+                  .Css("label label-success DashletModule")
+                  .Module(module.id)
+                  .InnerText(module.title)
+                  .DashboardView("myDashboard")
+                  .Behaviour(DashletCreateBehaviour.Both)
+                  .Render());
+        }
+    }
+</div>
+<br style="clear: both"/>
+@{
+    @(Html.JDash().DashboardView()
+           .ID("myDashboard")
+           .DesignMode(DashboardDesignMode.full)
+           .Load(ViewBag.CurrentDashboard)
+           .Render());
+
+
+    @(Html.JDash().ResourceManager()
+        .Theme("flat")
+        .Style("w")
+        .CookieForTheme(true)
+        .ClientInitHandler("window.runApp && window.runApp();")
+        .Render())
+
+}
+
+<script type="text/javascript">
+    function HideShowModulesList(itm) {
+
+        $("#DashboardModules").toggle();
+        return false;
+    }
+    function ShowButtonChoice(itm) {
+        var id = $(itm).attr("data-id");
+        $("#RecordList-" + id).hide();
+        $("#AddRecord-" + id).hide();
+        $("#SearchRecords-" + id).hide();
+        $("#Documents-" + id).hide();
+        $("#Functions-" + id).hide();
+        $("#RecordListSelect-" + id).attr("name", "");
+        $("#AddRecordSelect-" + id).attr("name", "");
+        $("#SearchRecordsSelect-" + id).attr("name", "");
+        $("#DocumentsSelect-" + id).attr("name", "");
+        $("#FunctionsSelect-" + id).attr("name", "");
+
+        switch (parseInt($(itm).val())) {
+        case 1:
+            $("#RecordList-" + id).show();
+            $("#RecordListSelect-" + id).attr("name", "Url-" + id);
+            break;
+        case 2:
+            $("#AddRecord-" + id).show();
+            $("#AddRecordSelect-" + id).attr("name", "Url-" + id);
+            break;
+        case 3:
+            $("#SearchRecords-" + id).show();
+            $("#SearchRecordsSelect-" + id).attr("name", "Url-" + id);
+            break;
+        case 4:
+            $("#Documents-" + id).show();
+            $("#DocumentsSelect-" + id).attr("name", "Url-" + id);
+            break;
+        case 5:
+            $("#Functions-" + id).show();
+            $("#FunctionsSelect-" + id).attr("name", "Url-" + id);
+            break;
+        }
+    }
+</script>

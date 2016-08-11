@@ -1,0 +1,459 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{36AFC124-02FB-450B-B099-516CBED9AB96}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FTL</RootNamespace>
+    <AssemblyName>FTL</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <MvcBuildViews>true</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ExcludeGeneratedDebugSymbol>true</ExcludeGeneratedDebugSymbol>
+    <PublishDatabases>false</PublishDatabases>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EPPlus, Version=4.0.5.0, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <HintPath>..\..\Libraries\EPPlus.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="JDash">
+      <HintPath>..\..\Libraries\JDash.dll</HintPath>
+    </Reference>
+    <Reference Include="JDash.Mvc">
+      <HintPath>..\..\Libraries\JDash.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="JDash.SessionProvider">
+      <HintPath>..\..\Libraries\JDash.SessionProvider.dll</HintPath>
+    </Reference>
+    <Reference Include="JDash.SqlProvider">
+      <HintPath>..\..\Libraries\JDash.SqlProvider.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.8.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Areas\Dashlets\Controllers\TruckController.cs" />
+    <Compile Include="Areas\Dashlets\DashletRegistration.cs" />
+    <Compile Include="Areas\Dashlets\Controllers\ButtonBlockController.cs" />
+    <Compile Include="Areas\Dashlets\DashletsAreaRegistration.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PortalController.cs" />
+    <Compile Include="Datasets\CertShip.cs" />
+    <Compile Include="Datasets\CN.cs" />
+    <Compile Include="Datasets\CNLine.cs" />
+    <Compile Include="Datasets\Contact.cs" />
+    <Compile Include="Datasets\Customer.cs" />
+    <Compile Include="Datasets\DriverHrs.cs" />
+    <Compile Include="Datasets\DSRegister.cs" />
+    <Compile Include="Datasets\EMail.cs" />
+    <Compile Include="Datasets\Inv.cs" />
+    <Compile Include="Datasets\InvLine.cs" />
+    <Compile Include="Datasets\IStatRec.cs" />
+    <Compile Include="Datasets\Job.cs" />
+    <Compile Include="Datasets\JobCost.cs" />
+    <Compile Include="Datasets\JobLine.cs" />
+    <Compile Include="Datasets\OrderLine.cs" />
+    <Compile Include="Datasets\Orders.cs" />
+    <Compile Include="Datasets\REDSOrder.cs" />
+    <Compile Include="Datasets\REDSOrderLine.cs" />
+    <Compile Include="Datasets\REDSTax.cs" />
+    <Compile Include="Datasets\ShipDoc.cs" />
+    <Compile Include="Datasets\Staff.cs" />
+    <Compile Include="Datasets\Trailer.cs" />
+    <Compile Include="Datasets\TruckMileage.cs" />
+    <Compile Include="Datasets\UKOrder.cs" />
+    <Compile Include="FTLUtil.cs" />
+    <Compile Include="Functions\CreateInvCB.cs" />
+    <Compile Include="Functions\CreatePeriodInvCB.cs" />
+    <Compile Include="Functions\SendUnsentInvoices.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QueryScreens\SummaryDetail.cs" />
+    <Compile Include="QueryScreens\TransportDet.cs" />
+    <Compile Include="QueryScreens\UKOrdInv.cs" />
+    <Compile Include="QueryScreens\UnDecWithDates.cs" />
+    <Compile Include="QueryScreens\UnDecWithMonth.cs" />
+    <Compile Include="QueryScreens\Zone.cs" />
+    <Compile Include="QueryScreens\MonthRange.cs" />
+    <Compile Include="QueryScreens\JobSingle.cs" />
+    <Compile Include="QueryScreens\HM2Form.cs" />
+    <Compile Include="QueryScreens\ExciseSummary.cs" />
+    <Compile Include="QueryScreens\ExciseDetail.cs" />
+    <Compile Include="QueryScreens\DataType.cs" />
+    <Compile Include="QueryScreens\DateFromTo.cs" />
+    <Compile Include="QueryScreens\DateFrom.cs" />
+    <Compile Include="QueryScreens\FTLQueryScreen.cs" />
+    <Compile Include="QueryScreens\QueryScreens.cs" />
+    <Compile Include="QueryScreens\ScreenRegister.cs" />
+    <Compile Include="QueryScreens\StaffSelect.cs" />
+    <Compile Include="Service References\CTrack.Membership\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\header.jpg" />
+    <Content Include="Content\icon\accounts.png" />
+    <Content Include="Content\icon\addrecord.png" />
+    <Content Include="Content\icon\admin.png" />
+    <Content Include="Content\icon\bottle.png" />
+    <Content Include="Content\icon\certificate.png" />
+    <Content Include="Content\icon\countries.png" />
+    <Content Include="Content\icon\credit.png" />
+    <Content Include="Content\icon\customers.png" />
+    <Content Include="Content\icon\drivers.png" />
+    <Content Include="Content\icon\exchange.png" />
+    <Content Include="Content\icon\ferryroutes.png" />
+    <Content Include="Content\icon\invoice.png" />
+    <Content Include="Content\icon\job.png" />
+    <Content Include="Content\icon\mileage.png" />
+    <Content Include="Content\icon\order.png" />
+    <Content Include="Content\icon\package.png" />
+    <Content Include="Content\icon\pallet.png" />
+    <Content Include="Content\icon\search.png" />
+    <Content Include="Content\icon\special.png" />
+    <Content Include="Content\icon\staff.png" />
+    <Content Include="Content\icon\systemadmin.png" />
+    <Content Include="Content\icon\trailers.png" />
+    <Content Include="Content\icon\trucks.png" />
+    <Content Include="Content\icon\vatcodes.png" />
+    <Content Include="Content\icon\weeks.png" />
+    <Content Include="Content\logo.png" />
+    <Content Include="Global.asax" />
+    <Content Include="Areas\Dashlets\Views\ButtonBlock\Index.cshtml" />
+    <Content Include="Areas\Dashlets\Views\web.config" />
+    <Content Include="Areas\Dashlets\Views\ButtonBlock\Editor.cshtml" />
+    <Content Include="Areas\Dashlets\Views\Truck\Index.cshtml" />
+    <None Include="IQ6.mdf" />
+    <Content Include="IQ6\alerts.png" />
+    <Content Include="IQ6\closefile.png" />
+    <Content Include="IQ6\down.png" />
+    <Content Include="IQ6\email.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="IQ6\field.png" />
+    <Content Include="IQ6\file.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="IQ6\files.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="IQ6\folder.png" />
+    <Content Include="IQ6\fullscreen.png" />
+    <Content Include="IQ6\history.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="IQ6\IQ6.css" />
+    <Content Include="IQ6\IQ6.js" />
+    <Content Include="IQ6\loading.gif" />
+    <Content Include="IQ6\login.png" />
+    <Content Include="IQ6\popover.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="IQ6\recents.png" />
+    <Content Include="IQ6\report.png" />
+    <Content Include="IQ6\save.png" />
+    <Content Include="IQ6\search.png" />
+    <Content Include="IQ6\select2.png" />
+    <Content Include="IQ6\select2x2.png" />
+    <Content Include="IQ6\sms.png" />
+    <Content Include="IQ6\trash.png" />
+    <Content Include="IQ6\up.png" />
+    <Content Include="IQ6\updown.png" />
+    <Content Include="IQ6\viewrecord.png" />
+    <Content Include="Service References\CTrack.Membership\FTL.CTrack.Membership.BusinessGroup.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\CTrack.Membership\FTL.CTrack.Membership.CostCentre.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\CTrack.Membership\FTL.CTrack.Membership.ProductFeatures.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\CTrack.Membership\FTL.CTrack.Membership.User.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\CTrack.Membership\FTL.CTrack.Membership.UserSettings.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\CTrack.Membership\FTL.CTrack.Membership.Validation.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\CTrack.Membership\FTL.CTrack.Membership.ValidToken.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="JDash.lic">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Properties\PublishProfiles\FTLLocal.pubxml" />
+    <None Include="Service References\CTrack.Membership\Membership.disco" />
+    <None Include="Service References\CTrack.Membership\configuration91.svcinfo" />
+    <None Include="Service References\CTrack.Membership\configuration.svcinfo" />
+    <None Include="Service References\CTrack.Membership\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Shared\_Layout.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\Portal\Index.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\Shared\Login.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\Web.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\_ViewStart.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\Portal\ViewOrder.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\Portal\AddOrder.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\Home\Index.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\Functions\SendUnsentInvoices.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Service References\CTrack.Membership\Membership.wsdl" />
+    <None Include="Service References\CTrack.Membership\Membership.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CTrack.Membership\Membership1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CTrack.Membership\Membership2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Areas\Dashlets\Models\" />
+    <Folder Include="Areas\Dashlets\Views\Shared\" />
+    <Folder Include="bin\" />
+    <Folder Include="IQ6\Views\" />
+    <Folder Include="temp\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\PublishProfiles\FTL.pubxml" />
+    <None Include="Properties\PublishProfiles\IQ4.pubxml" />
+    <None Include="Properties\PublishProfiles\IQLocal.pubxml" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\CTrack.Membership\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\BaseLib\Intrinsiq.Alerts\Intrinsiq.Alerts.csproj">
+      <Project>{d9e24166-8fa6-4e97-95e0-30ac335529c0}</Project>
+      <Name>Intrinsiq.Alerts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\BaseLib\Intrinsiq.EmailWordDocument\Intrinsiq.EmailWordDocument.csproj">
+      <Project>{6dc677b4-8402-4d6a-8c2b-63e0379d92cd}</Project>
+      <Name>Intrinsiq.EmailWordDocument</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\BaseLib\Intrinsiq.Email\Intrinsiq.Email.csproj">
+      <Project>{59a1a957-d908-4f4e-ad18-17db22848e37}</Project>
+      <Name>Intrinsiq.Email</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\BaseLib\Intrinsiq.LocalFileHandler\Intrinsiq.LocalFileHandler.csproj">
+      <Project>{d4fd2c50-a679-42c5-8c20-5cdeca40bc2c}</Project>
+      <Name>Intrinsiq.LocalFileHandler</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\BaseLib\Intrinsiq.Query\Intrinsiq.Query.csproj">
+      <Project>{71306785-a6dc-441c-a628-b08529ec8b0c}</Project>
+      <Name>Intrinsiq.Query</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\BaseLib\Intrinsiq.Reporting\Intrinsiq.Reporting.csproj">
+      <Project>{9f9ec506-8c18-41e5-a6b2-22c3616afdb9}</Project>
+      <Name>Intrinsiq.Reporting</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\BaseLib\Intrinsiq.SMS\Intrinsiq.SMS.csproj">
+      <Project>{955a7b57-d90a-437a-92d1-ee5e567c0a9f}</Project>
+      <Name>Intrinsiq.SMS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\BaseLib\Intrinsiq.WordDocument\Intrinsiq.WordDocument.csproj">
+      <Project>{63f88760-f21e-4ba5-81eb-7c64e75ad5eb}</Project>
+      <Name>Intrinsiq.WordDocument</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Framework\IQ6.Core\IQ6.Core.csproj">
+      <Project>{cb543942-8dab-40e1-b287-8e465b9ab57b}</Project>
+      <Name>IQ6.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FTL.UserAuthentication\FTL.UserAuthentication.csproj">
+      <Project>{0fc2eeee-0c10-4f20-b2a7-88a41098588e}</Project>
+      <Name>FTL.UserAuthentication</Name>
+    </ProjectReference>
+    <ProjectReference Include="IQ6\.iqsource\IQ6Lib.csproj">
+      <Project>{fc63421a-e56e-418e-820e-b90c541dd362}</Project>
+      <Name>IQ6Lib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49730</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:49733/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

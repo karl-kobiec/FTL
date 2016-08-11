@@ -1,0 +1,112 @@
+﻿@using System.Activities.Expressions
+@using Aspose.Words.Lists
+@using FTL.Areas.Dashlets
+@using Intrinsiq.WordDocument
+@model ButtonBlockModel
+<div style="height: 400px; overflow: scroll">
+@using (Ajax.BeginForm(new AjaxOptions() {}))
+{
+    <div class="row">
+        <label class="col-sm-6">Shortcut Block Title</label>
+    <div class="col-sm-6">
+        @Html.JDash().DashletTitleEditor().Render()
+    </div>
+    </div>
+    <text> @for (int i = 0; i < Model.Buttons.Count(); i++)
+    {
+               <div class="row">
+                   @DisplayButton(i, Model.Buttons[i])
+               </div>
+           }
+@for (int i = Model.Buttons.Count(); i < 6; i++)
+{
+    <div class="row">
+        @DisplayButton(i, new ButtonForBlockModel())
+    </div>
+}
+    </text>
+}
+@helper DisplayButton(int id, ButtonForBlockModel btn)
+{
+    
+    <div class="col-sm-12">
+        <h5>Button @(id+1)</h5>
+        <div class="row">
+            <label class="col-sm-6">Type of Button</label>
+            <div class="col-sm-6">
+                <select class="form-control"  data-id="@id" name="Type-@id" onchange="javascript:ShowButtonChoice(this)">
+                    <option value="0"></option>
+                    <option value="1" @(btn.Type == 1 ? "selected=selected" :"")>Record List</option>
+                    <option value="2" @(btn.Type == 2 ? "selected=selected" :"")>Add Record</option>
+                    <option value="3" @(btn.Type == 3 ? "selected=selected" :"")>Search Records</option>
+                    <option value="4" @(btn.Type == 4 ? "selected=selected" :"")>Document</option>
+                    <option value="5" @(btn.Type == 5 ? "selected=selected" :"")>Functionality</option>
+                </select>
+            </div>
+        </div>
+        <div class="row" id="RecordList-@id" style="@(btn.Type == 1 ? "" : "display: none;")">
+            <label class="col-sm-6">Buttons to List</label>
+            <div class="col-sm-6">
+                <select onchange="$('#Caption-@id option:selected').val($(this).text())" class="form-control" name="@(btn.Type == 1 ? "Url-" + id : "")" id="RecordListSelect-@id">
+                    @foreach (var itm in IQApp.Datasets.DatasetsAsPairs())
+                    {
+                        <option value="/@itm.KeyValue/List" @("/" + itm.KeyValue + "/List" == btn.Url ? "selected=selected" : "")>@itm.Description</option>
+                    }
+                </select>
+            </div>
+        </div>
+        <div class="row" id="AddRecord-@id"  style="@(btn.Type == 2 ? "" : "display: none;")">
+            <label class="col-sm-6">Record to Add</label>
+            <div class="col-sm-6">
+                <select onchange="$('#Caption-@id option:selected').val($(this).text())" class="form-control" name="@(btn.Type == 2 ? "Url-" + id : "")" id="AddRecordSelect-@id">
+                    @foreach (var itm in IQApp.Datasets.DatasetsAsPairs())
+                    {
+                        <option value="/@itm.KeyValue/Add" @("/" +itm.KeyValue + "/Add" == btn.Url ? "selected=selected" : "")>@itm.Description</option>
+                    }
+                </select>
+            </div>
+        </div>
+        <div class="row" id="SearchRecords-@id"  style="@(btn.Type == 3 ? "" : "display: none;")">
+            <label class="col-sm-6">Search Records</label>
+            <div class="col-sm-6">
+                <select onchange="$('#Caption-@id option:selected').val($(this).text())" class="form-control" name="@(btn.Type == 3 ? "Url-" + id : "")"  id="AddRecordSelect-@id">
+                    @foreach (var itm in IQApp.Datasets.DatasetsAsPairs())
+                    {
+                        <option value="/IQReporting/?DSName=@itm.KeyValue" @("/IQReporting/?DSName=" +itm.KeyValue + "" == btn.Url ? "selected=selected" : "")>@itm.Description</option>
+                    }
+                </select>
+            </div>
+        </div>
+        <div class="row" id="Documents-@id"  style="@(btn.Type == 4 ? "" : "display: none;")">
+            <label class="col-sm-6">Documents</label>
+            <div class="col-sm-6">
+                <select onchange="$('#Caption-@id option:selected').val($(this).text())" class="form-control" name="@(btn.Type == 4 ? "Url-" + id : "")"  id="DocumentsSelect-@id">
+                    @foreach (var itm in WordModule.GetWordDocumentsAsPairs())
+                    {
+                        <option value="IQJSCall('/WordDocument/GetWordAsHTML/@itm.KeyValue')" @("IQJSCall('/WordDocument/GetWordAsHTML/" +itm.KeyValue + "')" == btn.Url ? "selected=selected" : "")>@itm.Description</option>
+                    }
+                </select>
+            </div>
+        </div>
+        <div class="row" id="Functions-@id"  style="@(btn.Type == 5 ? "" : "display: none;")">
+            <label class="col-sm-6">Functionality</label>
+            <div class="col-sm-6">
+                <select onchange="$('#Caption-@id option:selected').val($(this).text())" class="form-control" name="@(btn.Type == 5 ? "Url-" + id : "")"  id="Functions-@id">
+                    @foreach (var itm in FTL.FunctionsUtil.FunctionsAsPairs())
+                    {
+                        <option value="/@itm.KeyValue/" @("/" +itm.KeyValue + "/" == btn.Url ? "selected=selected" : "")>@itm.Description</option>
+                    }
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <label class="col-sm-6">Caption</label>
+            <div class="col-sm-6">
+                <input type="text" class="form-control" name="Caption-@id" value="@btn.Title."/>
+            </div>
+        </div>
+    </div>
+
+}
+
+</div>

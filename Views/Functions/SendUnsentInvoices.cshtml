@@ -1,0 +1,32 @@
+﻿
+@model FTL.SendUnsentInvoicesModel
+    @{ 
+       
+    }
+<h4>Bulk Send Invoices</h4>
+
+<p>Select all the invoices to send to clients</p>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th></th>
+            <th>Invoice No</th>
+            <th>Order</th>
+            <th>Customer</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var inv in Model.UnsentInvoices())
+        {
+            <tr>
+                <td>@Html.CheckBox(inv.InvIdValue.ToString(), true)</td>
+                <td><a target="_blank" href="/Inv/Load/?RecId=@inv.RecordID">@inv.InvIdValue</a></td>
+                <td>@inv.InvCustOrd.DisplayValue</td>
+                <td><a href="/Customer/Load/?CustId=@inv.InvToValue" target="_blank">@inv.InvTo.DisplayValue</a></td>
+            </tr>
+        }
+
+    </tbody>
+</table>
+<br />
+<input type="button" onclick="$('form').attr('action', '/FTLSendUnsentInvoices/SendInvoices'); $('form').submit();" value="Send Selected Invoices" />

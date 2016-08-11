@@ -1,0 +1,32 @@
+﻿
+@model List<FTL.Orders>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Order No</th>
+            <th>Order Date</th>
+            <th>Req Date</th>
+            <th>Date Available</th>
+            <th>Collection Date</th>
+            <th>Date Delivered</th>
+        </tr>
+
+    </thead>
+    <tbody>
+        @foreach (var itm in Model)
+        {
+        <tr>
+            <td><a href="/Portal/ViewOrder/@itm.OrdIdValue">@itm.OrdIdValue</a></td>
+            <td>@(itm.OrdDateValue > DateTime.MinValue ? itm.OrdDateValue.ToString("dd MMM yyyy") : "")</td>
+            <td>@(itm.OrdReqDateValue > DateTime.MinValue ? itm.OrdReqDateValue.ToString("dd MMM yyyy") : "")</td>
+            <td>@(itm.OrdDateAvailValue > DateTime.MinValue ? itm.OrdDateAvailValue.ToString("dd MMM yyyy") : "")</td>
+            <td>@(itm.OrdCollDateValue > DateTime.MinValue ? itm.OrdCollDateValue.ToString("dd MMM yyyy") : "")</td>
+            <td>@(itm.OrdDateDelValue > DateTime.MinValue ? itm.OrdDateDelValue.ToString("dd MMM yyyy") : "")</td>
+        </tr>
+
+        }
+
+    </tbody>
+</table>
+

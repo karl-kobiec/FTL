@@ -1,0 +1,40 @@
+﻿
+@model FTL.Areas.Dashlets.Controllers.TruckModel
+@{
+
+
+}
+<p>Trucks needing attention in next 6 months.  </p>
+<table>
+    <tr><td style="width:25px;background-color:red"></td><td>Expires in next 2 weeks</td></tr>
+    <tr><td style="width:25px;background-color:mediumvioletred"></td><td>Expires in next 1 month</td></tr>
+</table>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Registration No</th>
+            <th>Driver</th>
+            <th>MOT Date</th>
+            <th>TAX Due Date</th>
+        </tr>
+
+    </thead>
+    <tbody>
+        @foreach (var itm in Model.Trucks)
+        {
+            <tr>
+                <td><a href="/Truck/Load/?RecId=@itm.RecordID.Value">@itm.TrkNameValue</a></td>
+                <td>@itm.TrkDriver.DisplayValue</td>
+                <td style='@Model.GetStyle(itm.TrkMOTDateValue)'>@itm.TrkMOTDateValue.ToString("dd MMM yyyy")</td>
+                    <td style='@Model.GetStyle(itm.TrkTAXDateValue)'>@(itm.TrkTAXDateValue > DateTime.MinValue ? itm.TrkTAXDateValue.ToString("dd MMM yyyy") : "")</td>
+                </tr>
+
+        }
+
+    </tbody>
+</table>
+@helper CreateStyle(DateTime dt)
+{
+
+}
+

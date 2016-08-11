@@ -1,0 +1,95 @@
+﻿@{ 
+
+    ViewBag.Title = "Add Order";
+}
+@model FTL.Orders
+
+@section Header {
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("select[name=ClientName]").select2({
+            ajax: {
+                dataType: "json",
+                delay: 100,
+                processResults: function (data, page) {
+                    return data;
+                },
+                cache: true,
+                url: "/Portal/FindClient"
+            },
+            minimumInputLength: 1
+        });
+    });
+</script>
+}
+
+    <form method="post" action="/Portal/AddOrders">
+<div class="well">Please complete the fields below and click 'Add New Order'  Please complete ALL the fields.</div>
+<hr />
+<div class="row">
+    <div class="col-sm-3"><label>Client Name:</label></div>
+    <div class="col-sm-3"><select name="ClientName" class="form-control input-sm"></select></div>
+    <div class="col-sm-3"><label>Your Order No:</label></div>
+    <div class="col-sm-3"><input type="text" class="form-control input-sm" name="YourOrderNo" /></div>
+</div>
+<div class="row">
+    <div class="col-sm-3"><label>Required Date:</label></div>
+    <div class="col-sm-3"><input type="text" class="form-control input-sm dateBox" name="RequiredDate" /></div>
+</div>
+<div class="row">
+    <div class="col-sm-3"><label>Status:</label></div>
+    <div class="col-sm-3"><select name="Status" class="form-control input-sm">
+        <option value="1">Duty Paid</option>
+        <option value="2">Under Bond</option>
+    </select></div>
+</div>
+<hr />
+<div class="row">
+    <div class="col-sm-3"><label>Supplier Name:</label></div>
+    <div class="col-sm-3"><input type="text" class="form-control input-sm" name="SupplierName" /></div>
+    <div class="col-sm-3"><label>Supplier Area Code:</label></div>
+    <div class="col-sm-3"><input type="text" class="form-control input-sm" name="SupplierAreaCode" /></div>
+</div>
+<div class="row">
+    <div class="col-sm-3"><label>Email:</label></div>
+    <div class="col-sm-3"><input type="text" class="form-control input-sm" name="SupplierEmail" /></div>
+
+</div>
+<hr />
+<div class="row">
+    <div class="col-sm-6"><label>Deliery Point:</label><br />
+    <textarea class="form-control input-sm" name="DeliveryPoint" rows="4"></textarea></div>
+    <div class="col-sm-6">
+        <div class="row">
+            <div class="col-sm-6"><label>Quantity:</label></div>
+            <div class="col-sm-6"><input type="number" name="Quantity" step="0.1" class="form-control input-sm" /></div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6"><label>Pack Type:</label></div>
+            <div class="col-sm-6"><select name="PackType" class="form-control input-sm">
+                @foreach(var i in IQApp.DB.Load<Pair<string, string>>("SELECT PackId AS KeyValue, PackName AS Description FROM PackageType UNION SELECT 0, '' ORDER BY Description, KeyValue"))
+                {
+                    <option value="@i.KeyValue">@i.Description</option>
+                }
+                </select></div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6"><label>Size (Bottle):</label></div>
+            <div class="col-sm-6"><select name="Size" class="form-control input-sm" >
+                    @foreach(var i in IQApp.DB.Load<Pair<string, string>>("SELECT BSzId AS KeyValue, BSzSize AS Description FROM BottleSize UNION SELECT 0, '' ORDER BY KeyValue"))
+                    {
+                        <option value="@i.KeyValue">@i.Description</option>
+                    }
+                </select></div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6"><label>Description:</label></div>
+            <div class="col-sm-6"><input name="Description" class="form-control input-sm" /></div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-12"><input type="submit" value="Add New Order" class="btn btn-primary" /></div>
+
+</div>
+</form>
