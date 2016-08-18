@@ -1494,7 +1494,7 @@ WriteLiteral(">\r\n");
 WriteLiteral("\t\t\t\t<div");
 WriteLiteral(" role=\"tabpanel\"");
 WriteLiteral(" ");
-                                Write(Html.Raw(Request["ActiveTab"] != "InvLine" ? "data-loadTarget='#721d8f9872b14641a3c60720f07b6b3a' data-dynamicContent='/InvLine/ListFromQuery?Limit=50&Ord=InvLLineNo&Clause=InvLInvNo=" + Model.InvIdValue + "&Partial=true'" : ""));
+                                Write(Html.Raw(Request["ActiveTab"] != "InvLine" ? "data-loadTarget='#1dcbe1e4ee5a47f89b1a8ac50fe08d7e' data-dynamicContent='/InvLine/ListFromQuery?Limit=50&Ord=InvLLineNo&Clause=InvLInvNo=" + Model.InvIdValue + "&Partial=true'" : ""));
 WriteLiteral(" class=\"tab-pane ");
                                                                                                                                                                                                                                                                                        Write((Request["ActiveTab"] != null ? (Request["ActiveTab"] == "InvLine" ? "active" :  "DynamicTab ") : "DynamicTab " ));
 WriteLiteral("\" id=\"InvLine\">\r\n\t\t\t\t\t<div");
@@ -1512,7 +1512,7 @@ WriteLiteral(">Add Invoice Lines</button>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\
                       Html.RenderPartial("~/Views/InvLine_List_1.cshtml", Model.InvLines);
 					} else {
 WriteLiteral("\t\t\t\t\t<div");
-WriteLiteral(" id=\"721d8f9872b14641a3c60720f07b6b3a\"");
+WriteLiteral(" id=\"1dcbe1e4ee5a47f89b1a8ac50fe08d7e\"");
 WriteLiteral(">\r\n\t\t\t\t\tLoading data...\r\n\t\t\t\t\t</div>\r\n");
 					}
 WriteLiteral("\t\t\t\t</div>\r\n");
@@ -1522,7 +1522,7 @@ WriteLiteral("\t\t\t\t\t\t\t");
 WriteLiteral("\t\t\t\t<div");
 WriteLiteral(" role=\"tabpanel\"");
 WriteLiteral(" ");
-                                Write(Html.Raw(Request["ActiveTab"] != "PeriodInv" ? "data-loadTarget='#758a21e1705d4383a0bde318b7f66c04' data-dynamicContent='/PeriodInv/ListFromQuery?Limit=50&Ord=PInvId&Clause=PInvId=" + Model.InvIdValue + "&Partial=true'" : ""));
+                                Write(Html.Raw(Request["ActiveTab"] != "PeriodInv" ? "data-loadTarget='#3871e2503ff94f32bc2e497207b813c1' data-dynamicContent='/PeriodInv/ListFromQuery?Limit=50&Ord=PInvId&Clause=PInvId=" + Model.InvIdValue + "&Partial=true'" : ""));
 WriteLiteral(" class=\"tab-pane ");
                                                                                                                                                                                                                                                                                     Write((Request["ActiveTab"] != null ? (Request["ActiveTab"] == "PeriodInv" ? "active" :  "DynamicTab ") : "DynamicTab " ));
 WriteLiteral("\" id=\"PeriodInv\">\r\n\t\t\t\t\t<div");
@@ -1543,7 +1543,7 @@ WriteLiteral(" >Add Period Inv Includes</a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\
                       Html.RenderPartial("~/Views/PeriodInv_List_1.cshtml", Model.PeriodInvs);
 					} else {
 WriteLiteral("\t\t\t\t\t<div");
-WriteLiteral(" id=\"758a21e1705d4383a0bde318b7f66c04\"");
+WriteLiteral(" id=\"3871e2503ff94f32bc2e497207b813c1\"");
 WriteLiteral(">\r\n\t\t\t\t\tLoading data...\r\n\t\t\t\t\t</div>\r\n");
 					}
 WriteLiteral("\t\t\t\t</div>\r\n");
@@ -2058,7 +2058,7 @@ WriteLiteral(">\r\n");
 WriteLiteral("\t\t\t\t<div");
 WriteLiteral(" role=\"tabpanel\"");
 WriteLiteral(" ");
-                                Write(Html.Raw(Request["ActiveTab"] != "InvLine" ? "data-loadTarget='#ac839e359d984f8087fe0855206dbd97' data-dynamicContent='/InvLine/ListFromQuery?Limit=50&Ord=InvLLineNo&Clause=InvLInvNo=" + Model.InvIdValue + "&Partial=true'" : ""));
+                                Write(Html.Raw(Request["ActiveTab"] != "InvLine" ? "data-loadTarget='#16ba66126486443885b23a71fe392f94' data-dynamicContent='/InvLine/ListFromQuery?Limit=50&Ord=InvLLineNo&Clause=InvLInvNo=" + Model.InvIdValue + "&Partial=true'" : ""));
 WriteLiteral(" class=\"tab-pane ");
                                                                                                                                                                                                                                                                                        Write((Request["ActiveTab"] != null ? (Request["ActiveTab"] == "InvLine" ? "active" :  "DynamicTab ") : "DynamicTab " ));
 WriteLiteral("\" id=\"InvLine\">\r\n\t\t\t\t\t<div");
@@ -2076,7 +2076,7 @@ WriteLiteral(">Add Invoice Lines</button>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\
                       Html.RenderPartial("~/Views/InvLine_List_2.cshtml", Model.InvLines);
 					} else {
 WriteLiteral("\t\t\t\t\t<div");
-WriteLiteral(" id=\"ac839e359d984f8087fe0855206dbd97\"");
+WriteLiteral(" id=\"16ba66126486443885b23a71fe392f94\"");
 WriteLiteral(">\r\n\t\t\t\t\tLoading data...\r\n\t\t\t\t\t</div>\r\n");
 					}
 WriteLiteral("\t\t\t\t</div>\r\n");
@@ -2086,7 +2086,7 @@ WriteLiteral("\t\t\t\t\t\t\t");
 WriteLiteral("\t\t\t\t<div");
 WriteLiteral(" role=\"tabpanel\"");
 WriteLiteral(" ");
-                                Write(Html.Raw(Request["ActiveTab"] != "PeriodInv" ? "data-loadTarget='#53ae64968d274627ac66b29287e22705' data-dynamicContent='/PeriodInv/ListFromQuery?Limit=50&Ord=PInvId&Clause=PInvId=" + Model.InvIdValue + "&Partial=true'" : ""));
+                                Write(Html.Raw(Request["ActiveTab"] != "PeriodInv" ? "data-loadTarget='#2fd6e65827d34be4a1b2bae4d31bbeaf' data-dynamicContent='/PeriodInv/ListFromQuery?Limit=50&Ord=PInvId&Clause=PInvId=" + Model.InvIdValue + "&Partial=true'" : ""));
 WriteLiteral(" class=\"tab-pane ");
                                                                                                                                                                                                                                                                                     Write((Request["ActiveTab"] != null ? (Request["ActiveTab"] == "PeriodInv" ? "active" :  "DynamicTab ") : "DynamicTab " ));
 WriteLiteral("\" id=\"PeriodInv\">\r\n\t\t\t\t\t<div");
@@ -2107,7 +2107,7 @@ WriteLiteral(" >Add Period Inv Includes</a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\
                       Html.RenderPartial("~/Views/PeriodInv_List_2.cshtml", Model.PeriodInvs);
 					} else {
 WriteLiteral("\t\t\t\t\t<div");
-WriteLiteral(" id=\"53ae64968d274627ac66b29287e22705\"");
+WriteLiteral(" id=\"2fd6e65827d34be4a1b2bae4d31bbeaf\"");
 WriteLiteral(">\r\n\t\t\t\t\tLoading data...\r\n\t\t\t\t\t</div>\r\n");
 					}
 WriteLiteral("\t\t\t\t</div>\r\n");

@@ -766,7 +766,7 @@ WriteLiteral(">\r\n");
 WriteLiteral("\t\t\t\t<div");
 WriteLiteral(" role=\"tabpanel\"");
 WriteLiteral(" ");
-                                Write(Html.Raw(Request["ActiveTab"] != "DriverHrs" ? "data-loadTarget='#a99e86fea93945f69d84c0bdf327d035' data-dynamicContent='/DriverHrs/ListFromQuery?Limit=50&Ord=DrvHWk%20DESC&Clause=DrvHDriver=" + Model.DrvIdValue + "&Partial=true'" : ""));
+                                Write(Html.Raw(Request["ActiveTab"] != "DriverHrs" ? "data-loadTarget='#a850b9f026df454ca7ee4140b28ebd4f' data-dynamicContent='/DriverHrs/ListFromQuery?Limit=50&Ord=DrvHWk%20DESC&Clause=DrvHDriver=" + Model.DrvIdValue + "&Partial=true'" : ""));
 WriteLiteral(" class=\"tab-pane ");
                                                                                                                                                                                                                                                                                                Write((Request["ActiveTab"] != null ? (Request["ActiveTab"] == "DriverHrs" ? "active" :  "DynamicTab ") : "DynamicTab " ));
 WriteLiteral("\" id=\"DriverHrs\">\r\n\t\t\t\t\t<div");
@@ -784,7 +784,7 @@ WriteLiteral(">Add Driver Hours</button>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n
                       Html.RenderPartial("~/Views/DriverHrs_List_1.cshtml", Model.DriverHrss);
 					} else {
 WriteLiteral("\t\t\t\t\t<div");
-WriteLiteral(" id=\"a99e86fea93945f69d84c0bdf327d035\"");
+WriteLiteral(" id=\"a850b9f026df454ca7ee4140b28ebd4f\"");
 WriteLiteral(">\r\n\t\t\t\t\tLoading data...\r\n\t\t\t\t\t</div>\r\n");
 					}
 WriteLiteral("\t\t\t\t</div>\r\n");
@@ -1306,7 +1306,7 @@ WriteLiteral(">\r\n");
 WriteLiteral("\t\t\t\t<div");
 WriteLiteral(" role=\"tabpanel\"");
 WriteLiteral(" ");
-                                Write(Html.Raw(Request["ActiveTab"] != "DriverHrs" ? "data-loadTarget='#813329b7f8e54aec988c13743c6a14bf' data-dynamicContent='/DriverHrs/ListFromQuery?Limit=50&Ord=DrvHWk%20DESC&Clause=DrvHDriver=" + Model.DrvIdValue + "&Partial=true'" : ""));
+                                Write(Html.Raw(Request["ActiveTab"] != "DriverHrs" ? "data-loadTarget='#0da86c801c7b45adaa6b8e6f77deb8a0' data-dynamicContent='/DriverHrs/ListFromQuery?Limit=50&Ord=DrvHWk%20DESC&Clause=DrvHDriver=" + Model.DrvIdValue + "&Partial=true'" : ""));
 WriteLiteral(" class=\"tab-pane ");
                                                                                                                                                                                                                                                                                                Write((Request["ActiveTab"] != null ? (Request["ActiveTab"] == "DriverHrs" ? "active" :  "DynamicTab ") : "DynamicTab " ));
 WriteLiteral("\" id=\"DriverHrs\">\r\n\t\t\t\t\t<div");
@@ -1324,7 +1324,7 @@ WriteLiteral(">Add Driver Hours</button>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n
                       Html.RenderPartial("~/Views/DriverHrs_List_2.cshtml", Model.DriverHrss);
 					} else {
 WriteLiteral("\t\t\t\t\t<div");
-WriteLiteral(" id=\"813329b7f8e54aec988c13743c6a14bf\"");
+WriteLiteral(" id=\"0da86c801c7b45adaa6b8e6f77deb8a0\"");
 WriteLiteral(">\r\n\t\t\t\t\tLoading data...\r\n\t\t\t\t\t</div>\r\n");
 					}
 WriteLiteral("\t\t\t\t</div>\r\n");

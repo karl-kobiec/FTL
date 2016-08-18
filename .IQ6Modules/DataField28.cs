@@ -60,7 +60,7 @@ public partial class Customer_CustRatesFieldDef
 				ds = (Customer)dsI;
 		 
 
-		string ctrl =  "[[Val]]";
+		string ctrl =  "<textarea style='height:21px;[[Width]]' onchange=\"javascript:IQAutoSave('/Customer/SaveCustRates/?RecId=[[RecId]]',$(this));\" class='form-control' data-bound-name='CustRates'>[[Val]]</textarea>";
 		ctrl = ctrl.Replace("[[RecId]]", ds.RecordID.ToString()).Replace("[[Val]]", ds.CustRates.HTMLValue.ToString());
 		if(widthPercentage > 0) 
 			ctrl = ctrl.Replace("[[Width]]", "width:" + widthPercentage.ToString() + "%;");
@@ -75,7 +75,7 @@ public partial class Customer_CustRatesFieldDef
 		
 	public string DrawResultsEditor(int id, string filterValue, string extraHTML = "", string overridename = "") {
 		if(string.IsNullOrEmpty(overridename)) overridename = "FilterValue-" + id.ToString();
-		return "";	}
+		return $"<input class='form-control' type='text' value='{filterValue}' {extraHTML} name='{overridename}' />";	}
 
 	public string GetSearchClause(int OperatorID, string FilterValue, ref List<Pair<string, string>> Params) {
 			

@@ -5,10 +5,10 @@
     {
         if (!string.IsNullOrEmpty(btn.Url) && !string.IsNullOrEmpty(btn.Title))
         {
-            <div class="col-sm-6">
+            <div class="col-lg-2">
                 @if (!string.IsNullOrEmpty(btn.Url) && !string.IsNullOrEmpty(btn.Title))
                 {
-                    <a class="btn btn-primary btn-block"
+                    <a class="btn btn-primary btn-sm"
                        href="@(btn.Url.StartsWith("IQJS") ? "" : btn.Url)"
                        onclick="@(!btn.Url.StartsWith("IQJS") ? "" : btn.Url)">@btn.Title</a>
                 }

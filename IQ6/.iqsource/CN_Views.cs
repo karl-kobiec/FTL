@@ -1170,7 +1170,7 @@ WriteLiteral(">\r\n");
 WriteLiteral("\t\t\t\t<div");
 WriteLiteral(" role=\"tabpanel\"");
 WriteLiteral(" ");
-                                Write(Html.Raw(Request["ActiveTab"] != "CNLine" ? "data-loadTarget='#413855151e7743fc8944299aab78796b' data-dynamicContent='/CNLine/ListFromQuery?Limit=50&Ord=CNLLineNo&Clause=CNLNo=" + Model.CNIdValue + "&Partial=true'" : ""));
+                                Write(Html.Raw(Request["ActiveTab"] != "CNLine" ? "data-loadTarget='#74b375f2ae304ab39aca4580d09d42f7' data-dynamicContent='/CNLine/ListFromQuery?Limit=50&Ord=CNLLineNo&Clause=CNLNo=" + Model.CNIdValue + "&Partial=true'" : ""));
 WriteLiteral(" class=\"tab-pane ");
                                                                                                                                                                                                                                                                                Write((Request["ActiveTab"] != null ? (Request["ActiveTab"] == "CNLine" ? "active" :  "DynamicTab ") : "DynamicTab " ));
 WriteLiteral("\" id=\"CNLine\">\r\n\t\t\t\t\t<div");
@@ -1188,7 +1188,7 @@ WriteLiteral(">Add Credit Note Lines</button>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div
                       Html.RenderPartial("~/Views/CNLine_List_1.cshtml", Model.CNLines);
 					} else {
 WriteLiteral("\t\t\t\t\t<div");
-WriteLiteral(" id=\"413855151e7743fc8944299aab78796b\"");
+WriteLiteral(" id=\"74b375f2ae304ab39aca4580d09d42f7\"");
 WriteLiteral(">\r\n\t\t\t\t\tLoading data...\r\n\t\t\t\t\t</div>\r\n");
 					}
 WriteLiteral("\t\t\t\t</div>\r\n");
@@ -1666,7 +1666,7 @@ WriteLiteral(">\r\n");
 WriteLiteral("\t\t\t\t<div");
 WriteLiteral(" role=\"tabpanel\"");
 WriteLiteral(" ");
-                                Write(Html.Raw(Request["ActiveTab"] != "CNLine" ? "data-loadTarget='#7fd85eecd85b4642baa6076df15436e3' data-dynamicContent='/CNLine/ListFromQuery?Limit=50&Ord=CNLLineNo&Clause=CNLNo=" + Model.CNIdValue + "&Partial=true'" : ""));
+                                Write(Html.Raw(Request["ActiveTab"] != "CNLine" ? "data-loadTarget='#db1e1e2acadd44d0abc2f8b017a8fa5a' data-dynamicContent='/CNLine/ListFromQuery?Limit=50&Ord=CNLLineNo&Clause=CNLNo=" + Model.CNIdValue + "&Partial=true'" : ""));
 WriteLiteral(" class=\"tab-pane ");
                                                                                                                                                                                                                                                                                Write((Request["ActiveTab"] != null ? (Request["ActiveTab"] == "CNLine" ? "active" :  "DynamicTab ") : "DynamicTab " ));
 WriteLiteral("\" id=\"CNLine\">\r\n\t\t\t\t\t<div");
@@ -1684,7 +1684,7 @@ WriteLiteral(">Add Credit Note Lines</button>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div
                       Html.RenderPartial("~/Views/CNLine_List_2.cshtml", Model.CNLines);
 					} else {
 WriteLiteral("\t\t\t\t\t<div");
-WriteLiteral(" id=\"7fd85eecd85b4642baa6076df15436e3\"");
+WriteLiteral(" id=\"db1e1e2acadd44d0abc2f8b017a8fa5a\"");
 WriteLiteral(">\r\n\t\t\t\t\tLoading data...\r\n\t\t\t\t\t</div>\r\n");
 					}
 WriteLiteral("\t\t\t\t</div>\r\n");

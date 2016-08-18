@@ -45,7 +45,8 @@ namespace FTL
             ControllerBuilder.Current.SetControllerFactory(typeof(IQExtendableControllerFactory));
             IQ6.Core.IQApp.RunAppStartup(new FTL.UserAuthentication.User(), new IQ6.Core.Database("IQ6"), new Intrinsiq.LocalFileHandler.FileHandler(),
                 new DSMapper(), new IQSettings(), new FTL.QueryScreens.FTLScreenMapper(), new Operators());
-            FTL.Datasets.DSRegister.Register();
+
+            FTL.Datasets.DSRegister.Register(); // custom ftl callbacks
             Intrinsiq.Query.QM.Register<Query>();
             Intrinsiq.Email.EmailModule.Register<EMail, EmailTemplatess>();
             Intrinsiq.WordDocument.WordModule.Register<WordDocument>();

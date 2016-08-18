@@ -853,7 +853,7 @@ WriteLiteral(">\r\n");
 WriteLiteral("\t\t\t\t<div");
 WriteLiteral(" role=\"tabpanel\"");
 WriteLiteral(" ");
-                                Write(Html.Raw(Request["ActiveTab"] != "JobLine" ? "data-loadTarget='#d0b4043e8d4145d8b08a9c2c1950fb27' data-dynamicContent='/JobLine/ListFromQuery?Limit=50&Ord=JobLLineLetter&Clause=JobLJobNo=" + Model.JobIdValue + "&Partial=true'" : ""));
+                                Write(Html.Raw(Request["ActiveTab"] != "JobLine" ? "data-loadTarget='#d91409a9b2464591a2be704b929a191b' data-dynamicContent='/JobLine/ListFromQuery?Limit=50&Ord=JobLLineLetter&Clause=JobLJobNo=" + Model.JobIdValue + "&Partial=true'" : ""));
 WriteLiteral(" class=\"tab-pane ");
                                                                                                                                                                                                                                                                                            Write((Request["ActiveTab"] != null ? (Request["ActiveTab"] == "JobLine" ? "active" :  "DynamicTab ") : "DynamicTab " ));
 WriteLiteral("\" id=\"JobLine\">\r\n\t\t\t\t\t<div");
@@ -871,7 +871,7 @@ WriteLiteral(">Add Job Lines</button>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\
                       Html.RenderPartial("~/Views/JobLine_List_1.cshtml", Model.JobLines);
 					} else {
 WriteLiteral("\t\t\t\t\t<div");
-WriteLiteral(" id=\"d0b4043e8d4145d8b08a9c2c1950fb27\"");
+WriteLiteral(" id=\"d91409a9b2464591a2be704b929a191b\"");
 WriteLiteral(">\r\n\t\t\t\t\tLoading data...\r\n\t\t\t\t\t</div>\r\n");
 					}
 WriteLiteral("\t\t\t\t</div>\r\n");
@@ -881,7 +881,7 @@ WriteLiteral("\t\t\t\t\t\t\t");
 WriteLiteral("\t\t\t\t<div");
 WriteLiteral(" role=\"tabpanel\"");
 WriteLiteral(" ");
-                                Write(Html.Raw(Request["ActiveTab"] != "JobCost" ? "data-loadTarget='#080343ea51b8484388b36d0b069d4e9e' data-dynamicContent='/JobCost/ListFromQuery?Limit=50&Ord=JobCInvNo&Clause=JobCJobNo=" + Model.JobIdValue + "&Partial=true'" : ""));
+                                Write(Html.Raw(Request["ActiveTab"] != "JobCost" ? "data-loadTarget='#decbe5e785574a498e05dacaf09c2acc' data-dynamicContent='/JobCost/ListFromQuery?Limit=50&Ord=JobCInvNo&Clause=JobCJobNo=" + Model.JobIdValue + "&Partial=true'" : ""));
 WriteLiteral(" class=\"tab-pane ");
                                                                                                                                                                                                                                                                                       Write((Request["ActiveTab"] != null ? (Request["ActiveTab"] == "JobCost" ? "active" :  "DynamicTab ") : "DynamicTab " ));
 WriteLiteral("\" id=\"JobCost\">\r\n\t\t\t\t\t<div");
@@ -899,7 +899,7 @@ WriteLiteral(">Add Job Costs</button>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\
                       Html.RenderPartial("~/Views/JobCost_List_1.cshtml", Model.JobCosts);
 					} else {
 WriteLiteral("\t\t\t\t\t<div");
-WriteLiteral(" id=\"080343ea51b8484388b36d0b069d4e9e\"");
+WriteLiteral(" id=\"decbe5e785574a498e05dacaf09c2acc\"");
 WriteLiteral(">\r\n\t\t\t\t\tLoading data...\r\n\t\t\t\t\t</div>\r\n");
 					}
 WriteLiteral("\t\t\t\t</div>\r\n");
@@ -909,7 +909,7 @@ WriteLiteral("\t\t\t\t\t\t\t");
 WriteLiteral("\t\t\t\t<div");
 WriteLiteral(" role=\"tabpanel\"");
 WriteLiteral(" ");
-                                Write(Html.Raw(Request["ActiveTab"] != "CertShip" ? "data-loadTarget='#ea2c81c357de4480975fefd616f72b1f' data-dynamicContent='/CertShip/ListFromQuery?Limit=50&Ord=CSId&Clause=CSJobNo=" + Model.JobIdValue + "&Partial=true'" : ""));
+                                Write(Html.Raw(Request["ActiveTab"] != "CertShip" ? "data-loadTarget='#0ab90896c3554385a4fab96360db6eed' data-dynamicContent='/CertShip/ListFromQuery?Limit=50&Ord=CSId&Clause=CSJobNo=" + Model.JobIdValue + "&Partial=true'" : ""));
 WriteLiteral(" class=\"tab-pane ");
                                                                                                                                                                                                                                                                                  Write((Request["ActiveTab"] != null ? (Request["ActiveTab"] == "CertShip" ? "active" :  "DynamicTab ") : "DynamicTab " ));
 WriteLiteral("\" id=\"CertShip\">\r\n\t\t\t\t\t<div");
@@ -930,7 +930,7 @@ WriteLiteral(" >Add Certificates of Shipment</a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</
                       Html.RenderPartial("~/Views/CertShip_List_1.cshtml", Model.CertShips);
 					} else {
 WriteLiteral("\t\t\t\t\t<div");
-WriteLiteral(" id=\"ea2c81c357de4480975fefd616f72b1f\"");
+WriteLiteral(" id=\"0ab90896c3554385a4fab96360db6eed\"");
 WriteLiteral(">\r\n\t\t\t\t\tLoading data...\r\n\t\t\t\t\t</div>\r\n");
 					}
 WriteLiteral("\t\t\t\t</div>\r\n");
@@ -940,7 +940,7 @@ WriteLiteral("\t\t\t\t\t\t\t");
 WriteLiteral("\t\t\t\t<div");
 WriteLiteral(" role=\"tabpanel\"");
 WriteLiteral(" ");
-                                Write(Html.Raw(Request["ActiveTab"] != "CN" ? "data-loadTarget='#cea267de17bb46daa0c6158a1936cb1b' data-dynamicContent='/CN/ListFromQuery?Limit=50&Ord=CNId&Clause=CNJobNo=" + Model.JobIdValue + "&Partial=true'" : ""));
+                                Write(Html.Raw(Request["ActiveTab"] != "CN" ? "data-loadTarget='#99336fb237ba47078468ab24c9b001c4' data-dynamicContent='/CN/ListFromQuery?Limit=50&Ord=CNId&Clause=CNJobNo=" + Model.JobIdValue + "&Partial=true'" : ""));
 WriteLiteral(" class=\"tab-pane ");
                                                                                                                                                                                                                                                                      Write((Request["ActiveTab"] != null ? (Request["ActiveTab"] == "CN" ? "active" :  "DynamicTab ") : "DynamicTab " ));
 WriteLiteral("\" id=\"CN\">\r\n\t\t\t\t\t<div");
@@ -961,7 +961,7 @@ WriteLiteral(" >Add Credit Notes</a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t
                       Html.RenderPartial("~/Views/CN_List_1.cshtml", Model.CNs);
 					} else {
 WriteLiteral("\t\t\t\t\t<div");
-WriteLiteral(" id=\"cea267de17bb46daa0c6158a1936cb1b\"");
+WriteLiteral(" id=\"99336fb237ba47078468ab24c9b001c4\"");
 WriteLiteral(">\r\n\t\t\t\t\tLoading data...\r\n\t\t\t\t\t</div>\r\n");
 					}
 WriteLiteral("\t\t\t\t</div>\r\n");
@@ -971,7 +971,7 @@ WriteLiteral("\t\t\t\t\t\t\t");
 WriteLiteral("\t\t\t\t<div");
 WriteLiteral(" role=\"tabpanel\"");
 WriteLiteral(" ");
-                                Write(Html.Raw(Request["ActiveTab"] != "Inv" ? "data-loadTarget='#ff927af269df4c0aa3c6fefb4df3bb2f' data-dynamicContent='/Inv/ListFromQuery?Limit=50&Ord=InvId&Clause=InvJobNo=" + Model.JobIdValue + "&Partial=true'" : ""));
+                                Write(Html.Raw(Request["ActiveTab"] != "Inv" ? "data-loadTarget='#47de643c921443b68fb874885f7f8028' data-dynamicContent='/Inv/ListFromQuery?Limit=50&Ord=InvId&Clause=InvJobNo=" + Model.JobIdValue + "&Partial=true'" : ""));
 WriteLiteral(" class=\"tab-pane ");
                                                                                                                                                                                                                                                                          Write((Request["ActiveTab"] != null ? (Request["ActiveTab"] == "Inv" ? "active" :  "DynamicTab ") : "DynamicTab " ));
 WriteLiteral("\" id=\"Inv\">\r\n\t\t\t\t\t<div");
@@ -992,7 +992,7 @@ WriteLiteral(" >Add Invoices</a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t
                       Html.RenderPartial("~/Views/Inv_List_1.cshtml", Model.Invs);
 					} else {
 WriteLiteral("\t\t\t\t\t<div");
-WriteLiteral(" id=\"ff927af269df4c0aa3c6fefb4df3bb2f\"");
+WriteLiteral(" id=\"47de643c921443b68fb874885f7f8028\"");
 WriteLiteral(">\r\n\t\t\t\t\tLoading data...\r\n\t\t\t\t\t</div>\r\n");
 					}
 WriteLiteral("\t\t\t\t</div>\r\n");
@@ -1002,7 +1002,7 @@ WriteLiteral("\t\t\t\t\t\t\t");
 WriteLiteral("\t\t\t\t<div");
 WriteLiteral(" role=\"tabpanel\"");
 WriteLiteral(" ");
-                                Write(Html.Raw(Request["ActiveTab"] != "Orders" ? "data-loadTarget='#f70cde284d8f4aa2a08fe297adb449fe' data-dynamicContent='/Orders/ListFromQuery?Limit=50&Ord=OrdId&Clause=OrdJobNo=" + Model.JobIdValue + "&Partial=true'" : ""));
+                                Write(Html.Raw(Request["ActiveTab"] != "Orders" ? "data-loadTarget='#918dd1bdfcc44f60975c0694d51c7561' data-dynamicContent='/Orders/ListFromQuery?Limit=50&Ord=OrdId&Clause=OrdJobNo=" + Model.JobIdValue + "&Partial=true'" : ""));
 WriteLiteral(" class=\"tab-pane ");
                                                                                                                                                                                                                                                                                Write((Request["ActiveTab"] != null ? (Request["ActiveTab"] == "Orders" ? "active" :  "DynamicTab ") : "DynamicTab " ));
 WriteLiteral("\" id=\"Orders\">\r\n\t\t\t\t\t<div");
@@ -1023,7 +1023,7 @@ WriteLiteral(" >Add Orders</a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t
                       Html.RenderPartial("~/Views/Orders_List_1.cshtml", Model.Orderss);
 					} else {
 WriteLiteral("\t\t\t\t\t<div");
-WriteLiteral(" id=\"f70cde284d8f4aa2a08fe297adb449fe\"");
+WriteLiteral(" id=\"918dd1bdfcc44f60975c0694d51c7561\"");
 WriteLiteral(">\r\n\t\t\t\t\tLoading data...\r\n\t\t\t\t\t</div>\r\n");
 					}
 WriteLiteral("\t\t\t\t</div>\r\n");
@@ -1033,7 +1033,7 @@ WriteLiteral("\t\t\t\t\t\t\t");
 WriteLiteral("\t\t\t\t<div");
 WriteLiteral(" role=\"tabpanel\"");
 WriteLiteral(" ");
-                                Write(Html.Raw(Request["ActiveTab"] != "REDSOrder" ? "data-loadTarget='#8c8d24f6498e41489d31e9cdf061c773' data-dynamicContent='/REDSOrder/ListFromQuery?Limit=50&Ord=RDOrdId&Clause=RDOrdJobNo=" + Model.JobIdValue + "&Partial=true'" : ""));
+                                Write(Html.Raw(Request["ActiveTab"] != "REDSOrder" ? "data-loadTarget='#9f3df28af8a348e3bb521dcc0c445287' data-dynamicContent='/REDSOrder/ListFromQuery?Limit=50&Ord=RDOrdId&Clause=RDOrdJobNo=" + Model.JobIdValue + "&Partial=true'" : ""));
 WriteLiteral(" class=\"tab-pane ");
                                                                                                                                                                                                                                                                                          Write((Request["ActiveTab"] != null ? (Request["ActiveTab"] == "REDSOrder" ? "active" :  "DynamicTab ") : "DynamicTab " ));
 WriteLiteral("\" id=\"REDSOrder\">\r\n\t\t\t\t\t<div");
@@ -1054,7 +1054,7 @@ WriteLiteral(" >Add REDS Order Header</a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\
                       Html.RenderPartial("~/Views/REDSOrder_List_1.cshtml", Model.REDSOrders);
 					} else {
 WriteLiteral("\t\t\t\t\t<div");
-WriteLiteral(" id=\"8c8d24f6498e41489d31e9cdf061c773\"");
+WriteLiteral(" id=\"9f3df28af8a348e3bb521dcc0c445287\"");
 WriteLiteral(">\r\n\t\t\t\t\tLoading data...\r\n\t\t\t\t\t</div>\r\n");
 					}
 WriteLiteral("\t\t\t\t</div>\r\n");
@@ -1668,7 +1668,7 @@ WriteLiteral(">\r\n");
 WriteLiteral("\t\t\t\t<div");
 WriteLiteral(" role=\"tabpanel\"");
 WriteLiteral(" ");
-                                Write(Html.Raw(Request["ActiveTab"] != "JobLine" ? "data-loadTarget='#11bbd626be334135924a8976fb845728' data-dynamicContent='/JobLine/ListFromQuery?Limit=50&Ord=JobLLineLetter&Clause=JobLJobNo=" + Model.JobIdValue + "&Partial=true'" : ""));
+                                Write(Html.Raw(Request["ActiveTab"] != "JobLine" ? "data-loadTarget='#bb7162934e0748be863f598a35295802' data-dynamicContent='/JobLine/ListFromQuery?Limit=50&Ord=JobLLineLetter&Clause=JobLJobNo=" + Model.JobIdValue + "&Partial=true'" : ""));
 WriteLiteral(" class=\"tab-pane ");
                                                                                                                                                                                                                                                                                            Write((Request["ActiveTab"] != null ? (Request["ActiveTab"] == "JobLine" ? "active" :  "DynamicTab ") : "DynamicTab " ));
 WriteLiteral("\" id=\"JobLine\">\r\n\t\t\t\t\t<div");
@@ -1686,7 +1686,7 @@ WriteLiteral(">Add Job Lines</button>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\
                       Html.RenderPartial("~/Views/JobLine_List_2.cshtml", Model.JobLines);
 					} else {
 WriteLiteral("\t\t\t\t\t<div");
-WriteLiteral(" id=\"11bbd626be334135924a8976fb845728\"");
+WriteLiteral(" id=\"bb7162934e0748be863f598a35295802\"");
 WriteLiteral(">\r\n\t\t\t\t\tLoading data...\r\n\t\t\t\t\t</div>\r\n");
 					}
 WriteLiteral("\t\t\t\t</div>\r\n");
@@ -1696,7 +1696,7 @@ WriteLiteral("\t\t\t\t\t\t\t");
 WriteLiteral("\t\t\t\t<div");
 WriteLiteral(" role=\"tabpanel\"");
 WriteLiteral(" ");
-                                Write(Html.Raw(Request["ActiveTab"] != "JobCost" ? "data-loadTarget='#0cf8f5a4ea484313a38bca7e1d64d411' data-dynamicContent='/JobCost/ListFromQuery?Limit=50&Ord=JobCInvNo&Clause=JobCJobNo=" + Model.JobIdValue + "&Partial=true'" : ""));
+                                Write(Html.Raw(Request["ActiveTab"] != "JobCost" ? "data-loadTarget='#c3b3192f43b44f8bacf4657e17e29074' data-dynamicContent='/JobCost/ListFromQuery?Limit=50&Ord=JobCInvNo&Clause=JobCJobNo=" + Model.JobIdValue + "&Partial=true'" : ""));
 WriteLiteral(" class=\"tab-pane ");
                                                                                                                                                                                                                                                                                       Write((Request["ActiveTab"] != null ? (Request["ActiveTab"] == "JobCost" ? "active" :  "DynamicTab ") : "DynamicTab " ));
 WriteLiteral("\" id=\"JobCost\">\r\n\t\t\t\t\t<div");
@@ -1714,7 +1714,7 @@ WriteLiteral(">Add Job Costs</button>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\
                       Html.RenderPartial("~/Views/JobCost_List_2.cshtml", Model.JobCosts);
 					} else {
 WriteLiteral("\t\t\t\t\t<div");
-WriteLiteral(" id=\"0cf8f5a4ea484313a38bca7e1d64d411\"");
+WriteLiteral(" id=\"c3b3192f43b44f8bacf4657e17e29074\"");
 WriteLiteral(">\r\n\t\t\t\t\tLoading data...\r\n\t\t\t\t\t</div>\r\n");
 					}
 WriteLiteral("\t\t\t\t</div>\r\n");
@@ -1724,7 +1724,7 @@ WriteLiteral("\t\t\t\t\t\t\t");
 WriteLiteral("\t\t\t\t<div");
 WriteLiteral(" role=\"tabpanel\"");
 WriteLiteral(" ");
-                                Write(Html.Raw(Request["ActiveTab"] != "CertShip" ? "data-loadTarget='#fb2a7a38de1e42a6964bf62afc4c9ba0' data-dynamicContent='/CertShip/ListFromQuery?Limit=50&Ord=CSId&Clause=CSJobNo=" + Model.JobIdValue + "&Partial=true'" : ""));
+                                Write(Html.Raw(Request["ActiveTab"] != "CertShip" ? "data-loadTarget='#b6c2900d34a141f48a57c689ba85e6d7' data-dynamicContent='/CertShip/ListFromQuery?Limit=50&Ord=CSId&Clause=CSJobNo=" + Model.JobIdValue + "&Partial=true'" : ""));
 WriteLiteral(" class=\"tab-pane ");
                                                                                                                                                                                                                                                                                  Write((Request["ActiveTab"] != null ? (Request["ActiveTab"] == "CertShip" ? "active" :  "DynamicTab ") : "DynamicTab " ));
 WriteLiteral("\" id=\"CertShip\">\r\n\t\t\t\t\t<div");
@@ -1745,7 +1745,7 @@ WriteLiteral(" >Add Certificates of Shipment</a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</
                       Html.RenderPartial("~/Views/CertShip_List_2.cshtml", Model.CertShips);
 					} else {
 WriteLiteral("\t\t\t\t\t<div");
-WriteLiteral(" id=\"fb2a7a38de1e42a6964bf62afc4c9ba0\"");
+WriteLiteral(" id=\"b6c2900d34a141f48a57c689ba85e6d7\"");
 WriteLiteral(">\r\n\t\t\t\t\tLoading data...\r\n\t\t\t\t\t</div>\r\n");
 					}
 WriteLiteral("\t\t\t\t</div>\r\n");
@@ -1755,7 +1755,7 @@ WriteLiteral("\t\t\t\t\t\t\t");
 WriteLiteral("\t\t\t\t<div");
 WriteLiteral(" role=\"tabpanel\"");
 WriteLiteral(" ");
-                                Write(Html.Raw(Request["ActiveTab"] != "CN" ? "data-loadTarget='#88b3948a5134425cafc52f4e71cde173' data-dynamicContent='/CN/ListFromQuery?Limit=50&Ord=CNId&Clause=CNJobNo=" + Model.JobIdValue + "&Partial=true'" : ""));
+                                Write(Html.Raw(Request["ActiveTab"] != "CN" ? "data-loadTarget='#293f2c41fb224553a82d814637b368b6' data-dynamicContent='/CN/ListFromQuery?Limit=50&Ord=CNId&Clause=CNJobNo=" + Model.JobIdValue + "&Partial=true'" : ""));
 WriteLiteral(" class=\"tab-pane ");
                                                                                                                                                                                                                                                                      Write((Request["ActiveTab"] != null ? (Request["ActiveTab"] == "CN" ? "active" :  "DynamicTab ") : "DynamicTab " ));
 WriteLiteral("\" id=\"CN\">\r\n\t\t\t\t\t<div");
@@ -1776,7 +1776,7 @@ WriteLiteral(" >Add Credit Notes</a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t
                       Html.RenderPartial("~/Views/CN_List_2.cshtml", Model.CNs);
 					} else {
 WriteLiteral("\t\t\t\t\t<div");
-WriteLiteral(" id=\"88b3948a5134425cafc52f4e71cde173\"");
+WriteLiteral(" id=\"293f2c41fb224553a82d814637b368b6\"");
 WriteLiteral(">\r\n\t\t\t\t\tLoading data...\r\n\t\t\t\t\t</div>\r\n");
 					}
 WriteLiteral("\t\t\t\t</div>\r\n");
@@ -1786,7 +1786,7 @@ WriteLiteral("\t\t\t\t\t\t\t");
 WriteLiteral("\t\t\t\t<div");
 WriteLiteral(" role=\"tabpanel\"");
 WriteLiteral(" ");
-                                Write(Html.Raw(Request["ActiveTab"] != "Inv" ? "data-loadTarget='#50067ce0e23c4e3691907d5717232122' data-dynamicContent='/Inv/ListFromQuery?Limit=50&Ord=InvId&Clause=InvJobNo=" + Model.JobIdValue + "&Partial=true'" : ""));
+                                Write(Html.Raw(Request["ActiveTab"] != "Inv" ? "data-loadTarget='#0ad6fb1c61054c63b5d195c55487f5b2' data-dynamicContent='/Inv/ListFromQuery?Limit=50&Ord=InvId&Clause=InvJobNo=" + Model.JobIdValue + "&Partial=true'" : ""));
 WriteLiteral(" class=\"tab-pane ");
                                                                                                                                                                                                                                                                          Write((Request["ActiveTab"] != null ? (Request["ActiveTab"] == "Inv" ? "active" :  "DynamicTab ") : "DynamicTab " ));
 WriteLiteral("\" id=\"Inv\">\r\n\t\t\t\t\t<div");
@@ -1807,7 +1807,7 @@ WriteLiteral(" >Add Invoices</a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t
                       Html.RenderPartial("~/Views/Inv_List_2.cshtml", Model.Invs);
 					} else {
 WriteLiteral("\t\t\t\t\t<div");
-WriteLiteral(" id=\"50067ce0e23c4e3691907d5717232122\"");
+WriteLiteral(" id=\"0ad6fb1c61054c63b5d195c55487f5b2\"");
 WriteLiteral(">\r\n\t\t\t\t\tLoading data...\r\n\t\t\t\t\t</div>\r\n");
 					}
 WriteLiteral("\t\t\t\t</div>\r\n");
@@ -1817,7 +1817,7 @@ WriteLiteral("\t\t\t\t\t\t\t");
 WriteLiteral("\t\t\t\t<div");
 WriteLiteral(" role=\"tabpanel\"");
 WriteLiteral(" ");
-                                Write(Html.Raw(Request["ActiveTab"] != "Orders" ? "data-loadTarget='#47d12008e43a4878b1546ac6229ea6c7' data-dynamicContent='/Orders/ListFromQuery?Limit=50&Ord=OrdId&Clause=OrdJobNo=" + Model.JobIdValue + "&Partial=true'" : ""));
+                                Write(Html.Raw(Request["ActiveTab"] != "Orders" ? "data-loadTarget='#244243983ed748198b6b95b14798aac9' data-dynamicContent='/Orders/ListFromQuery?Limit=50&Ord=OrdId&Clause=OrdJobNo=" + Model.JobIdValue + "&Partial=true'" : ""));
 WriteLiteral(" class=\"tab-pane ");
                                                                                                                                                                                                                                                                                Write((Request["ActiveTab"] != null ? (Request["ActiveTab"] == "Orders" ? "active" :  "DynamicTab ") : "DynamicTab " ));
 WriteLiteral("\" id=\"Orders\">\r\n\t\t\t\t\t<div");
@@ -1838,7 +1838,7 @@ WriteLiteral(" >Add Orders</a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t
                       Html.RenderPartial("~/Views/Orders_List_2.cshtml", Model.Orderss);
 					} else {
 WriteLiteral("\t\t\t\t\t<div");
-WriteLiteral(" id=\"47d12008e43a4878b1546ac6229ea6c7\"");
+WriteLiteral(" id=\"244243983ed748198b6b95b14798aac9\"");
 WriteLiteral(">\r\n\t\t\t\t\tLoading data...\r\n\t\t\t\t\t</div>\r\n");
 					}
 WriteLiteral("\t\t\t\t</div>\r\n");
@@ -1848,7 +1848,7 @@ WriteLiteral("\t\t\t\t\t\t\t");
 WriteLiteral("\t\t\t\t<div");
 WriteLiteral(" role=\"tabpanel\"");
 WriteLiteral(" ");
-                                Write(Html.Raw(Request["ActiveTab"] != "REDSOrder" ? "data-loadTarget='#e0c5650f2453485d8f6ef10c6ba92c53' data-dynamicContent='/REDSOrder/ListFromQuery?Limit=50&Ord=RDOrdId&Clause=RDOrdJobNo=" + Model.JobIdValue + "&Partial=true'" : ""));
+                                Write(Html.Raw(Request["ActiveTab"] != "REDSOrder" ? "data-loadTarget='#ec50531c501c4bf89f8c106669043c44' data-dynamicContent='/REDSOrder/ListFromQuery?Limit=50&Ord=RDOrdId&Clause=RDOrdJobNo=" + Model.JobIdValue + "&Partial=true'" : ""));
 WriteLiteral(" class=\"tab-pane ");
                                                                                                                                                                                                                                                                                          Write((Request["ActiveTab"] != null ? (Request["ActiveTab"] == "REDSOrder" ? "active" :  "DynamicTab ") : "DynamicTab " ));
 WriteLiteral("\" id=\"REDSOrder\">\r\n\t\t\t\t\t<div");
@@ -1869,7 +1869,7 @@ WriteLiteral(" >Add REDS Order Header</a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\
                       Html.RenderPartial("~/Views/REDSOrder_List_2.cshtml", Model.REDSOrders);
 					} else {
 WriteLiteral("\t\t\t\t\t<div");
-WriteLiteral(" id=\"e0c5650f2453485d8f6ef10c6ba92c53\"");
+WriteLiteral(" id=\"ec50531c501c4bf89f8c106669043c44\"");
 WriteLiteral(">\r\n\t\t\t\t\tLoading data...\r\n\t\t\t\t\t</div>\r\n");
 					}
 WriteLiteral("\t\t\t\t</div>\r\n");

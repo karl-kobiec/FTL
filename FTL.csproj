@@ -298,6 +298,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <None Include="Properties\PublishProfiles\FTLLocal.pubxml" />
+    <None Include="Properties\PublishProfiles\FTL_NEW.pubxml" />
     <None Include="Service References\CTrack.Membership\Membership.disco" />
     <None Include="Service References\CTrack.Membership\configuration91.svcinfo" />
     <None Include="Service References\CTrack.Membership\configuration.svcinfo" />

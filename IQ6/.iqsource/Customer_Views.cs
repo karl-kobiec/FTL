@@ -434,33 +434,52 @@ WriteAttribute("style", Tuple.Create("  style=\'", 13422), Tuple.Create("\'", 13
 , Tuple.Create(Tuple.Create("", 13537), Tuple.Create("position:absolute;font-size:12px;text-align:left;left:5px;height:21px;width:120px" +
 ";top:353px;", 13537), true)
 );
-WriteLiteral(">Rates</label>\r\n\t\t\t\t<div");
-WriteLiteral(" id=\"RichEditor-PopulateCustRates\"");
+WriteLiteral(">Rates</label>\r\n\t\t<div");
+WriteLiteral(" class=\'input-group\'");
+WriteLiteral(" data-OriginalWidth=\'400\'");
+WriteLiteral(" style=\'position: absolute; left:5px;height:146px;width:400px;top:393px;\'");
+WriteLiteral(">\t\t<textarea");
+WriteLiteral(" data-Label=\'Rates\'");
+WriteLiteral(" data-ScreenInfo=\'Customers_CustRates\'");
 WriteLiteral(" ");
-                                                   Write(Model.RecordLocked ? "data-disabled='true'" :"");
-WriteLiteral("  data-target=\"textarea[name=PopulateCustRates]\" class=\'RichEditor\' style=\'positi" +
-"on: absolute; left:5px;height:146px;width:400px;top:393px;\'>");
-                                                                                                                                                                                                                                                 Write(Html.Raw(Model.PopulateCustRates));
-WriteLiteral("</div>\r\n\t\t<textarea");
-WriteLiteral("  data-ScreenInfo=\'Customers_CustRates\'");
-                                                    Write(Model.RecordLocked || !Model.CustRates.Enabled ? "disabled=disabled" : "");
-WriteLiteral(" ");
-                                                                                                                                Write(Html.Raw(Model.RecordID.HasValue ? "onchange=\"javascript:IQAutoSave('/Customer/SaveCustRates/?RecId=" + Model.RecordID + "',$(this));\"" :"onchange=\"javascript:IQDirtyCallback('/Customer/CallbackCustRates/',$(this));\""));
-WriteLiteral("  class=\' ");
-                                                                                                                                                                                                                                                                                                                                                                          Write(!Model.CustRates.Visible ? " hide " : "");
-WriteLiteral(" form-control \' name=\'PopulateCustRates\' style=\'display:none\'>");
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  Write(Html.Raw(Model.PopulateCustRates));
-WriteLiteral("</textarea>\r\n\t\t\r\n\t\t<label");
-WriteAttribute("class", Tuple.Create(" class=\'", 14446), Tuple.Create("\'", 14516)
-, Tuple.Create(Tuple.Create("", 14454), Tuple.Create("IQLabel100131", 14454), true)
-, Tuple.Create(Tuple.Create(" ", 14467), Tuple.Create<System.Object, System.Int32>(!Model.CustPhone.LabelVisible ? " hide " : ""
-, 14468), false)
+                                                                                                                                                                                                       Write(Model.RecordLocked || !Model.CustRates.Enabled ? "disabled=disabled" : "");
+WriteLiteral("  ");
+                                                                                                                                                                                                                                                                                    Write(Html.Raw(Model.RecordID.HasValue ? "onchange=\"javascript:IQAutoSave('/Customer/SaveCustRates/?RecId=" + Model.RecordID + "',$(this));\"" :"onchange=\"javascript:IQDirtyCallback('/Customer/CallbackCustRates/',$(this));\""));
+WriteLiteral("  class=\'form-control    ");
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             Write(!Model.CustRates.Visible ? " hide " : "");
+WriteLiteral(" \' name=\'PopulateCustRates\' style=\'height:146px\'>");
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        Write(Model.PopulateCustRates);
+WriteLiteral("</textarea><div");
+WriteLiteral(" class=\"input-group-btn\"");
+WriteLiteral("><button");
+WriteLiteral(" type=\"button\"");
+WriteLiteral(" class=\"btn btn-default btn-xs dropdown-toggle\"");
+WriteLiteral(" data-toggle=\"dropdown\"");
+WriteLiteral(" aria-haspopup=\"true\"");
+WriteLiteral(" aria-expanded=\"false\"");
+WriteLiteral("><img");
+WriteLiteral(" src=\'/IQ6/popover.png\'");
+WriteLiteral(" style=\'max-height:10px;\'");
+WriteLiteral("/></button>\r\n        <ul");
+WriteLiteral(" class=\"dropdown-menu dropdown-menu-right\"");
+WriteLiteral(">\r\n\t\t\t\r\n\t\t<li><a");
+WriteLiteral(" href=\'#\'");
+WriteLiteral(" onclick=\'javascript:IQPopupEditor(this)\'");
+WriteLiteral(" data-target=\"*[name=PopulateCustRates]\"");
+WriteLiteral("><img");
+WriteLiteral(" src=\"/IQ6/fullscreen.png\"");
+WriteLiteral(" style=\'max-height:14px;float:left;\'");
+WriteLiteral(" />Full Screen Editor</a></li>\r\n\t\t\t</div></div><label");
+WriteAttribute("class", Tuple.Create(" class=\'", 14801), Tuple.Create("\'", 14871)
+, Tuple.Create(Tuple.Create("", 14809), Tuple.Create("IQLabel100131", 14809), true)
+, Tuple.Create(Tuple.Create(" ", 14822), Tuple.Create<System.Object, System.Int32>(!Model.CustPhone.LabelVisible ? " hide " : ""
+, 14823), false)
 );
-WriteAttribute("style", Tuple.Create("  style=\'", 14517), Tuple.Create("\'", 14725)
-              , Tuple.Create(Tuple.Create("", 14526), Tuple.Create<System.Object, System.Int32>(string.IsNullOrEmpty(Model.CustPhone.BackHEXColor) ? "" : "color:" + Model.CustPhone.BackHEXColor + ";"
-, 14526), false)
-, Tuple.Create(Tuple.Create("", 14632), Tuple.Create("position:absolute;font-size:12px;text-align:right;left:315px;height:21px;width:10" +
-"0px;top:3px;", 14632), true)
+WriteAttribute("style", Tuple.Create("  style=\'", 14872), Tuple.Create("\'", 15080)
+                              , Tuple.Create(Tuple.Create("", 14881), Tuple.Create<System.Object, System.Int32>(string.IsNullOrEmpty(Model.CustPhone.BackHEXColor) ? "" : "color:" + Model.CustPhone.BackHEXColor + ";"
+, 14881), false)
+, Tuple.Create(Tuple.Create("", 14987), Tuple.Create("position:absolute;font-size:12px;text-align:right;left:315px;height:21px;width:10" +
+"0px;top:3px;", 14987), true)
 );
 WriteLiteral(">Telephone</label>\r\n\t\t<div");
 WriteLiteral(" class=\'input-group\'");
@@ -498,16 +517,16 @@ WriteLiteral(";");
 WriteLiteral("\r\n");
             }
 WriteLiteral("\t\t</div></div><label");
-WriteAttribute("class", Tuple.Create(" class=\'", 15938), Tuple.Create("\'", 16006)
-, Tuple.Create(Tuple.Create("", 15946), Tuple.Create("IQLabel100132", 15946), true)
-, Tuple.Create(Tuple.Create(" ", 15959), Tuple.Create<System.Object, System.Int32>(!Model.CustFax.LabelVisible ? " hide " : ""
-, 15960), false)
+WriteAttribute("class", Tuple.Create(" class=\'", 16293), Tuple.Create("\'", 16361)
+, Tuple.Create(Tuple.Create("", 16301), Tuple.Create("IQLabel100132", 16301), true)
+, Tuple.Create(Tuple.Create(" ", 16314), Tuple.Create<System.Object, System.Int32>(!Model.CustFax.LabelVisible ? " hide " : ""
+, 16315), false)
 );
-WriteAttribute("style", Tuple.Create("  style=\'", 16007), Tuple.Create("\'", 16212)
-                        , Tuple.Create(Tuple.Create("", 16016), Tuple.Create<System.Object, System.Int32>(string.IsNullOrEmpty(Model.CustFax.BackHEXColor) ? "" : "color:" + Model.CustFax.BackHEXColor + ";"
-, 16016), false)
-, Tuple.Create(Tuple.Create("", 16118), Tuple.Create("position:absolute;font-size:12px;text-align:right;left:315px;height:21px;width:10" +
-"0px;top:28px;", 16118), true)
+WriteAttribute("style", Tuple.Create("  style=\'", 16362), Tuple.Create("\'", 16567)
+                        , Tuple.Create(Tuple.Create("", 16371), Tuple.Create<System.Object, System.Int32>(string.IsNullOrEmpty(Model.CustFax.BackHEXColor) ? "" : "color:" + Model.CustFax.BackHEXColor + ";"
+, 16371), false)
+, Tuple.Create(Tuple.Create("", 16473), Tuple.Create("position:absolute;font-size:12px;text-align:right;left:315px;height:21px;width:10" +
+"0px;top:28px;", 16473), true)
 );
 WriteLiteral(">Fax</label>\r\n\t\t<div");
 WriteLiteral(" class=\'input-group\'");
@@ -545,16 +564,16 @@ WriteLiteral(";");
 WriteLiteral("\r\n");
             }
 WriteLiteral("\t\t</div></div><label");
-WriteAttribute("class", Tuple.Create(" class=\'", 17402), Tuple.Create("\'", 17469)
-, Tuple.Create(Tuple.Create("", 17410), Tuple.Create("IQLabel100133", 17410), true)
-, Tuple.Create(Tuple.Create(" ", 17423), Tuple.Create<System.Object, System.Int32>(!Model.CustEM.LabelVisible ? " hide " : ""
-, 17424), false)
+WriteAttribute("class", Tuple.Create(" class=\'", 17757), Tuple.Create("\'", 17824)
+, Tuple.Create(Tuple.Create("", 17765), Tuple.Create("IQLabel100133", 17765), true)
+, Tuple.Create(Tuple.Create(" ", 17778), Tuple.Create<System.Object, System.Int32>(!Model.CustEM.LabelVisible ? " hide " : ""
+, 17779), false)
 );
-WriteAttribute("style", Tuple.Create("  style=\'", 17470), Tuple.Create("\'", 17673)
-                       , Tuple.Create(Tuple.Create("", 17479), Tuple.Create<System.Object, System.Int32>(string.IsNullOrEmpty(Model.CustEM.BackHEXColor) ? "" : "color:" + Model.CustEM.BackHEXColor + ";"
-, 17479), false)
-, Tuple.Create(Tuple.Create("", 17579), Tuple.Create("position:absolute;font-size:12px;text-align:right;left:315px;height:21px;width:10" +
-"0px;top:53px;", 17579), true)
+WriteAttribute("style", Tuple.Create("  style=\'", 17825), Tuple.Create("\'", 18028)
+                       , Tuple.Create(Tuple.Create("", 17834), Tuple.Create<System.Object, System.Int32>(string.IsNullOrEmpty(Model.CustEM.BackHEXColor) ? "" : "color:" + Model.CustEM.BackHEXColor + ";"
+, 17834), false)
+, Tuple.Create(Tuple.Create("", 17934), Tuple.Create("position:absolute;font-size:12px;text-align:right;left:315px;height:21px;width:10" +
+"0px;top:53px;", 17934), true)
 );
 WriteLiteral(">EMail</label>\r\n\t\t<div");
 WriteLiteral(" class=\'input-group\'");
@@ -592,16 +611,16 @@ WriteLiteral("><img");
 WriteLiteral(" src=\"/IQ6/email.png\"");
 WriteLiteral(" style=\'max-height:14px;float:left;\'");
 WriteLiteral(" />Send Email</a></li>\r\n\t\t</div></div><label");
-WriteAttribute("class", Tuple.Create(" class=\'", 18838), Tuple.Create("\'", 18906)
-, Tuple.Create(Tuple.Create("", 18846), Tuple.Create("IQLabel100134", 18846), true)
-, Tuple.Create(Tuple.Create(" ", 18859), Tuple.Create<System.Object, System.Int32>(!Model.CustEM2.LabelVisible ? " hide " : ""
-, 18860), false)
+WriteAttribute("class", Tuple.Create(" class=\'", 19193), Tuple.Create("\'", 19261)
+, Tuple.Create(Tuple.Create("", 19201), Tuple.Create("IQLabel100134", 19201), true)
+, Tuple.Create(Tuple.Create(" ", 19214), Tuple.Create<System.Object, System.Int32>(!Model.CustEM2.LabelVisible ? " hide " : ""
+, 19215), false)
 );
-WriteAttribute("style", Tuple.Create("  style=\'", 18907), Tuple.Create("\'", 19112)
-                        , Tuple.Create(Tuple.Create("", 18916), Tuple.Create<System.Object, System.Int32>(string.IsNullOrEmpty(Model.CustEM2.BackHEXColor) ? "" : "color:" + Model.CustEM2.BackHEXColor + ";"
-, 18916), false)
-, Tuple.Create(Tuple.Create("", 19018), Tuple.Create("position:absolute;font-size:12px;text-align:right;left:315px;height:21px;width:10" +
-"0px;top:78px;", 19018), true)
+WriteAttribute("style", Tuple.Create("  style=\'", 19262), Tuple.Create("\'", 19467)
+                        , Tuple.Create(Tuple.Create("", 19271), Tuple.Create<System.Object, System.Int32>(string.IsNullOrEmpty(Model.CustEM2.BackHEXColor) ? "" : "color:" + Model.CustEM2.BackHEXColor + ";"
+, 19271), false)
+, Tuple.Create(Tuple.Create("", 19373), Tuple.Create("position:absolute;font-size:12px;text-align:right;left:315px;height:21px;width:10" +
+"0px;top:78px;", 19373), true)
 );
 WriteLiteral(">E-Mail 2</label>\r\n\t\t<div");
 WriteLiteral(" class=\'input-group\'");
@@ -639,16 +658,16 @@ WriteLiteral("><img");
 WriteLiteral(" src=\"/IQ6/email.png\"");
 WriteLiteral(" style=\'max-height:14px;float:left;\'");
 WriteLiteral(" />Send Email</a></li>\r\n\t\t</div></div><label");
-WriteAttribute("class", Tuple.Create(" class=\'", 20288), Tuple.Create("\'", 20356)
-, Tuple.Create(Tuple.Create("", 20296), Tuple.Create("IQLabel100135", 20296), true)
-, Tuple.Create(Tuple.Create(" ", 20309), Tuple.Create<System.Object, System.Int32>(!Model.CustEM3.LabelVisible ? " hide " : ""
-, 20310), false)
+WriteAttribute("class", Tuple.Create(" class=\'", 20643), Tuple.Create("\'", 20711)
+, Tuple.Create(Tuple.Create("", 20651), Tuple.Create("IQLabel100135", 20651), true)
+, Tuple.Create(Tuple.Create(" ", 20664), Tuple.Create<System.Object, System.Int32>(!Model.CustEM3.LabelVisible ? " hide " : ""
+, 20665), false)
 );
-WriteAttribute("style", Tuple.Create("  style=\'", 20357), Tuple.Create("\'", 20563)
-                        , Tuple.Create(Tuple.Create("", 20366), Tuple.Create<System.Object, System.Int32>(string.IsNullOrEmpty(Model.CustEM3.BackHEXColor) ? "" : "color:" + Model.CustEM3.BackHEXColor + ";"
-, 20366), false)
-, Tuple.Create(Tuple.Create("", 20468), Tuple.Create("position:absolute;font-size:12px;text-align:right;left:315px;height:21px;width:10" +
-"0px;top:103px;", 20468), true)
+WriteAttribute("style", Tuple.Create("  style=\'", 20712), Tuple.Create("\'", 20918)
+                        , Tuple.Create(Tuple.Create("", 20721), Tuple.Create<System.Object, System.Int32>(string.IsNullOrEmpty(Model.CustEM3.BackHEXColor) ? "" : "color:" + Model.CustEM3.BackHEXColor + ";"
+, 20721), false)
+, Tuple.Create(Tuple.Create("", 20823), Tuple.Create("position:absolute;font-size:12px;text-align:right;left:315px;height:21px;width:10" +
+"0px;top:103px;", 20823), true)
 );
 WriteLiteral(">E-Mail 3</label>\r\n\t\t<div");
 WriteLiteral(" class=\'input-group\'");
@@ -686,16 +705,16 @@ WriteLiteral("><img");
 WriteLiteral(" src=\"/IQ6/email.png\"");
 WriteLiteral(" style=\'max-height:14px;float:left;\'");
 WriteLiteral(" />Send Email</a></li>\r\n\t\t</div></div><label");
-WriteAttribute("class", Tuple.Create(" class=\'", 21740), Tuple.Create("\'", 21808)
-, Tuple.Create(Tuple.Create("", 21748), Tuple.Create("IQLabel100136", 21748), true)
-, Tuple.Create(Tuple.Create(" ", 21761), Tuple.Create<System.Object, System.Int32>(!Model.CustEM4.LabelVisible ? " hide " : ""
-, 21762), false)
+WriteAttribute("class", Tuple.Create(" class=\'", 22095), Tuple.Create("\'", 22163)
+, Tuple.Create(Tuple.Create("", 22103), Tuple.Create("IQLabel100136", 22103), true)
+, Tuple.Create(Tuple.Create(" ", 22116), Tuple.Create<System.Object, System.Int32>(!Model.CustEM4.LabelVisible ? " hide " : ""
+, 22117), false)
 );
-WriteAttribute("style", Tuple.Create("  style=\'", 21809), Tuple.Create("\'", 22015)
-                        , Tuple.Create(Tuple.Create("", 21818), Tuple.Create<System.Object, System.Int32>(string.IsNullOrEmpty(Model.CustEM4.BackHEXColor) ? "" : "color:" + Model.CustEM4.BackHEXColor + ";"
-, 21818), false)
-, Tuple.Create(Tuple.Create("", 21920), Tuple.Create("position:absolute;font-size:12px;text-align:right;left:315px;height:21px;width:10" +
-"0px;top:128px;", 21920), true)
+WriteAttribute("style", Tuple.Create("  style=\'", 22164), Tuple.Create("\'", 22370)
+                        , Tuple.Create(Tuple.Create("", 22173), Tuple.Create<System.Object, System.Int32>(string.IsNullOrEmpty(Model.CustEM4.BackHEXColor) ? "" : "color:" + Model.CustEM4.BackHEXColor + ";"
+, 22173), false)
+, Tuple.Create(Tuple.Create("", 22275), Tuple.Create("position:absolute;font-size:12px;text-align:right;left:315px;height:21px;width:10" +
+"0px;top:128px;", 22275), true)
 );
 WriteLiteral(">E-Mail 4</label>\r\n\t\t<div");
 WriteLiteral(" class=\'input-group\'");
@@ -733,16 +752,16 @@ WriteLiteral("><img");
 WriteLiteral(" src=\"/IQ6/email.png\"");
 WriteLiteral(" style=\'max-height:14px;float:left;\'");
 WriteLiteral(" />Send Email</a></li>\r\n\t\t</div></div><label");
-WriteAttribute("class", Tuple.Create(" class=\'", 23192), Tuple.Create("\'", 23262)
-, Tuple.Create(Tuple.Create("", 23200), Tuple.Create("IQLabel100137", 23200), true)
-, Tuple.Create(Tuple.Create(" ", 23213), Tuple.Create<System.Object, System.Int32>(!Model.CustVATNo.LabelVisible ? " hide " : ""
-, 23214), false)
+WriteAttribute("class", Tuple.Create(" class=\'", 23547), Tuple.Create("\'", 23617)
+, Tuple.Create(Tuple.Create("", 23555), Tuple.Create("IQLabel100137", 23555), true)
+, Tuple.Create(Tuple.Create(" ", 23568), Tuple.Create<System.Object, System.Int32>(!Model.CustVATNo.LabelVisible ? " hide " : ""
+, 23569), false)
 );
-WriteAttribute("style", Tuple.Create("  style=\'", 23263), Tuple.Create("\'", 23473)
-                          , Tuple.Create(Tuple.Create("", 23272), Tuple.Create<System.Object, System.Int32>(string.IsNullOrEmpty(Model.CustVATNo.BackHEXColor) ? "" : "color:" + Model.CustVATNo.BackHEXColor + ";"
-, 23272), false)
-, Tuple.Create(Tuple.Create("", 23378), Tuple.Create("position:absolute;font-size:12px;text-align:right;left:315px;height:21px;width:10" +
-"0px;top:153px;", 23378), true)
+WriteAttribute("style", Tuple.Create("  style=\'", 23618), Tuple.Create("\'", 23828)
+                          , Tuple.Create(Tuple.Create("", 23627), Tuple.Create<System.Object, System.Int32>(string.IsNullOrEmpty(Model.CustVATNo.BackHEXColor) ? "" : "color:" + Model.CustVATNo.BackHEXColor + ";"
+, 23627), false)
+, Tuple.Create(Tuple.Create("", 23733), Tuple.Create("position:absolute;font-size:12px;text-align:right;left:315px;height:21px;width:10" +
+"0px;top:153px;", 23733), true)
 );
 WriteLiteral(">VAT Number</label>\r\n\t\t<input");
 WriteLiteral(" data-ScreenInfo=\'Customers_CustVATNo\'");
@@ -756,16 +775,16 @@ WriteLiteral(" type=\'text\' name=\'PopulateCustVATNo\' value=\'");
                                                                                                                                                                                                                                                                                                                                                                                                                                Write(Model.CustVATNo.ValueFormatted);
 WriteLiteral("\' style=\'position: absolute; left:420px;height:21px;width:160px;top:153px;\'/><lab" +
 "el");
-WriteAttribute("class", Tuple.Create(" class=\'", 24072), Tuple.Create("\'", 24142)
-, Tuple.Create(Tuple.Create("", 24080), Tuple.Create("IQLabel100138", 24080), true)
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           , Tuple.Create(Tuple.Create(" ", 24093), Tuple.Create<System.Object, System.Int32>(!Model.CustDANNo.LabelVisible ? " hide " : ""
-, 24094), false)
+WriteAttribute("class", Tuple.Create(" class=\'", 24427), Tuple.Create("\'", 24497)
+, Tuple.Create(Tuple.Create("", 24435), Tuple.Create("IQLabel100138", 24435), true)
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           , Tuple.Create(Tuple.Create(" ", 24448), Tuple.Create<System.Object, System.Int32>(!Model.CustDANNo.LabelVisible ? " hide " : ""
+, 24449), false)
 );
-WriteAttribute("style", Tuple.Create("  style=\'", 24143), Tuple.Create("\'", 24353)
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      , Tuple.Create(Tuple.Create("", 24152), Tuple.Create<System.Object, System.Int32>(string.IsNullOrEmpty(Model.CustDANNo.BackHEXColor) ? "" : "color:" + Model.CustDANNo.BackHEXColor + ";"
-, 24152), false)
-, Tuple.Create(Tuple.Create("", 24258), Tuple.Create("position:absolute;font-size:12px;text-align:right;left:315px;height:21px;width:10" +
-"0px;top:178px;", 24258), true)
+WriteAttribute("style", Tuple.Create("  style=\'", 24498), Tuple.Create("\'", 24708)
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      , Tuple.Create(Tuple.Create("", 24507), Tuple.Create<System.Object, System.Int32>(string.IsNullOrEmpty(Model.CustDANNo.BackHEXColor) ? "" : "color:" + Model.CustDANNo.BackHEXColor + ";"
+, 24507), false)
+, Tuple.Create(Tuple.Create("", 24613), Tuple.Create("position:absolute;font-size:12px;text-align:right;left:315px;height:21px;width:10" +
+"0px;top:178px;", 24613), true)
 );
 WriteLiteral(">DAN Number</label>\r\n\t\t<input");
 WriteLiteral(" data-ScreenInfo=\'Customers_CustDANNo\'");
@@ -779,16 +798,16 @@ WriteLiteral(" type=\'text\' name=\'PopulateCustDANNo\' value=\'");
                                                                                                                                                                                                                                                                                                                                                                                                                                Write(Model.CustDANNo.ValueFormatted);
 WriteLiteral("\' style=\'position: absolute; left:420px;height:21px;width:160px;top:178px;\'/><lab" +
 "el");
-WriteAttribute("class", Tuple.Create(" class=\'", 24952), Tuple.Create("\'", 25021)
-, Tuple.Create(Tuple.Create("", 24960), Tuple.Create("IQLabel100139", 24960), true)
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           , Tuple.Create(Tuple.Create(" ", 24973), Tuple.Create<System.Object, System.Int32>(!Model.CustGBWK.LabelVisible ? " hide " : ""
-, 24974), false)
+WriteAttribute("class", Tuple.Create(" class=\'", 25307), Tuple.Create("\'", 25376)
+, Tuple.Create(Tuple.Create("", 25315), Tuple.Create("IQLabel100139", 25315), true)
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           , Tuple.Create(Tuple.Create(" ", 25328), Tuple.Create<System.Object, System.Int32>(!Model.CustGBWK.LabelVisible ? " hide " : ""
+, 25329), false)
 );
-WriteAttribute("style", Tuple.Create("  style=\'", 25022), Tuple.Create("\'", 25230)
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     , Tuple.Create(Tuple.Create("", 25031), Tuple.Create<System.Object, System.Int32>(string.IsNullOrEmpty(Model.CustGBWK.BackHEXColor) ? "" : "color:" + Model.CustGBWK.BackHEXColor + ";"
-, 25031), false)
-, Tuple.Create(Tuple.Create("", 25135), Tuple.Create("position:absolute;font-size:12px;text-align:right;left:315px;height:21px;width:10" +
-"0px;top:203px;", 25135), true)
+WriteAttribute("style", Tuple.Create("  style=\'", 25377), Tuple.Create("\'", 25585)
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     , Tuple.Create(Tuple.Create("", 25386), Tuple.Create<System.Object, System.Int32>(string.IsNullOrEmpty(Model.CustGBWK.BackHEXColor) ? "" : "color:" + Model.CustGBWK.BackHEXColor + ";"
+, 25386), false)
+, Tuple.Create(Tuple.Create("", 25490), Tuple.Create("position:absolute;font-size:12px;text-align:right;left:315px;height:21px;width:10" +
+"0px;top:203px;", 25490), true)
 );
 WriteLiteral(">GBWK</label>\r\n\t\t<input");
 WriteLiteral(" data-ScreenInfo=\'Customers_CustGBWK\'");
@@ -802,16 +821,16 @@ WriteLiteral(" type=\'text\' name=\'PopulateCustGBWK\' value=\'");
                                                                                                                                                                                                                                                                                                                                                                                                                           Write(Model.CustGBWK.ValueFormatted);
 WriteLiteral("\' style=\'position: absolute; left:420px;height:21px;width:160px;top:203px;\'/><lab" +
 "el");
-WriteAttribute("class", Tuple.Create(" class=\'", 25816), Tuple.Create("\'", 25889)
-, Tuple.Create(Tuple.Create("", 25824), Tuple.Create("IQLabel100140", 25824), true)
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     , Tuple.Create(Tuple.Create(" ", 25837), Tuple.Create<System.Object, System.Int32>(!Model.CustBondCode.LabelVisible ? " hide " : ""
-, 25838), false)
+WriteAttribute("class", Tuple.Create(" class=\'", 26171), Tuple.Create("\'", 26244)
+, Tuple.Create(Tuple.Create("", 26179), Tuple.Create("IQLabel100140", 26179), true)
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     , Tuple.Create(Tuple.Create(" ", 26192), Tuple.Create<System.Object, System.Int32>(!Model.CustBondCode.LabelVisible ? " hide " : ""
+, 26193), false)
 );
-WriteAttribute("style", Tuple.Create("  style=\'", 25890), Tuple.Create("\'", 26106)
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   , Tuple.Create(Tuple.Create("", 25899), Tuple.Create<System.Object, System.Int32>(string.IsNullOrEmpty(Model.CustBondCode.BackHEXColor) ? "" : "color:" + Model.CustBondCode.BackHEXColor + ";"
-, 25899), false)
-, Tuple.Create(Tuple.Create("", 26011), Tuple.Create("position:absolute;font-size:12px;text-align:right;left:295px;height:21px;width:12" +
-"0px;top:228px;", 26011), true)
+WriteAttribute("style", Tuple.Create("  style=\'", 26245), Tuple.Create("\'", 26461)
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   , Tuple.Create(Tuple.Create("", 26254), Tuple.Create<System.Object, System.Int32>(string.IsNullOrEmpty(Model.CustBondCode.BackHEXColor) ? "" : "color:" + Model.CustBondCode.BackHEXColor + ";"
+, 26254), false)
+, Tuple.Create(Tuple.Create("", 26366), Tuple.Create("position:absolute;font-size:12px;text-align:right;left:295px;height:21px;width:12" +
+"0px;top:228px;", 26366), true)
 );
 WriteLiteral(">REDS / Bond Code</label>\r\n\t\t<input");
 WriteLiteral(" data-ScreenInfo=\'Customers_CustBondCode\'");
@@ -825,16 +844,16 @@ WriteLiteral(" type=\'text\' name=\'PopulateCustBondCode\' value=\'");
                                                                                                                                                                                                                                                                                                                                                                                                                                               Write(Model.CustBondCode.ValueFormatted);
 WriteLiteral("\' style=\'position: absolute; left:420px;height:21px;width:160px;top:228px;\'/><lab" +
 "el");
-WriteAttribute("class", Tuple.Create(" class=\'", 26732), Tuple.Create("\'", 26803)
-, Tuple.Create(Tuple.Create("", 26740), Tuple.Create("IQLabel100142", 26740), true)
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             , Tuple.Create(Tuple.Create(" ", 26753), Tuple.Create<System.Object, System.Int32>(!Model.CustCrdScr.LabelVisible ? " hide " : ""
-, 26754), false)
+WriteAttribute("class", Tuple.Create(" class=\'", 27087), Tuple.Create("\'", 27158)
+, Tuple.Create(Tuple.Create("", 27095), Tuple.Create("IQLabel100142", 27095), true)
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             , Tuple.Create(Tuple.Create(" ", 27108), Tuple.Create<System.Object, System.Int32>(!Model.CustCrdScr.LabelVisible ? " hide " : ""
+, 27109), false)
 );
-WriteAttribute("style", Tuple.Create("  style=\'", 26804), Tuple.Create("\'", 27016)
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         , Tuple.Create(Tuple.Create("", 26813), Tuple.Create<System.Object, System.Int32>(string.IsNullOrEmpty(Model.CustCrdScr.BackHEXColor) ? "" : "color:" + Model.CustCrdScr.BackHEXColor + ";"
-, 26813), false)
-, Tuple.Create(Tuple.Create("", 26921), Tuple.Create("position:absolute;font-size:12px;text-align:right;left:295px;height:21px;width:12" +
-"0px;top:278px;", 26921), true)
+WriteAttribute("style", Tuple.Create("  style=\'", 27159), Tuple.Create("\'", 27371)
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         , Tuple.Create(Tuple.Create("", 27168), Tuple.Create<System.Object, System.Int32>(string.IsNullOrEmpty(Model.CustCrdScr.BackHEXColor) ? "" : "color:" + Model.CustCrdScr.BackHEXColor + ";"
+, 27168), false)
+, Tuple.Create(Tuple.Create("", 27276), Tuple.Create("position:absolute;font-size:12px;text-align:right;left:295px;height:21px;width:12" +
+"0px;top:278px;", 27276), true)
 );
 WriteLiteral(">Credit Score</label>\r\n\t\t<div");
 WriteLiteral(" class=\'input-group\'");
@@ -872,16 +891,16 @@ WriteLiteral("><img");
 WriteLiteral(" src=\"/IQ6/fullscreen.png\"");
 WriteLiteral(" style=\'max-height:14px;float:left;\'");
 WriteLiteral(" />Full Screen Editor</a></li>\r\n\t\t\t</div></div><label");
-WriteAttribute("class", Tuple.Create(" class=\'", 28210), Tuple.Create("\'", 28283)
-, Tuple.Create(Tuple.Create("", 28218), Tuple.Create("IQLabel100144", 28218), true)
-, Tuple.Create(Tuple.Create(" ", 28231), Tuple.Create<System.Object, System.Int32>(!Model.CustGenNotes.LabelVisible ? " hide " : ""
-, 28232), false)
+WriteAttribute("class", Tuple.Create(" class=\'", 28565), Tuple.Create("\'", 28638)
+, Tuple.Create(Tuple.Create("", 28573), Tuple.Create("IQLabel100144", 28573), true)
+, Tuple.Create(Tuple.Create(" ", 28586), Tuple.Create<System.Object, System.Int32>(!Model.CustGenNotes.LabelVisible ? " hide " : ""
+, 28587), false)
 );
-WriteAttribute("style", Tuple.Create("  style=\'", 28284), Tuple.Create("\'", 28499)
-                                 , Tuple.Create(Tuple.Create("", 28293), Tuple.Create<System.Object, System.Int32>(string.IsNullOrEmpty(Model.CustGenNotes.BackHEXColor) ? "" : "color:" + Model.CustGenNotes.BackHEXColor + ";"
-, 28293), false)
-, Tuple.Create(Tuple.Create("", 28405), Tuple.Create("position:absolute;font-size:12px;text-align:left;left:410px;height:21px;width:120" +
-"px;top:353px;", 28405), true)
+WriteAttribute("style", Tuple.Create("  style=\'", 28639), Tuple.Create("\'", 28854)
+                                 , Tuple.Create(Tuple.Create("", 28648), Tuple.Create<System.Object, System.Int32>(string.IsNullOrEmpty(Model.CustGenNotes.BackHEXColor) ? "" : "color:" + Model.CustGenNotes.BackHEXColor + ";"
+, 28648), false)
+, Tuple.Create(Tuple.Create("", 28760), Tuple.Create("position:absolute;font-size:12px;text-align:left;left:410px;height:21px;width:120" +
+"px;top:353px;", 28760), true)
 );
 WriteLiteral(">General Notes</label>\r\n\t\t<div");
 WriteLiteral(" class=\'input-group\'");
@@ -919,16 +938,16 @@ WriteLiteral("><img");
 WriteLiteral(" src=\"/IQ6/fullscreen.png\"");
 WriteLiteral(" style=\'max-height:14px;float:left;\'");
 WriteLiteral(" />Full Screen Editor</a></li>\r\n\t\t\t</div></div><label");
-WriteAttribute("class", Tuple.Create(" class=\'", 29713), Tuple.Create("\'", 29782)
-, Tuple.Create(Tuple.Create("", 29721), Tuple.Create("IQLabel100151", 29721), true)
-, Tuple.Create(Tuple.Create(" ", 29734), Tuple.Create<System.Object, System.Int32>(!Model.CustLang.LabelVisible ? " hide " : ""
-, 29735), false)
+WriteAttribute("class", Tuple.Create(" class=\'", 30068), Tuple.Create("\'", 30137)
+, Tuple.Create(Tuple.Create("", 30076), Tuple.Create("IQLabel100151", 30076), true)
+, Tuple.Create(Tuple.Create(" ", 30089), Tuple.Create<System.Object, System.Int32>(!Model.CustLang.LabelVisible ? " hide " : ""
+, 30090), false)
 );
-WriteAttribute("style", Tuple.Create("  style=\'", 29783), Tuple.Create("\'", 29990)
-                             , Tuple.Create(Tuple.Create("", 29792), Tuple.Create<System.Object, System.Int32>(string.IsNullOrEmpty(Model.CustLang.BackHEXColor) ? "" : "color:" + Model.CustLang.BackHEXColor + ";"
-, 29792), false)
-, Tuple.Create(Tuple.Create("", 29896), Tuple.Create("position:absolute;font-size:12px;text-align:right;left:665px;height:21px;width:11" +
-"0px;top:28px;", 29896), true)
+WriteAttribute("style", Tuple.Create("  style=\'", 30138), Tuple.Create("\'", 30345)
+                             , Tuple.Create(Tuple.Create("", 30147), Tuple.Create<System.Object, System.Int32>(string.IsNullOrEmpty(Model.CustLang.BackHEXColor) ? "" : "color:" + Model.CustLang.BackHEXColor + ";"
+, 30147), false)
+, Tuple.Create(Tuple.Create("", 30251), Tuple.Create("position:absolute;font-size:12px;text-align:right;left:665px;height:21px;width:11" +
+"0px;top:28px;", 30251), true)
 );
 WriteLiteral(">Language</label>\r\n\t\t<select");
 WriteLiteral(" data-ScreenInfo=\'Customers_CustLang\'");
@@ -942,9 +961,9 @@ WriteLiteral("   name=\'PopulateCustLang\'  style=\'position: absolute; left:780
 "th:160px;top:28px;\'>\r\n");
              foreach(var itm in Model.CustLang.Data) {
 WriteLiteral("\t\t\t\t<option");
-WriteAttribute("value", Tuple.Create(" value=\'", 30587), Tuple.Create("\'", 30608)
-, Tuple.Create(Tuple.Create("", 30595), Tuple.Create<System.Object, System.Int32>(itm.KeyValue
-, 30595), false)
+WriteAttribute("value", Tuple.Create(" value=\'", 30942), Tuple.Create("\'", 30963)
+, Tuple.Create(Tuple.Create("", 30950), Tuple.Create<System.Object, System.Int32>(itm.KeyValue
+, 30950), false)
 );
 WriteLiteral(" ");
                                           Write(itm.KeyValue == Model.PopulateCustLang.ToString() ? "selected=selected" : "");
@@ -953,16 +972,16 @@ WriteLiteral(">");
 WriteLiteral("</option>\r\n");
 			}
 WriteLiteral("\t\t</select><label");
-WriteAttribute("class", Tuple.Create(" class=\'", 30740), Tuple.Create("\'", 30809)
-, Tuple.Create(Tuple.Create("", 30748), Tuple.Create("IQLabel100152", 30748), true)
-, Tuple.Create(Tuple.Create(" ", 30761), Tuple.Create<System.Object, System.Int32>(!Model.CustCurr.LabelVisible ? " hide " : ""
-, 30762), false)
+WriteAttribute("class", Tuple.Create(" class=\'", 31095), Tuple.Create("\'", 31164)
+, Tuple.Create(Tuple.Create("", 31103), Tuple.Create("IQLabel100152", 31103), true)
+, Tuple.Create(Tuple.Create(" ", 31116), Tuple.Create<System.Object, System.Int32>(!Model.CustCurr.LabelVisible ? " hide " : ""
+, 31117), false)
 );
-WriteAttribute("style", Tuple.Create("  style=\'", 30810), Tuple.Create("\'", 31017)
-                      , Tuple.Create(Tuple.Create("", 30819), Tuple.Create<System.Object, System.Int32>(string.IsNullOrEmpty(Model.CustCurr.BackHEXColor) ? "" : "color:" + Model.CustCurr.BackHEXColor + ";"
-, 30819), false)
-, Tuple.Create(Tuple.Create("", 30923), Tuple.Create("position:absolute;font-size:12px;text-align:right;left:665px;height:21px;width:11" +
-"0px;top:53px;", 30923), true)
+WriteAttribute("style", Tuple.Create("  style=\'", 31165), Tuple.Create("\'", 31372)
+                      , Tuple.Create(Tuple.Create("", 31174), Tuple.Create<System.Object, System.Int32>(string.IsNullOrEmpty(Model.CustCurr.BackHEXColor) ? "" : "color:" + Model.CustCurr.BackHEXColor + ";"
+, 31174), false)
+, Tuple.Create(Tuple.Create("", 31278), Tuple.Create("position:absolute;font-size:12px;text-align:right;left:665px;height:21px;width:11" +
+"0px;top:53px;", 31278), true)
 );
 WriteLiteral(">Currency</label>\r\n\t\t<select");
 WriteLiteral(" data-ScreenInfo=\'Customers_CustCurr\'");
@@ -976,9 +995,9 @@ WriteLiteral("   name=\'PopulateCustCurr\'  style=\'position: absolute; left:780
 "th:160px;top:53px;\'>\r\n");
              foreach(var itm in Model.CustCurr.Data) {
 WriteLiteral("\t\t\t\t<option");
-WriteAttribute("value", Tuple.Create(" value=\'", 31614), Tuple.Create("\'", 31635)
-, Tuple.Create(Tuple.Create("", 31622), Tuple.Create<System.Object, System.Int32>(itm.KeyValue
-, 31622), false)
+WriteAttribute("value", Tuple.Create(" value=\'", 31969), Tuple.Create("\'", 31990)
+, Tuple.Create(Tuple.Create("", 31977), Tuple.Create<System.Object, System.Int32>(itm.KeyValue
+, 31977), false)
 );
 WriteLiteral(" ");
                                           Write(itm.KeyValue == Model.PopulateCustCurr.ToString() ? "selected=selected" : "");
@@ -987,16 +1006,16 @@ WriteLiteral(">");
 WriteLiteral("</option>\r\n");
 			}
 WriteLiteral("\t\t</select><label");
-WriteAttribute("class", Tuple.Create(" class=\'", 31767), Tuple.Create("\'", 31839)
-, Tuple.Create(Tuple.Create("", 31775), Tuple.Create("IQLabel100153", 31775), true)
-, Tuple.Create(Tuple.Create(" ", 31788), Tuple.Create<System.Object, System.Int32>(!Model.CustDelZone.LabelVisible ? " hide " : ""
-, 31789), false)
+WriteAttribute("class", Tuple.Create(" class=\'", 32122), Tuple.Create("\'", 32194)
+, Tuple.Create(Tuple.Create("", 32130), Tuple.Create("IQLabel100153", 32130), true)
+, Tuple.Create(Tuple.Create(" ", 32143), Tuple.Create<System.Object, System.Int32>(!Model.CustDelZone.LabelVisible ? " hide " : ""
+, 32144), false)
 );
-WriteAttribute("style", Tuple.Create("  style=\'", 31840), Tuple.Create("\'", 32053)
-                         , Tuple.Create(Tuple.Create("", 31849), Tuple.Create<System.Object, System.Int32>(string.IsNullOrEmpty(Model.CustDelZone.BackHEXColor) ? "" : "color:" + Model.CustDelZone.BackHEXColor + ";"
-, 31849), false)
-, Tuple.Create(Tuple.Create("", 31959), Tuple.Create("position:absolute;font-size:12px;text-align:right;left:665px;height:21px;width:11" +
-"0px;top:78px;", 31959), true)
+WriteAttribute("style", Tuple.Create("  style=\'", 32195), Tuple.Create("\'", 32408)
+                         , Tuple.Create(Tuple.Create("", 32204), Tuple.Create<System.Object, System.Int32>(string.IsNullOrEmpty(Model.CustDelZone.BackHEXColor) ? "" : "color:" + Model.CustDelZone.BackHEXColor + ";"
+, 32204), false)
+, Tuple.Create(Tuple.Create("", 32314), Tuple.Create("position:absolute;font-size:12px;text-align:right;left:665px;height:21px;width:11" +
+"0px;top:78px;", 32314), true)
 );
 WriteLiteral(">Delivery Zone</label>\r\n\t\t<div");
 WriteLiteral(" class=\'input-group\'");
@@ -1013,9 +1032,9 @@ WriteLiteral("\'  ");
 WriteLiteral("   name=\'PopulateCustDelZone\'  style=\'height:21px\'>\r\n");
              foreach(var itm in Model.CustDelZone.Data) {
 WriteLiteral("\t\t\t\t<option");
-WriteAttribute("value", Tuple.Create(" value=\'", 32746), Tuple.Create("\'", 32767)
-, Tuple.Create(Tuple.Create("", 32754), Tuple.Create<System.Object, System.Int32>(itm.KeyValue
-, 32754), false)
+WriteAttribute("value", Tuple.Create(" value=\'", 33101), Tuple.Create("\'", 33122)
+, Tuple.Create(Tuple.Create("", 33109), Tuple.Create<System.Object, System.Int32>(itm.KeyValue
+, 33109), false)
 );
 WriteLiteral(" ");
                                           Write(itm.KeyValue == Model.PopulateCustDelZone.ToString() ? "selected=selected" : "");
@@ -1052,22 +1071,22 @@ WriteLiteral("><img");
 WriteLiteral(" src=\"/IQ6/viewrecord.png\"");
 WriteLiteral(" style=\'max-height:14px;\'");
 WriteLiteral(" />View All Delivery Zones</a></li>\r\n\t\t</div></div><label");
-WriteAttribute("class", Tuple.Create(" class=\'", 33659), Tuple.Create("\'", 33734)
-, Tuple.Create(Tuple.Create("", 33667), Tuple.Create("IQLabel100154", 33667), true)
-, Tuple.Create(Tuple.Create(" ", 33680), Tuple.Create<System.Object, System.Int32>(!Model.CustSendStatus.LabelVisible ? " hide " : ""
-, 33681), false)
+WriteAttribute("class", Tuple.Create(" class=\'", 34014), Tuple.Create("\'", 34089)
+, Tuple.Create(Tuple.Create("", 34022), Tuple.Create("IQLabel100154", 34022), true)
+, Tuple.Create(Tuple.Create(" ", 34035), Tuple.Create<System.Object, System.Int32>(!Model.CustSendStatus.LabelVisible ? " hide " : ""
+, 34036), false)
 );
-WriteAttribute("style", Tuple.Create("  style=\'", 33735), Tuple.Create("\'", 33955)
-                               , Tuple.Create(Tuple.Create("", 33744), Tuple.Create<System.Object, System.Int32>(string.IsNullOrEmpty(Model.CustSendStatus.BackHEXColor) ? "" : "color:" + Model.CustSendStatus.BackHEXColor + ";"
-, 33744), false)
-, Tuple.Create(Tuple.Create("", 33860), Tuple.Create("position:absolute;font-size:12px;text-align:right;left:665px;height:21px;width:11" +
-"0px;top:103px;", 33860), true)
+WriteAttribute("style", Tuple.Create("  style=\'", 34090), Tuple.Create("\'", 34310)
+                               , Tuple.Create(Tuple.Create("", 34099), Tuple.Create<System.Object, System.Int32>(string.IsNullOrEmpty(Model.CustSendStatus.BackHEXColor) ? "" : "color:" + Model.CustSendStatus.BackHEXColor + ";"
+, 34099), false)
+, Tuple.Create(Tuple.Create("", 34215), Tuple.Create("position:absolute;font-size:12px;text-align:right;left:665px;height:21px;width:11" +
+"0px;top:103px;", 34215), true)
 );
 WriteLiteral(">Send Status</label>\r\n\t\t\t\t\t\r\n\t\t<input");
 WriteLiteral(" data-ScreenInfo=\'Customers_CustSendStatus\'");
-WriteAttribute("class", Tuple.Create(" class=\'", 34036), Tuple.Create("\'", 34094)
-, Tuple.Create(Tuple.Create("  ", 34044), Tuple.Create<System.Object, System.Int32>(!Model.CustSendStatus.Visible ? " hide " : ""
-, 34046), false)
+WriteAttribute("class", Tuple.Create(" class=\'", 34391), Tuple.Create("\'", 34449)
+, Tuple.Create(Tuple.Create("  ", 34399), Tuple.Create<System.Object, System.Int32>(!Model.CustSendStatus.Visible ? " hide " : ""
+, 34401), false)
 );
 WriteLiteral(" ");
                                                                                                                  Write(Model.RecordLocked || !Model.CustSendStatus.Enabled ? "disabled=disabled" : "");
@@ -1083,16 +1102,16 @@ WriteLiteral(" value=\'false\'");
 WriteLiteral(" ");
                                                                      Write(!Model.PopulateCustSendStatus ? "checked=checked" : "");
 WriteLiteral(" />\r\n\t\t<label");
-WriteAttribute("class", Tuple.Create(" class=\'", 34752), Tuple.Create("\'", 34825)
-, Tuple.Create(Tuple.Create("", 34760), Tuple.Create("IQLabel100155", 34760), true)
-, Tuple.Create(Tuple.Create(" ", 34773), Tuple.Create<System.Object, System.Int32>(!Model.CustSortCode.LabelVisible ? " hide " : ""
-, 34774), false)
+WriteAttribute("class", Tuple.Create(" class=\'", 35107), Tuple.Create("\'", 35180)
+, Tuple.Create(Tuple.Create("", 35115), Tuple.Create("IQLabel100155", 35115), true)
+, Tuple.Create(Tuple.Create(" ", 35128), Tuple.Create<System.Object, System.Int32>(!Model.CustSortCode.LabelVisible ? " hide " : ""
+, 35129), false)
 );
-WriteAttribute("style", Tuple.Create("  style=\'", 34826), Tuple.Create("\'", 35042)
-                 , Tuple.Create(Tuple.Create("", 34835), Tuple.Create<System.Object, System.Int32>(string.IsNullOrEmpty(Model.CustSortCode.BackHEXColor) ? "" : "color:" + Model.CustSortCode.BackHEXColor + ";"
-, 34835), false)
-, Tuple.Create(Tuple.Create("", 34947), Tuple.Create("position:absolute;font-size:12px;text-align:right;left:665px;height:21px;width:11" +
-"0px;top:128px;", 34947), true)
+WriteAttribute("style", Tuple.Create("  style=\'", 35181), Tuple.Create("\'", 35397)
+                 , Tuple.Create(Tuple.Create("", 35190), Tuple.Create<System.Object, System.Int32>(string.IsNullOrEmpty(Model.CustSortCode.BackHEXColor) ? "" : "color:" + Model.CustSortCode.BackHEXColor + ";"
+, 35190), false)
+, Tuple.Create(Tuple.Create("", 35302), Tuple.Create("position:absolute;font-size:12px;text-align:right;left:665px;height:21px;width:11" +
+"0px;top:128px;", 35302), true)
 );
 WriteLiteral(">Sort Code</label>\r\n\t\t<input");
 WriteLiteral(" data-ScreenInfo=\'Customers_CustSortCode\'");
@@ -1106,22 +1125,22 @@ WriteLiteral(" type=\'text\' name=\'PopulateCustSortCode\' value=\'");
                                                                                                                                                                                                                                                                                                                                                                                                                                               Write(Model.CustSortCode.ValueFormatted);
 WriteLiteral("\' style=\'position: absolute; left:780px;height:21px;width:100px;top:128px;\'/><lab" +
 "el");
-WriteAttribute("class", Tuple.Create(" class=\'", 35661), Tuple.Create("\'", 35734)
-, Tuple.Create(Tuple.Create("", 35669), Tuple.Create("IQLabel100156", 35669), true)
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             , Tuple.Create(Tuple.Create(" ", 35682), Tuple.Create<System.Object, System.Int32>(!Model.CustOnFTrack.LabelVisible ? " hide " : ""
-, 35683), false)
+WriteAttribute("class", Tuple.Create(" class=\'", 36016), Tuple.Create("\'", 36089)
+, Tuple.Create(Tuple.Create("", 36024), Tuple.Create("IQLabel100156", 36024), true)
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             , Tuple.Create(Tuple.Create(" ", 36037), Tuple.Create<System.Object, System.Int32>(!Model.CustOnFTrack.LabelVisible ? " hide " : ""
+, 36038), false)
 );
-WriteAttribute("style", Tuple.Create("  style=\'", 35735), Tuple.Create("\'", 35951)
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           , Tuple.Create(Tuple.Create("", 35744), Tuple.Create<System.Object, System.Int32>(string.IsNullOrEmpty(Model.CustOnFTrack.BackHEXColor) ? "" : "color:" + Model.CustOnFTrack.BackHEXColor + ";"
-, 35744), false)
-, Tuple.Create(Tuple.Create("", 35856), Tuple.Create("position:absolute;font-size:12px;text-align:right;left:665px;height:21px;width:11" +
-"0px;top:153px;", 35856), true)
+WriteAttribute("style", Tuple.Create("  style=\'", 36090), Tuple.Create("\'", 36306)
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           , Tuple.Create(Tuple.Create("", 36099), Tuple.Create<System.Object, System.Int32>(string.IsNullOrEmpty(Model.CustOnFTrack.BackHEXColor) ? "" : "color:" + Model.CustOnFTrack.BackHEXColor + ";"
+, 36099), false)
+, Tuple.Create(Tuple.Create("", 36211), Tuple.Create("position:absolute;font-size:12px;text-align:right;left:665px;height:21px;width:11" +
+"0px;top:153px;", 36211), true)
 );
 WriteLiteral(">On FreightTrack</label>\r\n\t\t\t\t\t\r\n\t\t<input");
 WriteLiteral(" data-ScreenInfo=\'Customers_CustOnFTrack\'");
-WriteAttribute("class", Tuple.Create(" class=\'", 36034), Tuple.Create("\'", 36090)
-, Tuple.Create(Tuple.Create("  ", 36042), Tuple.Create<System.Object, System.Int32>(!Model.CustOnFTrack.Visible ? " hide " : ""
-, 36044), false)
+WriteAttribute("class", Tuple.Create(" class=\'", 36389), Tuple.Create("\'", 36445)
+, Tuple.Create(Tuple.Create("  ", 36397), Tuple.Create<System.Object, System.Int32>(!Model.CustOnFTrack.Visible ? " hide " : ""
+, 36399), false)
 );
 WriteLiteral(" disabled=disabled");
 WriteLiteral(" type=\'checkbox\'");
@@ -1138,22 +1157,22 @@ WriteLiteral(" value=\'false\'");
 WriteLiteral(" ");
                                                                    Write(!Model.PopulateCustOnFTrack ? "checked=checked" : "");
 WriteLiteral(" />\r\n\t\t<label");
-WriteAttribute("class", Tuple.Create(" class=\'", 36672), Tuple.Create("\'", 36746)
-, Tuple.Create(Tuple.Create("", 36680), Tuple.Create("IQLabel100157", 36680), true)
-, Tuple.Create(Tuple.Create(" ", 36693), Tuple.Create<System.Object, System.Int32>(!Model.CustIntrastat.LabelVisible ? " hide " : ""
-, 36694), false)
+WriteAttribute("class", Tuple.Create(" class=\'", 37027), Tuple.Create("\'", 37101)
+, Tuple.Create(Tuple.Create("", 37035), Tuple.Create("IQLabel100157", 37035), true)
+, Tuple.Create(Tuple.Create(" ", 37048), Tuple.Create<System.Object, System.Int32>(!Model.CustIntrastat.LabelVisible ? " hide " : ""
+, 37049), false)
 );
-WriteAttribute("style", Tuple.Create("  style=\'", 36747), Tuple.Create("\'", 36964)
-                  , Tuple.Create(Tuple.Create("", 36756), Tuple.Create<System.Object, System.Int32>(string.IsNullOrEmpty(Model.CustIntrastat.BackHEXColor) ? "" : "color:" + Model.CustIntrastat.BackHEXColor + ";"
-, 36756), false)
-, Tuple.Create(Tuple.Create("", 36870), Tuple.Create("position:absolute;font-size:12px;text-align:right;left:815px;height:21px;width:90" +
-"px;top:153px;", 36870), true)
+WriteAttribute("style", Tuple.Create("  style=\'", 37102), Tuple.Create("\'", 37319)
+                  , Tuple.Create(Tuple.Create("", 37111), Tuple.Create<System.Object, System.Int32>(string.IsNullOrEmpty(Model.CustIntrastat.BackHEXColor) ? "" : "color:" + Model.CustIntrastat.BackHEXColor + ";"
+, 37111), false)
+, Tuple.Create(Tuple.Create("", 37225), Tuple.Create("position:absolute;font-size:12px;text-align:right;left:815px;height:21px;width:90" +
+"px;top:153px;", 37225), true)
 );
 WriteLiteral(">Intrastat</label>\r\n\t\t\t\t\t\r\n\t\t<input");
 WriteLiteral(" data-ScreenInfo=\'Customers_CustIntrastat\'");
-WriteAttribute("class", Tuple.Create(" class=\'", 37042), Tuple.Create("\'", 37099)
-, Tuple.Create(Tuple.Create("  ", 37050), Tuple.Create<System.Object, System.Int32>(!Model.CustIntrastat.Visible ? " hide " : ""
-, 37052), false)
+WriteAttribute("class", Tuple.Create(" class=\'", 37397), Tuple.Create("\'", 37454)
+, Tuple.Create(Tuple.Create("  ", 37405), Tuple.Create<System.Object, System.Int32>(!Model.CustIntrastat.Visible ? " hide " : ""
+, 37407), false)
 );
 WriteLiteral(" ");
                                                                                                                Write(Model.RecordLocked || !Model.CustIntrastat.Enabled ? "disabled=disabled" : "");
@@ -1169,16 +1188,16 @@ WriteLiteral(" value=\'false\'");
 WriteLiteral(" ");
                                                                     Write(!Model.PopulateCustIntrastat ? "checked=checked" : "");
 WriteLiteral(" />\r\n\t\t<label");
-WriteAttribute("class", Tuple.Create(" class=\'", 37750), Tuple.Create("\'", 37822)
-, Tuple.Create(Tuple.Create("", 37758), Tuple.Create("IQLabel100158", 37758), true)
-, Tuple.Create(Tuple.Create(" ", 37771), Tuple.Create<System.Object, System.Int32>(!Model.CustWebsite.LabelVisible ? " hide " : ""
-, 37772), false)
+WriteAttribute("class", Tuple.Create(" class=\'", 38105), Tuple.Create("\'", 38177)
+, Tuple.Create(Tuple.Create("", 38113), Tuple.Create("IQLabel100158", 38113), true)
+, Tuple.Create(Tuple.Create(" ", 38126), Tuple.Create<System.Object, System.Int32>(!Model.CustWebsite.LabelVisible ? " hide " : ""
+, 38127), false)
 );
-WriteAttribute("style", Tuple.Create("  style=\'", 37823), Tuple.Create("\'", 38035)
-                , Tuple.Create(Tuple.Create("", 37832), Tuple.Create<System.Object, System.Int32>(string.IsNullOrEmpty(Model.CustWebsite.BackHEXColor) ? "" : "color:" + Model.CustWebsite.BackHEXColor + ";"
-, 37832), false)
-, Tuple.Create(Tuple.Create("", 37942), Tuple.Create("position:absolute;font-size:12px;text-align:right;left:655px;height:21px;width:12" +
-"0px;top:3px;", 37942), true)
+WriteAttribute("style", Tuple.Create("  style=\'", 38178), Tuple.Create("\'", 38390)
+                , Tuple.Create(Tuple.Create("", 38187), Tuple.Create<System.Object, System.Int32>(string.IsNullOrEmpty(Model.CustWebsite.BackHEXColor) ? "" : "color:" + Model.CustWebsite.BackHEXColor + ";"
+, 38187), false)
+, Tuple.Create(Tuple.Create("", 38297), Tuple.Create("position:absolute;font-size:12px;text-align:right;left:655px;height:21px;width:12" +
+"0px;top:3px;", 38297), true)
 );
 WriteLiteral(">Website</label>\r\n\t\t<input");
 WriteLiteral(" data-ScreenInfo=\'Customers_CustWebsite\'");
@@ -1192,16 +1211,16 @@ WriteLiteral(" type=\'text\' name=\'PopulateCustWebsite\' value=\'");
                                                                                                                                                                                                                                                                                                                                                                                                                                          Write(Model.CustWebsite.ValueFormatted);
 WriteLiteral("\' style=\'position: absolute; left:780px;height:21px;width:160px;top:3px;\'/><label" +
 "");
-WriteAttribute("class", Tuple.Create(" class=\'", 38643), Tuple.Create("\'", 38717)
-, Tuple.Create(Tuple.Create("", 38651), Tuple.Create("IQLabel100159", 38651), true)
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     , Tuple.Create(Tuple.Create(" ", 38664), Tuple.Create<System.Object, System.Int32>(!Model.CustCreatedBy.LabelVisible ? " hide " : ""
-, 38665), false)
+WriteAttribute("class", Tuple.Create(" class=\'", 38998), Tuple.Create("\'", 39072)
+, Tuple.Create(Tuple.Create("", 39006), Tuple.Create("IQLabel100159", 39006), true)
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     , Tuple.Create(Tuple.Create(" ", 39019), Tuple.Create<System.Object, System.Int32>(!Model.CustCreatedBy.LabelVisible ? " hide " : ""
+, 39020), false)
 );
-WriteAttribute("style", Tuple.Create("  style=\'", 38718), Tuple.Create("\'", 38936)
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    , Tuple.Create(Tuple.Create("", 38727), Tuple.Create<System.Object, System.Int32>(string.IsNullOrEmpty(Model.CustCreatedBy.BackHEXColor) ? "" : "color:" + Model.CustCreatedBy.BackHEXColor + ";"
-, 38727), false)
-, Tuple.Create(Tuple.Create("", 38841), Tuple.Create("position:absolute;font-size:12px;text-align:right;left:655px;height:21px;width:12" +
-"0px;top:228px;", 38841), true)
+WriteAttribute("style", Tuple.Create("  style=\'", 39073), Tuple.Create("\'", 39291)
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    , Tuple.Create(Tuple.Create("", 39082), Tuple.Create<System.Object, System.Int32>(string.IsNullOrEmpty(Model.CustCreatedBy.BackHEXColor) ? "" : "color:" + Model.CustCreatedBy.BackHEXColor + ";"
+, 39082), false)
+, Tuple.Create(Tuple.Create("", 39196), Tuple.Create("position:absolute;font-size:12px;text-align:right;left:655px;height:21px;width:12" +
+"0px;top:228px;", 39196), true)
 );
 WriteLiteral(">Created By</label>\r\n\t\t<div");
 WriteLiteral(" class=\'input-group\'");
@@ -1210,19 +1229,19 @@ WriteLiteral(" style=\'position: absolute; left:780px;height:21px;width:160px;to
 WriteLiteral("><select");
 WriteLiteral(" data-ScreenInfo=\'Customers_CustCreatedBy\'");
 WriteLiteral(" \r\n\t\tdisabled=disabled");
-WriteAttribute("class", Tuple.Create(" class=\'", 39155), Tuple.Create("\'", 39226)
-, Tuple.Create(Tuple.Create("", 39163), Tuple.Create("form-control", 39163), true)
-, Tuple.Create(Tuple.Create("    ", 39175), Tuple.Create<System.Object, System.Int32>(!Model.CustCreatedBy.Visible ? " hide " : ""
-, 39179), false)
+WriteAttribute("class", Tuple.Create(" class=\'", 39510), Tuple.Create("\'", 39581)
+, Tuple.Create(Tuple.Create("", 39518), Tuple.Create("form-control", 39518), true)
+, Tuple.Create(Tuple.Create("    ", 39530), Tuple.Create<System.Object, System.Int32>(!Model.CustCreatedBy.Visible ? " hide " : ""
+, 39534), false)
 );
 WriteLiteral("  ");
                                                                                               Write(Html.Raw(Model.RecordID.HasValue ? "onchange=\"javascript:IQAutoSave('/Customer/SaveCustCreatedBy/?RecId=" + Model.RecordID + "',$(this));\"" :"onchange=\"javascript:IQDirtyCallback('/Customer/CallbackCustCreatedBy/',$(this));\""));
 WriteLiteral("   name=\'PopulateCustCreatedBy\'  style=\'height:21px\'>\r\n");
              foreach(var itm in Model.CustCreatedBy.Data) {
 WriteLiteral("\t\t\t\t<option");
-WriteAttribute("value", Tuple.Create(" value=\'", 39578), Tuple.Create("\'", 39599)
-, Tuple.Create(Tuple.Create("", 39586), Tuple.Create<System.Object, System.Int32>(itm.KeyValue
-, 39586), false)
+WriteAttribute("value", Tuple.Create(" value=\'", 39933), Tuple.Create("\'", 39954)
+, Tuple.Create(Tuple.Create("", 39941), Tuple.Create<System.Object, System.Int32>(itm.KeyValue
+, 39941), false)
 );
 WriteLiteral(" ");
                                           Write(itm.KeyValue == Model.PopulateCustCreatedBy.ToString() ? "selected=selected" : "");
@@ -1259,16 +1278,16 @@ WriteLiteral("><img");
 WriteLiteral(" src=\"/IQ6/viewrecord.png\"");
 WriteLiteral(" style=\'max-height:14px;\'");
 WriteLiteral(" />View All Staff</a></li>\r\n\t\t</div></div><label");
-WriteAttribute("class", Tuple.Create(" class=\'", 40481), Tuple.Create("\'", 40554)
-, Tuple.Create(Tuple.Create("", 40489), Tuple.Create("IQLabel100160", 40489), true)
-, Tuple.Create(Tuple.Create(" ", 40502), Tuple.Create<System.Object, System.Int32>(!Model.CustUserName.LabelVisible ? " hide " : ""
-, 40503), false)
+WriteAttribute("class", Tuple.Create(" class=\'", 40836), Tuple.Create("\'", 40909)
+, Tuple.Create(Tuple.Create("", 40844), Tuple.Create("IQLabel100160", 40844), true)
+, Tuple.Create(Tuple.Create(" ", 40857), Tuple.Create<System.Object, System.Int32>(!Model.CustUserName.LabelVisible ? " hide " : ""
+, 40858), false)
 );
-WriteAttribute("style", Tuple.Create("  style=\'", 40555), Tuple.Create("\'", 40771)
-                             , Tuple.Create(Tuple.Create("", 40564), Tuple.Create<System.Object, System.Int32>(string.IsNullOrEmpty(Model.CustUserName.BackHEXColor) ? "" : "color:" + Model.CustUserName.BackHEXColor + ";"
-, 40564), false)
-, Tuple.Create(Tuple.Create("", 40676), Tuple.Create("position:absolute;font-size:12px;text-align:right;left:655px;height:21px;width:12" +
-"0px;top:178px;", 40676), true)
+WriteAttribute("style", Tuple.Create("  style=\'", 40910), Tuple.Create("\'", 41126)
+                             , Tuple.Create(Tuple.Create("", 40919), Tuple.Create<System.Object, System.Int32>(string.IsNullOrEmpty(Model.CustUserName.BackHEXColor) ? "" : "color:" + Model.CustUserName.BackHEXColor + ";"
+, 40919), false)
+, Tuple.Create(Tuple.Create("", 41031), Tuple.Create("position:absolute;font-size:12px;text-align:right;left:655px;height:21px;width:12" +
+"0px;top:178px;", 41031), true)
 );
 WriteLiteral(">Portal UserName</label>\r\n\t\t<input");
 WriteLiteral(" data-ScreenInfo=\'Customers_CustUserName\'");
@@ -1282,16 +1301,16 @@ WriteLiteral(" type=\'text\' name=\'PopulateCustUserName\' value=\'");
                                                                                                                                                                                                                                                                                                                                                                                                                                               Write(Model.CustUserName.ValueFormatted);
 WriteLiteral("\' style=\'position: absolute; left:780px;height:21px;width:160px;top:178px;\'/><lab" +
 "el");
-WriteAttribute("class", Tuple.Create(" class=\'", 41396), Tuple.Create("\'", 41469)
-, Tuple.Create(Tuple.Create("", 41404), Tuple.Create("IQLabel100161", 41404), true)
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             , Tuple.Create(Tuple.Create(" ", 41417), Tuple.Create<System.Object, System.Int32>(!Model.CustPassword.LabelVisible ? " hide " : ""
-, 41418), false)
+WriteAttribute("class", Tuple.Create(" class=\'", 41751), Tuple.Create("\'", 41824)
+, Tuple.Create(Tuple.Create("", 41759), Tuple.Create("IQLabel100161", 41759), true)
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             , Tuple.Create(Tuple.Create(" ", 41772), Tuple.Create<System.Object, System.Int32>(!Model.CustPassword.LabelVisible ? " hide " : ""
+, 41773), false)
 );
-WriteAttribute("style", Tuple.Create("  style=\'", 41470), Tuple.Create("\'", 41686)
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           , Tuple.Create(Tuple.Create("", 41479), Tuple.Create<System.Object, System.Int32>(string.IsNullOrEmpty(Model.CustPassword.BackHEXColor) ? "" : "color:" + Model.CustPassword.BackHEXColor + ";"
-, 41479), false)
-, Tuple.Create(Tuple.Create("", 41591), Tuple.Create("position:absolute;font-size:12px;text-align:right;left:655px;height:21px;width:12" +
-"0px;top:203px;", 41591), true)
+WriteAttribute("style", Tuple.Create("  style=\'", 41825), Tuple.Create("\'", 42041)
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           , Tuple.Create(Tuple.Create("", 41834), Tuple.Create<System.Object, System.Int32>(string.IsNullOrEmpty(Model.CustPassword.BackHEXColor) ? "" : "color:" + Model.CustPassword.BackHEXColor + ";"
+, 41834), false)
+, Tuple.Create(Tuple.Create("", 41946), Tuple.Create("position:absolute;font-size:12px;text-align:right;left:655px;height:21px;width:12" +
+"0px;top:203px;", 41946), true)
 );
 WriteLiteral(">Portal Password</label>\r\n\t\t<input");
 WriteLiteral(" data-ScreenInfo=\'Customers_CustPassword\'");
@@ -1305,22 +1324,22 @@ WriteLiteral(" type=\'text\' name=\'PopulateCustPassword\' value=\'");
                                                                                                                                                                                                                                                                                                                                                                                                                                               Write(Model.CustPassword.ValueFormatted);
 WriteLiteral("\' style=\'position: absolute; left:780px;height:21px;width:160px;top:203px;\'/><lab" +
 "el");
-WriteAttribute("class", Tuple.Create(" class=\'", 42311), Tuple.Create("\'", 42388)
-, Tuple.Create(Tuple.Create("", 42319), Tuple.Create("IQLabel100171", 42319), true)
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             , Tuple.Create(Tuple.Create(" ", 42332), Tuple.Create<System.Object, System.Int32>(!Model.CustDueDiligence.LabelVisible ? " hide " : ""
-, 42333), false)
+WriteAttribute("class", Tuple.Create(" class=\'", 42666), Tuple.Create("\'", 42743)
+, Tuple.Create(Tuple.Create("", 42674), Tuple.Create("IQLabel100171", 42674), true)
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             , Tuple.Create(Tuple.Create(" ", 42687), Tuple.Create<System.Object, System.Int32>(!Model.CustDueDiligence.LabelVisible ? " hide " : ""
+, 42688), false)
 );
-WriteAttribute("style", Tuple.Create("  style=\'", 42389), Tuple.Create("\'", 42611)
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               , Tuple.Create(Tuple.Create("", 42398), Tuple.Create<System.Object, System.Int32>(string.IsNullOrEmpty(Model.CustDueDiligence.BackHEXColor) ? "" : "color:" + Model.CustDueDiligence.BackHEXColor + ";"
-, 42398), false)
-, Tuple.Create(Tuple.Create("", 42518), Tuple.Create("position:absolute;font-size:12px;text-align:right;left:945px;height:21px;width:15" +
-"0px;top:3px;", 42518), true)
+WriteAttribute("style", Tuple.Create("  style=\'", 42744), Tuple.Create("\'", 42966)
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               , Tuple.Create(Tuple.Create("", 42753), Tuple.Create<System.Object, System.Int32>(string.IsNullOrEmpty(Model.CustDueDiligence.BackHEXColor) ? "" : "color:" + Model.CustDueDiligence.BackHEXColor + ";"
+, 42753), false)
+, Tuple.Create(Tuple.Create("", 42873), Tuple.Create("position:absolute;font-size:12px;text-align:right;left:945px;height:21px;width:15" +
+"0px;top:3px;", 42873), true)
 );
 WriteLiteral(">Due Diligence Received</label>\r\n\t\t\t\t\t\r\n\t\t<input");
 WriteLiteral(" data-ScreenInfo=\'Customers_CustDueDiligence\'");
-WriteAttribute("class", Tuple.Create(" class=\'", 42705), Tuple.Create("\'", 42765)
-, Tuple.Create(Tuple.Create("  ", 42713), Tuple.Create<System.Object, System.Int32>(!Model.CustDueDiligence.Visible ? " hide " : ""
-, 42715), false)
+WriteAttribute("class", Tuple.Create(" class=\'", 43060), Tuple.Create("\'", 43120)
+, Tuple.Create(Tuple.Create("  ", 43068), Tuple.Create<System.Object, System.Int32>(!Model.CustDueDiligence.Visible ? " hide " : ""
+, 43070), false)
 );
 WriteLiteral(" ");
                                                                                                                      Write(Model.RecordLocked || !Model.CustDueDiligence.Enabled ? "disabled=disabled" : "");
@@ -1336,22 +1355,22 @@ WriteLiteral(" value=\'false\'");
 WriteLiteral(" ");
                                                                        Write(!Model.PopulateCustDueDiligence ? "checked=checked" : "");
 WriteLiteral(" />\r\n\t\t<label");
-WriteAttribute("class", Tuple.Create(" class=\'", 43436), Tuple.Create("\'", 43516)
-, Tuple.Create(Tuple.Create("", 43444), Tuple.Create("IQLabel100172", 43444), true)
-, Tuple.Create(Tuple.Create(" ", 43457), Tuple.Create<System.Object, System.Int32>(!Model.CustCredScoreSearch.LabelVisible ? " hide " : ""
-, 43458), false)
+WriteAttribute("class", Tuple.Create(" class=\'", 43791), Tuple.Create("\'", 43871)
+, Tuple.Create(Tuple.Create("", 43799), Tuple.Create("IQLabel100172", 43799), true)
+, Tuple.Create(Tuple.Create(" ", 43812), Tuple.Create<System.Object, System.Int32>(!Model.CustCredScoreSearch.LabelVisible ? " hide " : ""
+, 43813), false)
 );
-WriteAttribute("style", Tuple.Create("  style=\'", 43517), Tuple.Create("\'", 43746)
-                        , Tuple.Create(Tuple.Create("", 43526), Tuple.Create<System.Object, System.Int32>(string.IsNullOrEmpty(Model.CustCredScoreSearch.BackHEXColor) ? "" : "color:" + Model.CustCredScoreSearch.BackHEXColor + ";"
-, 43526), false)
-, Tuple.Create(Tuple.Create("", 43652), Tuple.Create("position:absolute;font-size:12px;text-align:right;left:945px;height:21px;width:15" +
-"0px;top:28px;", 43652), true)
+WriteAttribute("style", Tuple.Create("  style=\'", 43872), Tuple.Create("\'", 44101)
+                        , Tuple.Create(Tuple.Create("", 43881), Tuple.Create<System.Object, System.Int32>(string.IsNullOrEmpty(Model.CustCredScoreSearch.BackHEXColor) ? "" : "color:" + Model.CustCredScoreSearch.BackHEXColor + ";"
+, 43881), false)
+, Tuple.Create(Tuple.Create("", 44007), Tuple.Create("position:absolute;font-size:12px;text-align:right;left:945px;height:21px;width:15" +
+"0px;top:28px;", 44007), true)
 );
 WriteLiteral(">Credit Score Searched</label>\r\n\t\t\t\t\t\r\n\t\t<input");
 WriteLiteral(" data-ScreenInfo=\'Customers_CustCredScoreSearch\'");
-WriteAttribute("class", Tuple.Create(" class=\'", 43842), Tuple.Create("\'", 43905)
-, Tuple.Create(Tuple.Create("  ", 43850), Tuple.Create<System.Object, System.Int32>(!Model.CustCredScoreSearch.Visible ? " hide " : ""
-, 43852), false)
+WriteAttribute("class", Tuple.Create(" class=\'", 44197), Tuple.Create("\'", 44260)
+, Tuple.Create(Tuple.Create("  ", 44205), Tuple.Create<System.Object, System.Int32>(!Model.CustCredScoreSearch.Visible ? " hide " : ""
+, 44207), false)
 );
 WriteLiteral(" ");
                                                                                                                            Write(Model.RecordLocked || !Model.CustCredScoreSearch.Enabled ? "disabled=disabled" : "");
@@ -1367,16 +1386,16 @@ WriteLiteral(" value=\'false\'");
 WriteLiteral(" ");
                                                                           Write(!Model.PopulateCustCredScoreSearch ? "checked=checked" : "");
 WriteLiteral(" />\r\n\t\t<label");
-WriteAttribute("class", Tuple.Create(" class=\'", 44598), Tuple.Create("\'", 44672)
-, Tuple.Create(Tuple.Create("", 44606), Tuple.Create("IQLabel100173", 44606), true)
-, Tuple.Create(Tuple.Create(" ", 44619), Tuple.Create<System.Object, System.Int32>(!Model.CustCredScore.LabelVisible ? " hide " : ""
-, 44620), false)
+WriteAttribute("class", Tuple.Create(" class=\'", 44953), Tuple.Create("\'", 45027)
+, Tuple.Create(Tuple.Create("", 44961), Tuple.Create("IQLabel100173", 44961), true)
+, Tuple.Create(Tuple.Create(" ", 44974), Tuple.Create<System.Object, System.Int32>(!Model.CustCredScore.LabelVisible ? " hide " : ""
+, 44975), false)
 );
-WriteAttribute("style", Tuple.Create("  style=\'", 44673), Tuple.Create("\'", 44890)
-                  , Tuple.Create(Tuple.Create("", 44682), Tuple.Create<System.Object, System.Int32>(string.IsNullOrEmpty(Model.CustCredScore.BackHEXColor) ? "" : "color:" + Model.CustCredScore.BackHEXColor + ";"
-, 44682), false)
-, Tuple.Create(Tuple.Create("", 44796), Tuple.Create("position:absolute;font-size:12px;text-align:right;left:945px;height:21px;width:15" +
-"0px;top:53px;", 44796), true)
+WriteAttribute("style", Tuple.Create("  style=\'", 45028), Tuple.Create("\'", 45245)
+                  , Tuple.Create(Tuple.Create("", 45037), Tuple.Create<System.Object, System.Int32>(string.IsNullOrEmpty(Model.CustCredScore.BackHEXColor) ? "" : "color:" + Model.CustCredScore.BackHEXColor + ";"
+, 45037), false)
+, Tuple.Create(Tuple.Create("", 45151), Tuple.Create("position:absolute;font-size:12px;text-align:right;left:945px;height:21px;width:15" +
+"0px;top:53px;", 45151), true)
 );
 WriteLiteral(">Credit Score Number</label>\r\n\t\t<input");
 WriteLiteral(" data-ScreenInfo=\'Customers_CustCredScore\'");
@@ -1390,16 +1409,16 @@ WriteLiteral(" type=\'text\' name=\'PopulateCustCredScore\' value=\'");
                                                                                                                                                                                                                                                                                                                                                                                                                                                    Write(Model.CustCredScore.ValueFormatted);
 WriteLiteral("\' style=\'position: absolute; left:1100px;height:21px;width:80px;top:53px;\'/><labe" +
 "l");
-WriteAttribute("class", Tuple.Create(" class=\'", 45525), Tuple.Create("\'", 45600)
-, Tuple.Create(Tuple.Create("", 45533), Tuple.Create("IQLabel100175", 45533), true)
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  , Tuple.Create(Tuple.Create(" ", 45546), Tuple.Create<System.Object, System.Int32>(!Model.CustAccContact.LabelVisible ? " hide " : ""
-, 45547), false)
+WriteAttribute("class", Tuple.Create(" class=\'", 45880), Tuple.Create("\'", 45955)
+, Tuple.Create(Tuple.Create("", 45888), Tuple.Create("IQLabel100175", 45888), true)
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  , Tuple.Create(Tuple.Create(" ", 45901), Tuple.Create<System.Object, System.Int32>(!Model.CustAccContact.LabelVisible ? " hide " : ""
+, 45902), false)
 );
-WriteAttribute("style", Tuple.Create("  style=\'", 45601), Tuple.Create("\'", 45821)
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  , Tuple.Create(Tuple.Create("", 45610), Tuple.Create<System.Object, System.Int32>(string.IsNullOrEmpty(Model.CustAccContact.BackHEXColor) ? "" : "color:" + Model.CustAccContact.BackHEXColor + ";"
-, 45610), false)
-, Tuple.Create(Tuple.Create("", 45726), Tuple.Create("position:absolute;font-size:12px;text-align:right;left:975px;height:21px;width:12" +
-"0px;top:103px;", 45726), true)
+WriteAttribute("style", Tuple.Create("  style=\'", 45956), Tuple.Create("\'", 46176)
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  , Tuple.Create(Tuple.Create("", 45965), Tuple.Create<System.Object, System.Int32>(string.IsNullOrEmpty(Model.CustAccContact.BackHEXColor) ? "" : "color:" + Model.CustAccContact.BackHEXColor + ";"
+, 45965), false)
+, Tuple.Create(Tuple.Create("", 46081), Tuple.Create("position:absolute;font-size:12px;text-align:right;left:975px;height:21px;width:12" +
+"0px;top:103px;", 46081), true)
 );
 WriteLiteral(">Accounts Contact</label>\r\n\t\t<input");
 WriteLiteral(" data-ScreenInfo=\'Customers_CustAccContact\'");
@@ -1413,16 +1432,16 @@ WriteLiteral(" type=\'text\' name=\'PopulateCustAccContact\' value=\'");
                                                                                                                                                                                                                                                                                                                                                                                                                                                         Write(Model.CustAccContact.ValueFormatted);
 WriteLiteral("\' style=\'position: absolute; left:1100px;height:21px;width:200px;top:103px;\'/><la" +
 "bel");
-WriteAttribute("class", Tuple.Create(" class=\'", 46462), Tuple.Create("\'", 46535)
-, Tuple.Create(Tuple.Create("", 46470), Tuple.Create("IQLabel100176", 46470), true)
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          , Tuple.Create(Tuple.Create(" ", 46483), Tuple.Create<System.Object, System.Int32>(!Model.CustAccEmail.LabelVisible ? " hide " : ""
-, 46484), false)
+WriteAttribute("class", Tuple.Create(" class=\'", 46817), Tuple.Create("\'", 46890)
+, Tuple.Create(Tuple.Create("", 46825), Tuple.Create("IQLabel100176", 46825), true)
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          , Tuple.Create(Tuple.Create(" ", 46838), Tuple.Create<System.Object, System.Int32>(!Model.CustAccEmail.LabelVisible ? " hide " : ""
+, 46839), false)
 );
-WriteAttribute("style", Tuple.Create("  style=\'", 46536), Tuple.Create("\'", 46752)
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        , Tuple.Create(Tuple.Create("", 46545), Tuple.Create<System.Object, System.Int32>(string.IsNullOrEmpty(Model.CustAccEmail.BackHEXColor) ? "" : "color:" + Model.CustAccEmail.BackHEXColor + ";"
-, 46545), false)
-, Tuple.Create(Tuple.Create("", 46657), Tuple.Create("position:absolute;font-size:12px;text-align:right;left:975px;height:21px;width:12" +
-"0px;top:128px;", 46657), true)
+WriteAttribute("style", Tuple.Create("  style=\'", 46891), Tuple.Create("\'", 47107)
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        , Tuple.Create(Tuple.Create("", 46900), Tuple.Create<System.Object, System.Int32>(string.IsNullOrEmpty(Model.CustAccEmail.BackHEXColor) ? "" : "color:" + Model.CustAccEmail.BackHEXColor + ";"
+, 46900), false)
+, Tuple.Create(Tuple.Create("", 47012), Tuple.Create("position:absolute;font-size:12px;text-align:right;left:975px;height:21px;width:12" +
+"0px;top:128px;", 47012), true)
 );
 WriteLiteral(">Accounts Email</label>\r\n\t\t<div");
 WriteLiteral(" class=\'input-group\'");
@@ -1460,16 +1479,16 @@ WriteLiteral("><img");
 WriteLiteral(" src=\"/IQ6/email.png\"");
 WriteLiteral(" style=\'max-height:14px;float:left;\'");
 WriteLiteral(" />Send Email</a></li>\r\n\t\t</div></div><label");
-WriteAttribute("class", Tuple.Create(" class=\'", 47976), Tuple.Create("\'", 48049)
-, Tuple.Create(Tuple.Create("", 47984), Tuple.Create("IQLabel100188", 47984), true)
-, Tuple.Create(Tuple.Create(" ", 47997), Tuple.Create<System.Object, System.Int32>(!Model.CustFTLNotes.LabelVisible ? " hide " : ""
-, 47998), false)
+WriteAttribute("class", Tuple.Create(" class=\'", 48331), Tuple.Create("\'", 48404)
+, Tuple.Create(Tuple.Create("", 48339), Tuple.Create("IQLabel100188", 48339), true)
+, Tuple.Create(Tuple.Create(" ", 48352), Tuple.Create<System.Object, System.Int32>(!Model.CustFTLNotes.LabelVisible ? " hide " : ""
+, 48353), false)
 );
-WriteAttribute("style", Tuple.Create("  style=\'", 48050), Tuple.Create("\'", 48265)
-                             , Tuple.Create(Tuple.Create("", 48059), Tuple.Create<System.Object, System.Int32>(string.IsNullOrEmpty(Model.CustFTLNotes.BackHEXColor) ? "" : "color:" + Model.CustFTLNotes.BackHEXColor + ";"
-, 48059), false)
-, Tuple.Create(Tuple.Create("", 48171), Tuple.Create("position:absolute;font-size:12px;text-align:left;left:820px;height:21px;width:120" +
-"px;top:353px;", 48171), true)
+WriteAttribute("style", Tuple.Create("  style=\'", 48405), Tuple.Create("\'", 48620)
+                             , Tuple.Create(Tuple.Create("", 48414), Tuple.Create<System.Object, System.Int32>(string.IsNullOrEmpty(Model.CustFTLNotes.BackHEXColor) ? "" : "color:" + Model.CustFTLNotes.BackHEXColor + ";"
+, 48414), false)
+, Tuple.Create(Tuple.Create("", 48526), Tuple.Create("position:absolute;font-size:12px;text-align:left;left:820px;height:21px;width:120" +
+"px;top:353px;", 48526), true)
 );
 WriteLiteral(">In House Notes</label>\r\n\t\t<div");
 WriteLiteral(" class=\'input-group\'");
@@ -1553,33 +1572,52 @@ WriteAttribute("style", Tuple.Create("  style=\'", 135), Tuple.Create("\'", 341)
 , Tuple.Create(Tuple.Create("", 250), Tuple.Create("position:absolute;font-size:12px;text-align:left;left:5px;height:21px;width:120px" +
 ";top:28px;", 250), true)
 );
-WriteLiteral(">Rates</label>\r\n\t\t\t\t<div");
-WriteLiteral(" id=\"RichEditor-PopulateCustRates\"");
+WriteLiteral(">Rates</label>\r\n\t\t<div");
+WriteLiteral(" class=\'input-group\'");
+WriteLiteral(" data-OriginalWidth=\'475\'");
+WriteLiteral(" style=\'position: absolute; left:5px;height:396px;width:475px;top:53px;\'");
+WriteLiteral(">\t\t<textarea");
+WriteLiteral(" data-Label=\'Rates\'");
+WriteLiteral(" data-ScreenInfo=\'Notes_CustRates\'");
 WriteLiteral(" ");
-                                                   Write(Model.RecordLocked ? "data-disabled='true'" :"");
-WriteLiteral("  data-target=\"textarea[name=PopulateCustRates]\" class=\'RichEditor\' style=\'positi" +
-"on: absolute; left:5px;height:396px;width:475px;top:53px;\'>");
-                                                                                                                                                                                                                                                Write(Html.Raw(Model.PopulateCustRates));
-WriteLiteral("</div>\r\n\t\t<textarea");
-WriteLiteral("  data-ScreenInfo=\'Notes_CustRates\'");
-                                                Write(Model.RecordLocked || !Model.CustRates.Enabled ? "disabled=disabled" : "");
-WriteLiteral(" ");
-                                                                                                                            Write(Html.Raw(Model.RecordID.HasValue ? "onchange=\"javascript:IQAutoSave('/Customer/SaveCustRates/?RecId=" + Model.RecordID + "',$(this));\"" :"onchange=\"javascript:IQDirtyCallback('/Customer/CallbackCustRates/',$(this));\""));
-WriteLiteral("  class=\' ");
-                                                                                                                                                                                                                                                                                                                                                                      Write(!Model.CustRates.Visible ? " hide " : "");
-WriteLiteral(" form-control \' name=\'PopulateCustRates\' style=\'display:none\'>");
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                              Write(Html.Raw(Model.PopulateCustRates));
-WriteLiteral("</textarea>\r\n\t\t\r\n\t\t<label");
-WriteAttribute("class", Tuple.Create(" class=\'", 1153), Tuple.Create("\'", 1222)
-, Tuple.Create(Tuple.Create("", 1161), Tuple.Create("IQLabel101212", 1161), true)
-, Tuple.Create(Tuple.Create(" ", 1174), Tuple.Create<System.Object, System.Int32>(!Model.CustName.LabelVisible ? " hide " : ""
-, 1175), false)
+                                                                                                                                                                                                   Write(Model.RecordLocked || !Model.CustRates.Enabled ? "disabled=disabled" : "");
+WriteLiteral("  ");
+                                                                                                                                                                                                                                                                                Write(Html.Raw(Model.RecordID.HasValue ? "onchange=\"javascript:IQAutoSave('/Customer/SaveCustRates/?RecId=" + Model.RecordID + "',$(this));\"" :"onchange=\"javascript:IQDirtyCallback('/Customer/CallbackCustRates/',$(this));\""));
+WriteLiteral("  class=\'form-control    ");
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         Write(!Model.CustRates.Visible ? " hide " : "");
+WriteLiteral(" \' name=\'PopulateCustRates\' style=\'height:396px\'>");
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    Write(Model.PopulateCustRates);
+WriteLiteral("</textarea><div");
+WriteLiteral(" class=\"input-group-btn\"");
+WriteLiteral("><button");
+WriteLiteral(" type=\"button\"");
+WriteLiteral(" class=\"btn btn-default btn-xs dropdown-toggle\"");
+WriteLiteral(" data-toggle=\"dropdown\"");
+WriteLiteral(" aria-haspopup=\"true\"");
+WriteLiteral(" aria-expanded=\"false\"");
+WriteLiteral("><img");
+WriteLiteral(" src=\'/IQ6/popover.png\'");
+WriteLiteral(" style=\'max-height:10px;\'");
+WriteLiteral("/></button>\r\n        <ul");
+WriteLiteral(" class=\"dropdown-menu dropdown-menu-right\"");
+WriteLiteral(">\r\n\t\t\t\r\n\t\t<li><a");
+WriteLiteral(" href=\'#\'");
+WriteLiteral(" onclick=\'javascript:IQPopupEditor(this)\'");
+WriteLiteral(" data-target=\"*[name=PopulateCustRates]\"");
+WriteLiteral("><img");
+WriteLiteral(" src=\"/IQ6/fullscreen.png\"");
+WriteLiteral(" style=\'max-height:14px;float:left;\'");
+WriteLiteral(" />Full Screen Editor</a></li>\r\n\t\t\t</div></div><label");
+WriteAttribute("class", Tuple.Create(" class=\'", 1508), Tuple.Create("\'", 1577)
+, Tuple.Create(Tuple.Create("", 1516), Tuple.Create("IQLabel101212", 1516), true)
+, Tuple.Create(Tuple.Create(" ", 1529), Tuple.Create<System.Object, System.Int32>(!Model.CustName.LabelVisible ? " hide " : ""
+, 1530), false)
 );
-WriteAttribute("style", Tuple.Create("  style=\'", 1223), Tuple.Create("\'", 1427)
-              , Tuple.Create(Tuple.Create("", 1232), Tuple.Create<System.Object, System.Int32>(string.IsNullOrEmpty(Model.CustName.BackHEXColor) ? "" : "color:" + Model.CustName.BackHEXColor + ";"
-, 1232), false)
-, Tuple.Create(Tuple.Create("", 1336), Tuple.Create("position:absolute;font-size:12px;text-align:right;left:5px;height:21px;width:120p" +
-"x;top:3px;", 1336), true)
+WriteAttribute("style", Tuple.Create("  style=\'", 1578), Tuple.Create("\'", 1782)
+                              , Tuple.Create(Tuple.Create("", 1587), Tuple.Create<System.Object, System.Int32>(string.IsNullOrEmpty(Model.CustName.BackHEXColor) ? "" : "color:" + Model.CustName.BackHEXColor + ";"
+, 1587), false)
+, Tuple.Create(Tuple.Create("", 1691), Tuple.Create("position:absolute;font-size:12px;text-align:right;left:5px;height:21px;width:120p" +
+"x;top:3px;", 1691), true)
 );
 WriteLiteral(">Company Name</label>\r\n\t\t<input");
 WriteLiteral(" data-ScreenInfo=\'Notes_CustName\'");
@@ -1593,16 +1631,16 @@ WriteLiteral(" type=\'text\' name=\'PopulateCustName\' value=\'");
                                                                                                                                                                                                                                                                                                                                                                                                                                    Write(Model.CustName.ValueFormatted);
 WriteLiteral("\' style=\'position: absolute; left:130px;height:21px;width:200px;top:3px;\'/><label" +
 "");
-WriteAttribute("class", Tuple.Create(" class=\'", 2024), Tuple.Create("\'", 2097)
-, Tuple.Create(Tuple.Create("", 2032), Tuple.Create("IQLabel101231", 2032), true)
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             , Tuple.Create(Tuple.Create(" ", 2045), Tuple.Create<System.Object, System.Int32>(!Model.CustGenNotes.LabelVisible ? " hide " : ""
-, 2046), false)
+WriteAttribute("class", Tuple.Create(" class=\'", 2379), Tuple.Create("\'", 2452)
+, Tuple.Create(Tuple.Create("", 2387), Tuple.Create("IQLabel101231", 2387), true)
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             , Tuple.Create(Tuple.Create(" ", 2400), Tuple.Create<System.Object, System.Int32>(!Model.CustGenNotes.LabelVisible ? " hide " : ""
+, 2401), false)
 );
-WriteAttribute("style", Tuple.Create("  style=\'", 2098), Tuple.Create("\'", 2311)
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           , Tuple.Create(Tuple.Create("", 2107), Tuple.Create<System.Object, System.Int32>(string.IsNullOrEmpty(Model.CustGenNotes.BackHEXColor) ? "" : "color:" + Model.CustGenNotes.BackHEXColor + ";"
-, 2107), false)
-, Tuple.Create(Tuple.Create("", 2219), Tuple.Create("position:absolute;font-size:12px;text-align:left;left:500px;height:21px;width:120" +
-"px;top:3px;", 2219), true)
+WriteAttribute("style", Tuple.Create("  style=\'", 2453), Tuple.Create("\'", 2666)
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           , Tuple.Create(Tuple.Create("", 2462), Tuple.Create<System.Object, System.Int32>(string.IsNullOrEmpty(Model.CustGenNotes.BackHEXColor) ? "" : "color:" + Model.CustGenNotes.BackHEXColor + ";"
+, 2462), false)
+, Tuple.Create(Tuple.Create("", 2574), Tuple.Create("position:absolute;font-size:12px;text-align:left;left:500px;height:21px;width:120" +
+"px;top:3px;", 2574), true)
 );
 WriteLiteral(">General Notes</label>\r\n\t\t<div");
 WriteLiteral(" class=\'input-group\'");
@@ -1640,16 +1678,16 @@ WriteLiteral("><img");
 WriteLiteral(" src=\"/IQ6/fullscreen.png\"");
 WriteLiteral(" style=\'max-height:14px;float:left;\'");
 WriteLiteral(" />Full Screen Editor</a></li>\r\n\t\t\t</div></div><label");
-WriteAttribute("class", Tuple.Create(" class=\'", 3520), Tuple.Create("\'", 3593)
-, Tuple.Create(Tuple.Create("", 3528), Tuple.Create("IQLabel101234", 3528), true)
-, Tuple.Create(Tuple.Create(" ", 3541), Tuple.Create<System.Object, System.Int32>(!Model.CustFTLNotes.LabelVisible ? " hide " : ""
-, 3542), false)
+WriteAttribute("class", Tuple.Create(" class=\'", 3875), Tuple.Create("\'", 3948)
+, Tuple.Create(Tuple.Create("", 3883), Tuple.Create("IQLabel101234", 3883), true)
+, Tuple.Create(Tuple.Create(" ", 3896), Tuple.Create<System.Object, System.Int32>(!Model.CustFTLNotes.LabelVisible ? " hide " : ""
+, 3897), false)
 );
-WriteAttribute("style", Tuple.Create("  style=\'", 3594), Tuple.Create("\'", 3809)
-                                  , Tuple.Create(Tuple.Create("", 3603), Tuple.Create<System.Object, System.Int32>(string.IsNullOrEmpty(Model.CustFTLNotes.BackHEXColor) ? "" : "color:" + Model.CustFTLNotes.BackHEXColor + ";"
-, 3603), false)
-, Tuple.Create(Tuple.Create("", 3715), Tuple.Create("position:absolute;font-size:12px;text-align:left;left:500px;height:21px;width:120" +
-"px;top:153px;", 3715), true)
+WriteAttribute("style", Tuple.Create("  style=\'", 3949), Tuple.Create("\'", 4164)
+                                  , Tuple.Create(Tuple.Create("", 3958), Tuple.Create<System.Object, System.Int32>(string.IsNullOrEmpty(Model.CustFTLNotes.BackHEXColor) ? "" : "color:" + Model.CustFTLNotes.BackHEXColor + ";"
+, 3958), false)
+, Tuple.Create(Tuple.Create("", 4070), Tuple.Create("position:absolute;font-size:12px;text-align:left;left:500px;height:21px;width:120" +
+"px;top:153px;", 4070), true)
 );
 WriteLiteral(">In House Notes</label>\r\n\t\t<div");
 WriteLiteral(" class=\'input-group\'");
@@ -2028,7 +2066,7 @@ WriteLiteral(">\r\n");
 WriteLiteral("\t\t\t\t<div");
 WriteLiteral(" role=\"tabpanel\"");
 WriteLiteral(" ");
-                                Write(Html.Raw(Request["ActiveTab"] != "Contact" ? "data-loadTarget='#3382d1d6ac164b158720286d1002b448' data-dynamicContent='/Contact/ListFromQuery?Limit=50&Ord=ContFN&Clause=ContCust=" + Model.CustIdValue + "&Partial=true'" : ""));
+                                Write(Html.Raw(Request["ActiveTab"] != "Contact" ? "data-loadTarget='#27caf6e5db944f62b813e10eb4a6e50d' data-dynamicContent='/Contact/ListFromQuery?Limit=50&Ord=ContFN&Clause=ContCust=" + Model.CustIdValue + "&Partial=true'" : ""));
 WriteLiteral(" class=\"tab-pane ");
                                                                                                                                                                                                                                                                                    Write((Request["ActiveTab"] != null ? (Request["ActiveTab"] == "Contact" ? "active" :  "DynamicTab ") : "DynamicTab " ));
 WriteLiteral("\" id=\"Contact\">\r\n\t\t\t\t\t<div");
@@ -2046,7 +2084,7 @@ WriteLiteral(">Add Customer Contacts</button>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div
                       Html.RenderPartial("~/Views/Contact_List_1.cshtml", Model.Contacts);
 					} else {
 WriteLiteral("\t\t\t\t\t<div");
-WriteLiteral(" id=\"3382d1d6ac164b158720286d1002b448\"");
+WriteLiteral(" id=\"27caf6e5db944f62b813e10eb4a6e50d\"");
 WriteLiteral(">\r\n\t\t\t\t\tLoading data...\r\n\t\t\t\t\t</div>\r\n");
 					}
 WriteLiteral("\t\t\t\t</div>\r\n");
@@ -2056,7 +2094,7 @@ WriteLiteral("\t\t\t\t\t\t\t");
 WriteLiteral("\t\t\t\t<div");
 WriteLiteral(" role=\"tabpanel\"");
 WriteLiteral(" ");
-                                Write(Html.Raw(Request["ActiveTab"] != "CertShip" ? "data-loadTarget='#cbff101b1b7c41f8b81808cdc187311c' data-dynamicContent='/CertShip/ListFromQuery?Limit=50&Ord=CSId&Clause=CSCust=" + Model.CustIdValue + "&Partial=true'" : ""));
+                                Write(Html.Raw(Request["ActiveTab"] != "CertShip" ? "data-loadTarget='#8b6e6b094ef44e43a5e7ea72d3f2727d' data-dynamicContent='/CertShip/ListFromQuery?Limit=50&Ord=CSId&Clause=CSCust=" + Model.CustIdValue + "&Partial=true'" : ""));
 WriteLiteral(" class=\"tab-pane ");
                                                                                                                                                                                                                                                                                  Write((Request["ActiveTab"] != null ? (Request["ActiveTab"] == "CertShip" ? "active" :  "DynamicTab ") : "DynamicTab " ));
 WriteLiteral("\" id=\"CertShip\">\r\n\t\t\t\t\t<div");
@@ -2077,7 +2115,7 @@ WriteLiteral(" >Add Certificates of Shipment</a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</
                       Html.RenderPartial("~/Views/CertShip_List_1.cshtml", Model.CertShips);
 					} else {
 WriteLiteral("\t\t\t\t\t<div");
-WriteLiteral(" id=\"cbff101b1b7c41f8b81808cdc187311c\"");
+WriteLiteral(" id=\"8b6e6b094ef44e43a5e7ea72d3f2727d\"");
 WriteLiteral(">\r\n\t\t\t\t\tLoading data...\r\n\t\t\t\t\t</div>\r\n");
 					}
 WriteLiteral("\t\t\t\t</div>\r\n");
@@ -2087,7 +2125,7 @@ WriteLiteral("\t\t\t\t\t\t\t");
 WriteLiteral("\t\t\t\t<div");
 WriteLiteral(" role=\"tabpanel\"");
 WriteLiteral(" ");
-                                Write(Html.Raw(Request["ActiveTab"] != "CN" ? "data-loadTarget='#67753803012b43e8a124729858c17aef' data-dynamicContent='/CN/ListFromQuery?Limit=50&Ord=CNId&Clause=CNTo=" + Model.CustIdValue + "&Partial=true'" : ""));
+                                Write(Html.Raw(Request["ActiveTab"] != "CN" ? "data-loadTarget='#a839accfdbfb4a959a60d9a9197778f8' data-dynamicContent='/CN/ListFromQuery?Limit=50&Ord=CNId&Clause=CNTo=" + Model.CustIdValue + "&Partial=true'" : ""));
 WriteLiteral(" class=\"tab-pane ");
                                                                                                                                                                                                                                                                    Write((Request["ActiveTab"] != null ? (Request["ActiveTab"] == "CN" ? "active" :  "DynamicTab ") : "DynamicTab " ));
 WriteLiteral("\" id=\"CN\">\r\n\t\t\t\t\t<div");
@@ -2108,7 +2146,7 @@ WriteLiteral(" >Add Credit Notes</a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t
                       Html.RenderPartial("~/Views/CN_List_1.cshtml", Model.CNs);
 					} else {
 WriteLiteral("\t\t\t\t\t<div");
-WriteLiteral(" id=\"67753803012b43e8a124729858c17aef\"");
+WriteLiteral(" id=\"a839accfdbfb4a959a60d9a9197778f8\"");
 WriteLiteral(">\r\n\t\t\t\t\tLoading data...\r\n\t\t\t\t\t</div>\r\n");
 					}
 WriteLiteral("\t\t\t\t</div>\r\n");
@@ -2118,7 +2156,7 @@ WriteLiteral("\t\t\t\t\t\t\t");
 WriteLiteral("\t\t\t\t<div");
 WriteLiteral(" role=\"tabpanel\"");
 WriteLiteral(" ");
-                                Write(Html.Raw(Request["ActiveTab"] != "Inv" ? "data-loadTarget='#1ce2b38136c14ae4ae078f33691e982b' data-dynamicContent='/Inv/ListFromQuery?Limit=50&Ord=InvId&Clause=InvTo=" + Model.CustIdValue + "&Partial=true'" : ""));
+                                Write(Html.Raw(Request["ActiveTab"] != "Inv" ? "data-loadTarget='#9a65040313b7490b8cb57cbcc9988056' data-dynamicContent='/Inv/ListFromQuery?Limit=50&Ord=InvId&Clause=InvTo=" + Model.CustIdValue + "&Partial=true'" : ""));
 WriteLiteral(" class=\"tab-pane ");
                                                                                                                                                                                                                                                                        Write((Request["ActiveTab"] != null ? (Request["ActiveTab"] == "Inv" ? "active" :  "DynamicTab ") : "DynamicTab " ));
 WriteLiteral("\" id=\"Inv\">\r\n\t\t\t\t\t<div");
@@ -2139,7 +2177,7 @@ WriteLiteral(" >Add Invoices</a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t
                       Html.RenderPartial("~/Views/Inv_List_1.cshtml", Model.Invs);
 					} else {
 WriteLiteral("\t\t\t\t\t<div");
-WriteLiteral(" id=\"1ce2b38136c14ae4ae078f33691e982b\"");
+WriteLiteral(" id=\"9a65040313b7490b8cb57cbcc9988056\"");
 WriteLiteral(">\r\n\t\t\t\t\tLoading data...\r\n\t\t\t\t\t</div>\r\n");
 					}
 WriteLiteral("\t\t\t\t</div>\r\n");
@@ -2149,7 +2187,7 @@ WriteLiteral("\t\t\t\t\t\t\t");
 WriteLiteral("\t\t\t\t<div");
 WriteLiteral(" role=\"tabpanel\"");
 WriteLiteral(" ");
-                                Write(Html.Raw(Request["ActiveTab"] != "Job" ? "data-loadTarget='#1af58e6715174647a4b27ed850c5a8a6' data-dynamicContent='/Job/ListFromQuery?Limit=50&Ord=JobNo&Clause=JobTransp=" + Model.CustIdValue + "&Partial=true'" : ""));
+                                Write(Html.Raw(Request["ActiveTab"] != "Job" ? "data-loadTarget='#22f6ceb9ae2a438f9e1d40eb222571e9' data-dynamicContent='/Job/ListFromQuery?Limit=50&Ord=JobNo&Clause=JobTransp=" + Model.CustIdValue + "&Partial=true'" : ""));
 WriteLiteral(" class=\"tab-pane ");
                                                                                                                                                                                                                                                                            Write((Request["ActiveTab"] != null ? (Request["ActiveTab"] == "Job" ? "active" :  "DynamicTab ") : "DynamicTab " ));
 WriteLiteral("\" id=\"Job\">\r\n\t\t\t\t\t<div");
@@ -2170,7 +2208,7 @@ WriteLiteral(" >Add Jobs</a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</
                       Html.RenderPartial("~/Views/Job_List_1.cshtml", Model.Jobs);
 					} else {
 WriteLiteral("\t\t\t\t\t<div");
-WriteLiteral(" id=\"1af58e6715174647a4b27ed850c5a8a6\"");
+WriteLiteral(" id=\"22f6ceb9ae2a438f9e1d40eb222571e9\"");
 WriteLiteral(">\r\n\t\t\t\t\tLoading data...\r\n\t\t\t\t\t</div>\r\n");
 					}
 WriteLiteral("\t\t\t\t</div>\r\n");
@@ -2180,7 +2218,7 @@ WriteLiteral("\t\t\t\t\t\t\t");
 WriteLiteral("\t\t\t\t<div");
 WriteLiteral(" role=\"tabpanel\"");
 WriteLiteral(" ");
-                                Write(Html.Raw(Request["ActiveTab"] != "Orders" ? "data-loadTarget='#91651fd433de481dbeb01a238f5a1b58' data-dynamicContent='/Orders/ListFromQuery?Limit=50&Ord=OrdId&Clause=OrdSupp=" + Model.CustIdValue + "&Partial=true'" : ""));
+                                Write(Html.Raw(Request["ActiveTab"] != "Orders" ? "data-loadTarget='#5de4ed62d8504e198986b26eaa60ed43' data-dynamicContent='/Orders/ListFromQuery?Limit=50&Ord=OrdId&Clause=OrdSupp=" + Model.CustIdValue + "&Partial=true'" : ""));
 WriteLiteral(" class=\"tab-pane ");
                                                                                                                                                                                                                                                                                Write((Request["ActiveTab"] != null ? (Request["ActiveTab"] == "Orders" ? "active" :  "DynamicTab ") : "DynamicTab " ));
 WriteLiteral("\" id=\"Orders\">\r\n\t\t\t\t\t<div");
@@ -2201,7 +2239,7 @@ WriteLiteral(" >Add Orders</a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t
                       Html.RenderPartial("~/Views/Orders_List_1.cshtml", Model.Orderss);
 					} else {
 WriteLiteral("\t\t\t\t\t<div");
-WriteLiteral(" id=\"91651fd433de481dbeb01a238f5a1b58\"");
+WriteLiteral(" id=\"5de4ed62d8504e198986b26eaa60ed43\"");
 WriteLiteral(">\r\n\t\t\t\t\tLoading data...\r\n\t\t\t\t\t</div>\r\n");
 					}
 WriteLiteral("\t\t\t\t</div>\r\n");
@@ -2211,7 +2249,7 @@ WriteLiteral("\t\t\t\t\t\t\t");
 WriteLiteral("\t\t\t\t<div");
 WriteLiteral(" role=\"tabpanel\"");
 WriteLiteral(" ");
-                                Write(Html.Raw(Request["ActiveTab"] != "ShipDoc" ? "data-loadTarget='#66e93b808d0243a2b7f41a356aa11376' data-dynamicContent='/ShipDoc/ListFromQuery?Limit=50&Ord=SDId&Clause=SDSupp=" + Model.CustIdValue + "&Partial=true'" : ""));
+                                Write(Html.Raw(Request["ActiveTab"] != "ShipDoc" ? "data-loadTarget='#7c17e3c285744a00aa4053838edaecae' data-dynamicContent='/ShipDoc/ListFromQuery?Limit=50&Ord=SDId&Clause=SDSupp=" + Model.CustIdValue + "&Partial=true'" : ""));
 WriteLiteral(" class=\"tab-pane ");
                                                                                                                                                                                                                                                                                Write((Request["ActiveTab"] != null ? (Request["ActiveTab"] == "ShipDoc" ? "active" :  "DynamicTab ") : "DynamicTab " ));
 WriteLiteral("\" id=\"ShipDoc\">\r\n\t\t\t\t\t<div");
@@ -2232,7 +2270,7 @@ WriteLiteral(" >Add Shipping Documents</a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r
                       Html.RenderPartial("~/Views/ShipDoc_List_1.cshtml", Model.ShipDocs);
 					} else {
 WriteLiteral("\t\t\t\t\t<div");
-WriteLiteral(" id=\"66e93b808d0243a2b7f41a356aa11376\"");
+WriteLiteral(" id=\"7c17e3c285744a00aa4053838edaecae\"");
 WriteLiteral(">\r\n\t\t\t\t\tLoading data...\r\n\t\t\t\t\t</div>\r\n");
 					}
 WriteLiteral("\t\t\t\t</div>\r\n");
@@ -2242,7 +2280,7 @@ WriteLiteral("\t\t\t\t\t\t\t");
 WriteLiteral("\t\t\t\t<div");
 WriteLiteral(" role=\"tabpanel\"");
 WriteLiteral(" ");
-                                Write(Html.Raw(Request["ActiveTab"] != "UKOrder" ? "data-loadTarget='#5604b64742a14e60a51041a6b819c391' data-dynamicContent='/UKOrder/ListFromQuery?Limit=50&Ord=UKOId&Clause=UKOCust=" + Model.CustIdValue + "&Partial=true'" : ""));
+                                Write(Html.Raw(Request["ActiveTab"] != "UKOrder" ? "data-loadTarget='#dcdc08b9166741e5bc6a739459ed0668' data-dynamicContent='/UKOrder/ListFromQuery?Limit=50&Ord=UKOId&Clause=UKOCust=" + Model.CustIdValue + "&Partial=true'" : ""));
 WriteLiteral(" class=\"tab-pane ");
                                                                                                                                                                                                                                                                                  Write((Request["ActiveTab"] != null ? (Request["ActiveTab"] == "UKOrder" ? "active" :  "DynamicTab ") : "DynamicTab " ));
 WriteLiteral("\" id=\"UKOrder\">\r\n\t\t\t\t\t<div");
@@ -2263,7 +2301,7 @@ WriteLiteral(" >Add UK Orders</a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\
                       Html.RenderPartial("~/Views/UKOrder_List_1.cshtml", Model.UKOrders);
 					} else {
 WriteLiteral("\t\t\t\t\t<div");
-WriteLiteral(" id=\"5604b64742a14e60a51041a6b819c391\"");
+WriteLiteral(" id=\"dcdc08b9166741e5bc6a739459ed0668\"");
 WriteLiteral(">\r\n\t\t\t\t\tLoading data...\r\n\t\t\t\t\t</div>\r\n");
 					}
 WriteLiteral("\t\t\t\t</div>\r\n");
@@ -2882,7 +2920,7 @@ WriteLiteral(">\r\n");
 WriteLiteral("\t\t\t\t<div");
 WriteLiteral(" role=\"tabpanel\"");
 WriteLiteral(" ");
-                                Write(Html.Raw(Request["ActiveTab"] != "Contact" ? "data-loadTarget='#7f7d2deba66847a2a83f24a63d8ac28a' data-dynamicContent='/Contact/ListFromQuery?Limit=50&Ord=ContFN&Clause=ContCust=" + Model.CustIdValue + "&Partial=true'" : ""));
+                                Write(Html.Raw(Request["ActiveTab"] != "Contact" ? "data-loadTarget='#352def3a4eb949bb9bd1bd95ab8d752d' data-dynamicContent='/Contact/ListFromQuery?Limit=50&Ord=ContFN&Clause=ContCust=" + Model.CustIdValue + "&Partial=true'" : ""));
 WriteLiteral(" class=\"tab-pane ");
                                                                                                                                                                                                                                                                                    Write((Request["ActiveTab"] != null ? (Request["ActiveTab"] == "Contact" ? "active" :  "DynamicTab ") : "DynamicTab " ));
 WriteLiteral("\" id=\"Contact\">\r\n\t\t\t\t\t<div");
@@ -2900,7 +2938,7 @@ WriteLiteral(">Add Customer Contacts</button>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div
                       Html.RenderPartial("~/Views/Contact_List_2.cshtml", Model.Contacts);
 					} else {
 WriteLiteral("\t\t\t\t\t<div");
-WriteLiteral(" id=\"7f7d2deba66847a2a83f24a63d8ac28a\"");
+WriteLiteral(" id=\"352def3a4eb949bb9bd1bd95ab8d752d\"");
 WriteLiteral(">\r\n\t\t\t\t\tLoading data...\r\n\t\t\t\t\t</div>\r\n");
 					}
 WriteLiteral("\t\t\t\t</div>\r\n");
@@ -2910,7 +2948,7 @@ WriteLiteral("\t\t\t\t\t\t\t");
 WriteLiteral("\t\t\t\t<div");
 WriteLiteral(" role=\"tabpanel\"");
 WriteLiteral(" ");
-                                Write(Html.Raw(Request["ActiveTab"] != "CertShip" ? "data-loadTarget='#b380b6086cca4c0a90b59eddde248e85' data-dynamicContent='/CertShip/ListFromQuery?Limit=50&Ord=CSId&Clause=CSCust=" + Model.CustIdValue + "&Partial=true'" : ""));
+                                Write(Html.Raw(Request["ActiveTab"] != "CertShip" ? "data-loadTarget='#8950a56f6bb4496b864ed7d40b02d070' data-dynamicContent='/CertShip/ListFromQuery?Limit=50&Ord=CSId&Clause=CSCust=" + Model.CustIdValue + "&Partial=true'" : ""));
 WriteLiteral(" class=\"tab-pane ");
                                                                                                                                                                                                                                                                                  Write((Request["ActiveTab"] != null ? (Request["ActiveTab"] == "CertShip" ? "active" :  "DynamicTab ") : "DynamicTab " ));
 WriteLiteral("\" id=\"CertShip\">\r\n\t\t\t\t\t<div");
@@ -2931,7 +2969,7 @@ WriteLiteral(" >Add Certificates of Shipment</a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</
                       Html.RenderPartial("~/Views/CertShip_List_2.cshtml", Model.CertShips);
 					} else {
 WriteLiteral("\t\t\t\t\t<div");
-WriteLiteral(" id=\"b380b6086cca4c0a90b59eddde248e85\"");
+WriteLiteral(" id=\"8950a56f6bb4496b864ed7d40b02d070\"");
 WriteLiteral(">\r\n\t\t\t\t\tLoading data...\r\n\t\t\t\t\t</div>\r\n");
 					}
 WriteLiteral("\t\t\t\t</div>\r\n");
@@ -2941,7 +2979,7 @@ WriteLiteral("\t\t\t\t\t\t\t");
 WriteLiteral("\t\t\t\t<div");
 WriteLiteral(" role=\"tabpanel\"");
 WriteLiteral(" ");
-                                Write(Html.Raw(Request["ActiveTab"] != "CN" ? "data-loadTarget='#3cbcb6f82a3f494daab9003931f07246' data-dynamicContent='/CN/ListFromQuery?Limit=50&Ord=CNId&Clause=CNTo=" + Model.CustIdValue + "&Partial=true'" : ""));
+                                Write(Html.Raw(Request["ActiveTab"] != "CN" ? "data-loadTarget='#2d0c94f46c3e4512b5fd1f08fa83ca65' data-dynamicContent='/CN/ListFromQuery?Limit=50&Ord=CNId&Clause=CNTo=" + Model.CustIdValue + "&Partial=true'" : ""));
 WriteLiteral(" class=\"tab-pane ");
                                                                                                                                                                                                                                                                    Write((Request["ActiveTab"] != null ? (Request["ActiveTab"] == "CN" ? "active" :  "DynamicTab ") : "DynamicTab " ));
 WriteLiteral("\" id=\"CN\">\r\n\t\t\t\t\t<div");
@@ -2962,7 +3000,7 @@ WriteLiteral(" >Add Credit Notes</a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t
                       Html.RenderPartial("~/Views/CN_List_2.cshtml", Model.CNs);
 					} else {
 WriteLiteral("\t\t\t\t\t<div");
-WriteLiteral(" id=\"3cbcb6f82a3f494daab9003931f07246\"");
+WriteLiteral(" id=\"2d0c94f46c3e4512b5fd1f08fa83ca65\"");
 WriteLiteral(">\r\n\t\t\t\t\tLoading data...\r\n\t\t\t\t\t</div>\r\n");
 					}
 WriteLiteral("\t\t\t\t</div>\r\n");
@@ -2972,7 +3010,7 @@ WriteLiteral("\t\t\t\t\t\t\t");
 WriteLiteral("\t\t\t\t<div");
 WriteLiteral(" role=\"tabpanel\"");
 WriteLiteral(" ");
-                                Write(Html.Raw(Request["ActiveTab"] != "Inv" ? "data-loadTarget='#09611facc1424422aa83708b56b1b0dc' data-dynamicContent='/Inv/ListFromQuery?Limit=50&Ord=InvId&Clause=InvTo=" + Model.CustIdValue + "&Partial=true'" : ""));
+                                Write(Html.Raw(Request["ActiveTab"] != "Inv" ? "data-loadTarget='#063c18a8ab3747ddac1e7e89b02d7867' data-dynamicContent='/Inv/ListFromQuery?Limit=50&Ord=InvId&Clause=InvTo=" + Model.CustIdValue + "&Partial=true'" : ""));
 WriteLiteral(" class=\"tab-pane ");
                                                                                                                                                                                                                                                                        Write((Request["ActiveTab"] != null ? (Request["ActiveTab"] == "Inv" ? "active" :  "DynamicTab ") : "DynamicTab " ));
 WriteLiteral("\" id=\"Inv\">\r\n\t\t\t\t\t<div");
@@ -2993,7 +3031,7 @@ WriteLiteral(" >Add Invoices</a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t
                       Html.RenderPartial("~/Views/Inv_List_2.cshtml", Model.Invs);
 					} else {
 WriteLiteral("\t\t\t\t\t<div");
-WriteLiteral(" id=\"09611facc1424422aa83708b56b1b0dc\"");
+WriteLiteral(" id=\"063c18a8ab3747ddac1e7e89b02d7867\"");
 WriteLiteral(">\r\n\t\t\t\t\tLoading data...\r\n\t\t\t\t\t</div>\r\n");
 					}
 WriteLiteral("\t\t\t\t</div>\r\n");
@@ -3003,7 +3041,7 @@ WriteLiteral("\t\t\t\t\t\t\t");
 WriteLiteral("\t\t\t\t<div");
 WriteLiteral(" role=\"tabpanel\"");
 WriteLiteral(" ");
-                                Write(Html.Raw(Request["ActiveTab"] != "Job" ? "data-loadTarget='#f1621263d9dd429ea6768ae4e51aeaff' data-dynamicContent='/Job/ListFromQuery?Limit=50&Ord=JobNo&Clause=JobTransp=" + Model.CustIdValue + "&Partial=true'" : ""));
+                                Write(Html.Raw(Request["ActiveTab"] != "Job" ? "data-loadTarget='#73aaaf65066644f9910387efc0d7bb80' data-dynamicContent='/Job/ListFromQuery?Limit=50&Ord=JobNo&Clause=JobTransp=" + Model.CustIdValue + "&Partial=true'" : ""));
 WriteLiteral(" class=\"tab-pane ");
                                                                                                                                                                                                                                                                            Write((Request["ActiveTab"] != null ? (Request["ActiveTab"] == "Job" ? "active" :  "DynamicTab ") : "DynamicTab " ));
 WriteLiteral("\" id=\"Job\">\r\n\t\t\t\t\t<div");
@@ -3024,7 +3062,7 @@ WriteLiteral(" >Add Jobs</a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</
                       Html.RenderPartial("~/Views/Job_List_2.cshtml", Model.Jobs);
 					} else {
 WriteLiteral("\t\t\t\t\t<div");
-WriteLiteral(" id=\"f1621263d9dd429ea6768ae4e51aeaff\"");
+WriteLiteral(" id=\"73aaaf65066644f9910387efc0d7bb80\"");
 WriteLiteral(">\r\n\t\t\t\t\tLoading data...\r\n\t\t\t\t\t</div>\r\n");
 					}
 WriteLiteral("\t\t\t\t</div>\r\n");
@@ -3034,7 +3072,7 @@ WriteLiteral("\t\t\t\t\t\t\t");
 WriteLiteral("\t\t\t\t<div");
 WriteLiteral(" role=\"tabpanel\"");
 WriteLiteral(" ");
-                                Write(Html.Raw(Request["ActiveTab"] != "Orders" ? "data-loadTarget='#8057de33fde64280a5622b6c04af785d' data-dynamicContent='/Orders/ListFromQuery?Limit=50&Ord=OrdId&Clause=OrdSupp=" + Model.CustIdValue + "&Partial=true'" : ""));
+                                Write(Html.Raw(Request["ActiveTab"] != "Orders" ? "data-loadTarget='#d0d06be2f3dd4b548eb351080e3e7b0a' data-dynamicContent='/Orders/ListFromQuery?Limit=50&Ord=OrdId&Clause=OrdSupp=" + Model.CustIdValue + "&Partial=true'" : ""));
 WriteLiteral(" class=\"tab-pane ");
                                                                                                                                                                                                                                                                                Write((Request["ActiveTab"] != null ? (Request["ActiveTab"] == "Orders" ? "active" :  "DynamicTab ") : "DynamicTab " ));
 WriteLiteral("\" id=\"Orders\">\r\n\t\t\t\t\t<div");
@@ -3055,7 +3093,7 @@ WriteLiteral(" >Add Orders</a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t
                       Html.RenderPartial("~/Views/Orders_List_2.cshtml", Model.Orderss);
 					} else {
 WriteLiteral("\t\t\t\t\t<div");
-WriteLiteral(" id=\"8057de33fde64280a5622b6c04af785d\"");
+WriteLiteral(" id=\"d0d06be2f3dd4b548eb351080e3e7b0a\"");
 WriteLiteral(">\r\n\t\t\t\t\tLoading data...\r\n\t\t\t\t\t</div>\r\n");
 					}
 WriteLiteral("\t\t\t\t</div>\r\n");
@@ -3065,7 +3103,7 @@ WriteLiteral("\t\t\t\t\t\t\t");
 WriteLiteral("\t\t\t\t<div");
 WriteLiteral(" role=\"tabpanel\"");
 WriteLiteral(" ");
-                                Write(Html.Raw(Request["ActiveTab"] != "ShipDoc" ? "data-loadTarget='#18dafa1d37fe4f8682ec707532f0e142' data-dynamicContent='/ShipDoc/ListFromQuery?Limit=50&Ord=SDId&Clause=SDSupp=" + Model.CustIdValue + "&Partial=true'" : ""));
+                                Write(Html.Raw(Request["ActiveTab"] != "ShipDoc" ? "data-loadTarget='#2c3759ca51f044ac82637b5c07e2d578' data-dynamicContent='/ShipDoc/ListFromQuery?Limit=50&Ord=SDId&Clause=SDSupp=" + Model.CustIdValue + "&Partial=true'" : ""));
 WriteLiteral(" class=\"tab-pane ");
                                                                                                                                                                                                                                                                                Write((Request["ActiveTab"] != null ? (Request["ActiveTab"] == "ShipDoc" ? "active" :  "DynamicTab ") : "DynamicTab " ));
 WriteLiteral("\" id=\"ShipDoc\">\r\n\t\t\t\t\t<div");
@@ -3086,7 +3124,7 @@ WriteLiteral(" >Add Shipping Documents</a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r
                       Html.RenderPartial("~/Views/ShipDoc_List_2.cshtml", Model.ShipDocs);
 					} else {
 WriteLiteral("\t\t\t\t\t<div");
-WriteLiteral(" id=\"18dafa1d37fe4f8682ec707532f0e142\"");
+WriteLiteral(" id=\"2c3759ca51f044ac82637b5c07e2d578\"");
 WriteLiteral(">\r\n\t\t\t\t\tLoading data...\r\n\t\t\t\t\t</div>\r\n");
 					}
 WriteLiteral("\t\t\t\t</div>\r\n");
@@ -3096,7 +3134,7 @@ WriteLiteral("\t\t\t\t\t\t\t");
 WriteLiteral("\t\t\t\t<div");
 WriteLiteral(" role=\"tabpanel\"");
 WriteLiteral(" ");
-                                Write(Html.Raw(Request["ActiveTab"] != "UKOrder" ? "data-loadTarget='#f975c169d3a94301b41b84847b53cdb4' data-dynamicContent='/UKOrder/ListFromQuery?Limit=50&Ord=UKOId&Clause=UKOCust=" + Model.CustIdValue + "&Partial=true'" : ""));
+                                Write(Html.Raw(Request["ActiveTab"] != "UKOrder" ? "data-loadTarget='#95cdcb04571e4f8699f9d4748105536a' data-dynamicContent='/UKOrder/ListFromQuery?Limit=50&Ord=UKOId&Clause=UKOCust=" + Model.CustIdValue + "&Partial=true'" : ""));
 WriteLiteral(" class=\"tab-pane ");
                                                                                                                                                                                                                                                                                  Write((Request["ActiveTab"] != null ? (Request["ActiveTab"] == "UKOrder" ? "active" :  "DynamicTab ") : "DynamicTab " ));
 WriteLiteral("\" id=\"UKOrder\">\r\n\t\t\t\t\t<div");
@@ -3117,7 +3155,7 @@ WriteLiteral(" >Add UK Orders</a>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\
                       Html.RenderPartial("~/Views/UKOrder_List_2.cshtml", Model.UKOrders);
 					} else {
 WriteLiteral("\t\t\t\t\t<div");
-WriteLiteral(" id=\"f975c169d3a94301b41b84847b53cdb4\"");
+WriteLiteral(" id=\"95cdcb04571e4f8699f9d4748105536a\"");
 WriteLiteral(">\r\n\t\t\t\t\tLoading data...\r\n\t\t\t\t\t</div>\r\n");
 					}
 WriteLiteral("\t\t\t\t</div>\r\n");

@@ -96,10 +96,6 @@
     <Compile Include="C:\Users\Intrinsiq\Documents\GitHub\IQ6-master\Customer\ftl\IQ6\.iqsource\\*.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\BaseLib\Intrinsiq.Reporting\Intrinsiq.Reporting.csproj">
-      <Project>{9f9ec506-8c18-41e5-a6b2-22c3616afdb9}</Project>
-      <Name>Intrinsiq.Reporting</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\..\..\Framework\IQ6.Core\IQ6.Core.csproj">
       <Project>{cb543942-8dab-40e1-b287-8e465b9ab57b}</Project>
       <Name>IQ6.Core</Name>
@@ -118,23 +114,27 @@
   </Target>
   -->
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\BaseLib\Intrinsiq.WordDocument\Intrinsiq.WordDocument.csproj">
+    <ProjectReference Include="&#xD;&#xA;         ..\..\..\..\BaseLib\Intrinsiq.Reporting\Intrinsiq.Reporting.csproj">
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\BaseLib\Intrinsiq.Query\Intrinsiq.Query.csproj">
+    <ProjectReference Include="&#xD;&#xA;         ..\..\..\..\BaseLib\Intrinsiq.WordDocument\Intrinsiq.WordDocument.csproj">
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\BaseLib\Intrinsiq.Email\Intrinsiq.Email.csproj">
+    <ProjectReference Include="&#xD;&#xA;         ..\..\..\..\BaseLib\Intrinsiq.Query\Intrinsiq.Query.csproj">
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\BaseLib\Intrinsiq.Alerts\Intrinsiq.Alerts.csproj">
+    <ProjectReference Include="&#xD;&#xA;         ..\..\..\..\BaseLib\Intrinsiq.Email\Intrinsiq.Email.csproj">
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\BaseLib\Intrinsiq.SMS\Intrinsiq.SMS.csproj">
+    <ProjectReference Include="&#xD;&#xA;         ..\..\..\..\BaseLib\Intrinsiq.Alerts\Intrinsiq.Alerts.csproj">
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="&#xD;&#xA;         ..\..\..\..\BaseLib\Intrinsiq.SMS\Intrinsiq.SMS.csproj">
     </ProjectReference>
   </ItemGroup>
 </Project>
